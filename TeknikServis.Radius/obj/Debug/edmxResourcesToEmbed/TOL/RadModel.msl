@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tolModelStoreContainer" CdmEntityContainer="tolEntities">
+    <EntitySetMapping Name="rm_invoices">
+      <EntityTypeMapping TypeName="tolModel.rm_invoices">
+        <MappingFragment StoreEntitySet="rm_invoices">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="invgroup" ColumnName="invgroup" />
+          <ScalarProperty Name="invnum" ColumnName="invnum" />
+          <ScalarProperty Name="managername" ColumnName="managername" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="bytesdl" ColumnName="bytesdl" />
+          <ScalarProperty Name="bytesul" ColumnName="bytesul" />
+          <ScalarProperty Name="bytescomb" ColumnName="bytescomb" />
+          <ScalarProperty Name="downlimit" ColumnName="downlimit" />
+          <ScalarProperty Name="uplimit" ColumnName="uplimit" />
+          <ScalarProperty Name="comblimit" ColumnName="comblimit" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="uptimelimit" ColumnName="uptimelimit" />
+          <ScalarProperty Name="days" ColumnName="days" />
+          <ScalarProperty Name="expiration" ColumnName="expiration" />
+          <ScalarProperty Name="capdl" ColumnName="capdl" />
+          <ScalarProperty Name="capul" ColumnName="capul" />
+          <ScalarProperty Name="captotal" ColumnName="captotal" />
+          <ScalarProperty Name="captime" ColumnName="captime" />
+          <ScalarProperty Name="capdate" ColumnName="capdate" />
+          <ScalarProperty Name="service" ColumnName="service" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="transid" ColumnName="transid" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="taxid" ColumnName="taxid" />
+          <ScalarProperty Name="paymentopt" ColumnName="paymentopt" />
+          <ScalarProperty Name="invtype" ColumnName="invtype" />
+          <ScalarProperty Name="paymode" ColumnName="paymode" />
+          <ScalarProperty Name="paid" ColumnName="paid" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="vatpercent" ColumnName="vatpercent" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="gwtransid" ColumnName="gwtransid" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rm_services">
+      <EntityTypeMapping TypeName="tolModel.rm_services">
+        <MappingFragment StoreEntitySet="rm_services">
+          <ScalarProperty Name="srvid" ColumnName="srvid" />
+          <ScalarProperty Name="srvname" ColumnName="srvname" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="downrate" ColumnName="downrate" />
+          <ScalarProperty Name="uprate" ColumnName="uprate" />
+          <ScalarProperty Name="limitdl" ColumnName="limitdl" />
+          <ScalarProperty Name="limitul" ColumnName="limitul" />
+          <ScalarProperty Name="limitcomb" ColumnName="limitcomb" />
+          <ScalarProperty Name="limitexpiration" ColumnName="limitexpiration" />
+          <ScalarProperty Name="limituptime" ColumnName="limituptime" />
+          <ScalarProperty Name="poolname" ColumnName="poolname" />
+          <ScalarProperty Name="unitprice" ColumnName="unitprice" />
+          <ScalarProperty Name="unitpriceadd" ColumnName="unitpriceadd" />
+          <ScalarProperty Name="timebaseexp" ColumnName="timebaseexp" />
+          <ScalarProperty Name="timebaseonline" ColumnName="timebaseonline" />
+          <ScalarProperty Name="timeunitexp" ColumnName="timeunitexp" />
+          <ScalarProperty Name="timeunitonline" ColumnName="timeunitonline" />
+          <ScalarProperty Name="trafficunitdl" ColumnName="trafficunitdl" />
+          <ScalarProperty Name="trafficunitul" ColumnName="trafficunitul" />
+          <ScalarProperty Name="trafficunitcomb" ColumnName="trafficunitcomb" />
+          <ScalarProperty Name="inittimeexp" ColumnName="inittimeexp" />
+          <ScalarProperty Name="inittimeonline" ColumnName="inittimeonline" />
+          <ScalarProperty Name="initdl" ColumnName="initdl" />
+          <ScalarProperty Name="initul" ColumnName="initul" />
+          <ScalarProperty Name="inittotal" ColumnName="inittotal" />
+          <ScalarProperty Name="srvtype" ColumnName="srvtype" />
+          <ScalarProperty Name="timeaddmodeexp" ColumnName="timeaddmodeexp" />
+          <ScalarProperty Name="timeaddmodeonline" ColumnName="timeaddmodeonline" />
+          <ScalarProperty Name="trafficaddmode" ColumnName="trafficaddmode" />
+          <ScalarProperty Name="monthly" ColumnName="monthly" />
+          <ScalarProperty Name="enaddcredits" ColumnName="enaddcredits" />
+          <ScalarProperty Name="minamount" ColumnName="minamount" />
+          <ScalarProperty Name="minamountadd" ColumnName="minamountadd" />
+          <ScalarProperty Name="resetcounters" ColumnName="resetcounters" />
+          <ScalarProperty Name="pricecalcdownload" ColumnName="pricecalcdownload" />
+          <ScalarProperty Name="pricecalcupload" ColumnName="pricecalcupload" />
+          <ScalarProperty Name="pricecalcuptime" ColumnName="pricecalcuptime" />
+          <ScalarProperty Name="unitpricetax" ColumnName="unitpricetax" />
+          <ScalarProperty Name="unitpriceaddtax" ColumnName="unitpriceaddtax" />
+          <ScalarProperty Name="enableburst" ColumnName="enableburst" />
+          <ScalarProperty Name="dlburstlimit" ColumnName="dlburstlimit" />
+          <ScalarProperty Name="ulburstlimit" ColumnName="ulburstlimit" />
+          <ScalarProperty Name="dlburstthreshold" ColumnName="dlburstthreshold" />
+          <ScalarProperty Name="ulburstthreshold" ColumnName="ulburstthreshold" />
+          <ScalarProperty Name="dlbursttime" ColumnName="dlbursttime" />
+          <ScalarProperty Name="ulbursttime" ColumnName="ulbursttime" />
+          <ScalarProperty Name="enableservice" ColumnName="enableservice" />
+          <ScalarProperty Name="dlquota" ColumnName="dlquota" />
+          <ScalarProperty Name="ulquota" ColumnName="ulquota" />
+          <ScalarProperty Name="combquota" ColumnName="combquota" />
+          <ScalarProperty Name="timequota" ColumnName="timequota" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="nextsrvid" ColumnName="nextsrvid" />
+          <ScalarProperty Name="dailynextsrvid" ColumnName="dailynextsrvid" />
+          <ScalarProperty Name="disnextsrvid" ColumnName="disnextsrvid" />
+          <ScalarProperty Name="availucp" ColumnName="availucp" />
+          <ScalarProperty Name="renew" ColumnName="renew" />
+          <ScalarProperty Name="carryover" ColumnName="carryover" />
+          <ScalarProperty Name="policymapdl" ColumnName="policymapdl" />
+          <ScalarProperty Name="policymapul" ColumnName="policymapul" />
+          <ScalarProperty Name="custattr" ColumnName="custattr" />
+          <ScalarProperty Name="gentftp" ColumnName="gentftp" />
+          <ScalarProperty Name="cmcfg" ColumnName="cmcfg" />
+          <ScalarProperty Name="advcmcfg" ColumnName="advcmcfg" />
+          <ScalarProperty Name="addamount" ColumnName="addamount" />
+          <ScalarProperty Name="ignstatip" ColumnName="ignstatip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rm_users">
+      <EntityTypeMapping TypeName="tolModel.rm_users">
+        <MappingFragment StoreEntitySet="rm_users">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="groupid" ColumnName="groupid" />
+          <ScalarProperty Name="enableuser" ColumnName="enableuser" />
+          <ScalarProperty Name="uplimit" ColumnName="uplimit" />
+          <ScalarProperty Name="downlimit" ColumnName="downlimit" />
+          <ScalarProperty Name="comblimit" ColumnName="comblimit" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="gpslat" ColumnName="gpslat" />
+          <ScalarProperty Name="gpslong" ColumnName="gpslong" />
+          <ScalarProperty Name="mac" ColumnName="mac" />
+          <ScalarProperty Name="usemacauth" ColumnName="usemacauth" />
+          <ScalarProperty Name="expiration" ColumnName="expiration" />
+          <ScalarProperty Name="uptimelimit" ColumnName="uptimelimit" />
+          <ScalarProperty Name="srvid" ColumnName="srvid" />
+          <ScalarProperty Name="staticipcm" ColumnName="staticipcm" />
+          <ScalarProperty Name="staticipcpe" ColumnName="staticipcpe" />
+          <ScalarProperty Name="ipmodecm" ColumnName="ipmodecm" />
+          <ScalarProperty Name="ipmodecpe" ColumnName="ipmodecpe" />
+          <ScalarProperty Name="poolidcm" ColumnName="poolidcm" />
+          <ScalarProperty Name="poolidcpe" ColumnName="poolidcpe" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+          <ScalarProperty Name="acctype" ColumnName="acctype" />
+          <ScalarProperty Name="credits" ColumnName="credits" />
+          <ScalarProperty Name="cardfails" ColumnName="cardfails" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="taxid" ColumnName="taxid" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="maccm" ColumnName="maccm" />
+          <ScalarProperty Name="custattr" ColumnName="custattr" />
+          <ScalarProperty Name="warningsent" ColumnName="warningsent" />
+          <ScalarProperty Name="verifycode" ColumnName="verifycode" />
+          <ScalarProperty Name="verified" ColumnName="verified" />
+          <ScalarProperty Name="selfreg" ColumnName="selfreg" />
+          <ScalarProperty Name="verifyfails" ColumnName="verifyfails" />
+          <ScalarProperty Name="verifysentnum" ColumnName="verifysentnum" />
+          <ScalarProperty Name="verifymobile" ColumnName="verifymobile" />
+          <ScalarProperty Name="contractid" ColumnName="contractid" />
+          <ScalarProperty Name="contractvalid" ColumnName="contractvalid" />
+          <ScalarProperty Name="actcode" ColumnName="actcode" />
+          <ScalarProperty Name="pswactsmsnum" ColumnName="pswactsmsnum" />
+          <ScalarProperty Name="alertemail" ColumnName="alertemail" />
+          <ScalarProperty Name="alertsms" ColumnName="alertsms" />
+          <ScalarProperty Name="lang" ColumnName="lang" />
+          <ScalarProperty Name="lastlogoff" ColumnName="lastlogoff" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

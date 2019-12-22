@@ -1,0 +1,1700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B1304DA-B3D8-4A23-8B3C-E6CACC9FA914}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TeknikServis</RootNamespace>
+    <AssemblyName>TeknikServis</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNet.ScriptManager.bootstrap, Version=3.3.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.4\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=2.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.2.1.3\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.SpellChecker.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxRichEdit.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Web, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.7\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.7\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Web.6.9.7\lib\net45\MySql.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Giris.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="AdminSuper\AdminOlustur.aspx" />
+    <Content Include="AdminSuper\AdminPage.aspx" />
+    <Content Include="AdminSuper\Firmalar.aspx" />
+    <Content Include="AdminSuper\firmaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>firmaModel.edmx</DependentUpon>
+      <LastGenOutput>firmaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AdminSuper\firmaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>firmaModel.edmx</DependentUpon>
+      <LastGenOutput>firmaModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Admin\Ayarlar.aspx" />
+    <Content Include="Admin\BayiAyarlari.aspx" />
+    <Content Include="Admin\BilgitapPanel.aspx" />
+    <Content Include="Admin\FaturaTasarim.aspx" />
+    <Content Include="Admin\Kullanicilar.aspx" />
+    <Content Include="Admin\MailAyarlari.aspx" />
+    <Content Include="Admin\SmsAyarlari.aspx" />
+    <Content Include="Admin\Tasarimci.aspx" />
+    <Content Include="Baski.aspx" />
+    <Content Include="Content\dropzone.css" />
+    <Content Include="Content\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="LisansError.aspx" />
+    <Content Include="MusteriDetayBilgileri.aspx" />
+    <Content Include="Raporlar\RaporSorgu.aspx" />
+    <Content Include="Raporlar\TekRaporView.aspx" />
+    <Content Include="Scripts\harita-anten-kaydet.min.js">
+      <DependentUpon>harita-anten-kaydet.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-anten-kaydet2.min.js">
+      <DependentUpon>harita-anten-kaydet2.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-anten-kaydet3.min.js">
+      <DependentUpon>harita-anten-kaydet3.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-anten-musteri-geo.js" />
+    <Content Include="Scripts\harita-anten-musteri-geo.min.js">
+      <DependentUpon>harita-anten-musteri-geo.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-anten-musteri-geo2.js" />
+    <Content Include="Scripts\harita-anten-musteri.min.js">
+      <DependentUpon>harita-anten-musteri.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-anten-musteri2.js" />
+    <Content Include="Scripts\harita-anten-musteri2.min.js">
+      <DependentUpon>harita-anten-musteri2.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-anten-musteri3.js" />
+    <Content Include="Scripts\harita-anten-musteri3.min.js">
+      <DependentUpon>harita-anten-musteri3.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-anten-musteri4.js" />
+    <Content Include="Scripts\harita-antenler.min.js">
+      <DependentUpon>harita-antenler.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-antenler2.js" />
+    <Content Include="Scripts\harita-antenler2.min.js">
+      <DependentUpon>harita-antenler2.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-antenler3.js" />
+    <Content Include="Scripts\harita-arc-dep.js" />
+    <Content Include="Scripts\harita-hazir-anten-kaydet.js" />
+    <Content Include="Scripts\harita-hazir-anten-kaydet.min.js">
+      <DependentUpon>harita-hazir-anten-kaydet.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-hazir-anten-kaydet2.js" />
+    <Content Include="Scripts\harita-hazir-anten.js" />
+    <Content Include="Scripts\harita-hazir-anten.min.js">
+      <DependentUpon>harita-hazir-anten.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-hazir-anten2.js" />
+    <Content Include="Scripts\harita-hazir-anten2.min.js">
+      <DependentUpon>harita-hazir-anten2.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-hazir-anten3.js" />
+    <Content Include="Scripts\harita-hazir-anten3.min.js">
+      <DependentUpon>harita-hazir-anten3.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-hazir-anten4.js" />
+    <Content Include="Scripts\harita-hazir-anten4.min.js">
+      <DependentUpon>harita-hazir-anten4.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteri-kaydet-mobil.min.js">
+      <DependentUpon>harita-musteri-kaydet-mobil.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteri-kaydet-mobil2.js" />
+    <Content Include="Scripts\harita-musteri-kaydet-mobil2.min.js">
+      <DependentUpon>harita-musteri-kaydet-mobil2.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteri-kaydet-mobil3.js" />
+    <Content Include="Scripts\harita-musteri-kaydet-mobil3.min.js">
+      <DependentUpon>harita-musteri-kaydet-mobil3.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteri-kaydet-mobil4.js" />
+    <Content Include="Scripts\harita-musteri-kaydet.min.js">
+      <DependentUpon>harita-musteri-kaydet.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteriler-geo-test.js" />
+    <Content Include="Scripts\harita-musteriler-geo-test.min.js">
+      <DependentUpon>harita-musteriler-geo-test.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteriler-geo.js" />
+    <Content Include="Scripts\harita-musteriler-geo.min.js">
+      <DependentUpon>harita-musteriler-geo.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteriler.min.js">
+      <DependentUpon>harita-musteriler.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteriler2.js" />
+    <Content Include="Scripts\harita-musteriler2.min.js">
+      <DependentUpon>harita-musteriler2.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-servisler.js" />
+    <Content Include="Scripts\harita-servisler.min.js">
+      <DependentUpon>harita-servisler.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-anten-geo.js" />
+    <Content Include="Scripts\harita-tek-anten-geo.min.js">
+      <DependentUpon>harita-tek-anten-geo.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-anten-geo2.js" />
+    <Content Include="Scripts\harita-tek-anten.min.js">
+      <DependentUpon>harita-tek-anten.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-anten2.js" />
+    <Content Include="Scripts\harita-tek-anten2.min.js">
+      <DependentUpon>harita-tek-anten2.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-anten3.js" />
+    <Content Include="Scripts\harita-tek-anten3.min.js">
+      <DependentUpon>harita-tek-anten3.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-anten4.js" />
+    <Content Include="Scripts\harita-tek-musteri.min.js">
+      <DependentUpon>harita-tek-musteri.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-musteri2.js" />
+    <Content Include="Scripts\harita-tek-musteri2.min.js">
+      <DependentUpon>harita-tek-musteri2.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-musteri21.js" />
+    <Content Include="Scripts\harita-tek-musteri3.js" />
+    <Content Include="Scripts\harita-tek-musteri3.min.js">
+      <DependentUpon>harita-tek-musteri3.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-musteri4.js" />
+    <Content Include="Scripts\harita-tek-musteri4.min.js">
+      <DependentUpon>harita-tek-musteri4.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-musteri5.js" />
+    <Content Include="Scripts\Tasarim\ace.js" />
+    <Content Include="Scripts\Dropzone.js" />
+    <Content Include="Scripts\Tasarim\knockout-3.4.0.js" />
+    <Content Include="Scripts\test.js" />
+    <Content Include="Scripts\harita-anten-kaydet3.js" />
+    <Content Include="Scripts\test3.js" />
+    <Content Include="Sonuc.aspx" />
+    <Content Include="TeknikAlim\AlimDetaylar.aspx" />
+    <Content Include="TeknikAlim\Alimlar.aspx" />
+    <Content Include="TeknikAlim\CihazGruplar.aspx" />
+    <Content Include="TeknikAlim\MusteriUrunAra.aspx" />
+    <Content Include="TeknikAlim\MusteriUrunler.aspx" />
+    <Content Include="TeknikAlim\Stoklar.aspx" />
+    <Content Include="TeknikCari\Bankalar.aspx" />
+    <Content Include="TeknikCari\Cekler.aspx" />
+    <Content Include="TeknikCari\Hareketler.aspx" />
+    <Content Include="TeknikCari\KartExtre.aspx" />
+    <Content Include="TeknikCari\KartExtre2.aspx" />
+    <Content Include="TeknikCari\KartExtreOdemeler.aspx" />
+    <Content Include="TeknikCari\Kartlar.aspx" />
+    <Content Include="TeknikCari\Ode.aspx" />
+    <Content Include="TeknikCari\OdemeTahsilatlar.aspx" />
+    <Content Include="TeknikCari\Poslar.aspx" />
+    <Content Include="TeknikAlim\SatinAl.aspx" />
+    <Content Include="TeknikHarita\Antenler.aspx" />
+    <Content Include="TeknikHarita\ButunAntenler.aspx" />
+    <Content Include="TeknikHarita\ButunAntenMusteri.aspx" />
+    <Content Include="TeknikHarita\ButunAntenMusteri2.aspx" />
+    <Content Include="TeknikHarita\ButunMusteriler.aspx" />
+    <Content Include="TeknikCari\CariDetay.aspx" />
+    <Content Include="TeknikCari\CariHesapBorclu.aspx" />
+    <Content Include="TeknikCari\CariHesaplar.aspx" />
+    <Content Include="Content\alertify-bootstrap-3.css" />
+    <Content Include="Content\alertify-bootstrap-3.min.css">
+      <DependentUpon>alertify-bootstrap-3.css</DependentUpon>
+    </Content>
+    <Content Include="Content\alertify-bootstrap.css" />
+    <Content Include="Content\alertify-bootstrap.min.css">
+      <DependentUpon>alertify-bootstrap.css</DependentUpon>
+    </Content>
+    <Content Include="Content\alertify.css" />
+    <Content Include="Content\alertify.min.css">
+      <DependentUpon>alertify.css</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap-colorpicker.css" />
+    <Content Include="Content\bootstrap-colorpicker.min.css">
+      <DependentUpon>bootstrap-colorpicker.css</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\main-style.css" />
+    <Content Include="Content\main-style.min.css">
+      <DependentUpon>main-style.css</DependentUpon>
+    </Content>
+    <Content Include="Content\pace-theme-big-counter.css" />
+    <Content Include="Content\pace-theme-big-counter.min.css">
+      <DependentUpon>pace-theme-big-counter.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\Site.min.css">
+      <DependentUpon>Site.css</DependentUpon>
+    </Content>
+    <Content Include="Content\social-buttons.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\timeline.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="CustQ.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Deneme.aspx" />
+    <Content Include="TeknikEmanet\Emanetler.aspx" />
+    <Content Include="TeknikEmanet\EmanetVer.aspx" />
+    <Content Include="TeknikEmanet\EmanetVerMusteri.aspx" />
+    <Content Include="TeknikFatura\FaturaBasim.aspx" />
+    <Content Include="TeknikFatura\FaturaManuel.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="TeknikHarita\ButunServisler.aspx" />
+    <Content Include="TeknikHarita\HaritaAntenKaydet.aspx" />
+    <Content Include="TeknikHarita\HaritaAntenKaydet3.aspx" />
+    <Content Include="TeknikHarita\HaritaMusteriKaydet.aspx" />
+    <Content Include="TeknikHarita\HaritaMusteriKaydetMobil.aspx" />
+    <Content Include="TeknikHarita\HaritaTekMusteri.aspx" />
+    <Content Include="Icon.png" />
+    <Content Include="img\ajax_loader_blue_64.gif" />
+    <Content Include="img\anten.png" />
+    <Content Include="img\anten2.png" />
+    <Content Include="img\anten3.png" />
+    <Content Include="img\find_user.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\musteri.png" />
+    <Content Include="img\musteri2.png" />
+    <Content Include="img\user.jpg" />
+    <Content Include="MesajGonder.aspx" />
+    <Content Include="Musteri.aspx" />
+    <Content Include="TeknikHarita\HaritaTekMusteriKayitli.aspx" />
+    <Content Include="TeknikHarita\MusteriAnten.aspx" />
+    <Content Include="TeknikHarita\MusteriAnten2.aspx" />
+    <Content Include="TeknikHarita\MusteriYolu.aspx" />
+    <Content Include="TeknikCari\OdemeEkle.aspx" />
+    <Content Include="TeknikCari\Odemeler.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="Account\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Print.aspx" />
+    <Content Include="TeknikHarita\TekAnten.aspx" />
+    <Content Include="TeknikHarita\TekAnten2.aspx" />
+    <Content Include="TeknikSatis\SatisListesi.aspx" />
+    <Content Include="TeknikSatis\PesinSatisFiyatli.aspx" />
+    <Content Include="TeknikSatis\PesinSatis.aspx" />
+    <Content Include="TeknikTeknik\MusteriUrunAra.aspx" />
+    <Content Include="TeknikTeknik\MusteriUrunler.aspx" />
+    <Content Include="TeknikTeknik\ResimKaydet.aspx" />
+    <Content Include="Scripts\alertify.js" />
+    <Content Include="Scripts\alertify.min.js" />
+    <Content Include="Scripts\bootstrap-colorpicker.js" />
+    <Content Include="Scripts\bootstrap-colorpicker.min.js">
+      <DependentUpon>bootstrap-colorpicker.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="MasterPage.master" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\wells.less" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\utilities.less" />
+    <Content Include="Content\bootstrap\type.less" />
+    <Content Include="Content\bootstrap\tooltip.less" />
+    <Content Include="Content\bootstrap\thumbnails.less" />
+    <Content Include="Content\bootstrap\theme.less" />
+    <Content Include="Content\bootstrap\tables.less" />
+    <Content Include="Content\bootstrap\scaffolding.less" />
+    <Content Include="Content\bootstrap\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\progress-bars.less" />
+    <Content Include="Content\bootstrap\print.less" />
+    <Content Include="Content\bootstrap\popovers.less" />
+    <Content Include="Content\bootstrap\panels.less" />
+    <Content Include="Content\bootstrap\pagination.less" />
+    <Content Include="Content\bootstrap\pager.less" />
+    <Content Include="Content\bootstrap\normalize.less" />
+    <Content Include="Content\bootstrap\navs.less" />
+    <Content Include="Content\bootstrap\navbar.less" />
+    <Content Include="Content\bootstrap\modals.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
+    <Content Include="Content\bootstrap\media.less" />
+    <Content Include="Content\bootstrap\list-group.less" />
+    <Content Include="Content\bootstrap\labels.less" />
+    <Content Include="Content\bootstrap\jumbotron.less" />
+    <Content Include="Content\bootstrap\input-groups.less" />
+    <Content Include="Content\bootstrap\grid.less" />
+    <Content Include="Content\bootstrap\glyphicons.less" />
+    <Content Include="Content\bootstrap\forms.less" />
+    <Content Include="Content\bootstrap\dropdowns.less" />
+    <Content Include="Content\bootstrap\component-animations.less" />
+    <Content Include="Content\bootstrap\code.less" />
+    <Content Include="Content\bootstrap\close.less" />
+    <Content Include="Content\bootstrap\carousel.less" />
+    <Content Include="Content\bootstrap\buttons.less" />
+    <Content Include="Content\bootstrap\button-groups.less" />
+    <Content Include="Content\bootstrap\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\bootstrap.less" />
+    <Content Include="Content\bootstrap\badges.less" />
+    <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Content\less\bootstrap-datetimepicker-build.less" />
+    <Content Include="Content\less\_bootstrap-datetimepicker.less" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Scripts\bootstrap-colorpicker.min.js.map">
+      <DependentUpon>bootstrap-colorpicker.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteri-kaydet-mobil.js" />
+    <Content Include="Admin\Web.config" />
+    <EntityDeploy Include="AdminSuper\firmaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>firmaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="AdminSuper\firmaModel.edmx.diagram">
+      <DependentUpon>firmaModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="AdminSuper\Super.Master" />
+    <None Include="Properties\PublishProfiles\filelocal.pubxml" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+    <None Include="Properties\PublishProfiles\teknikI.pubxml" />
+    <Content Include="Scripts\harita-anten-kaydet.min.js.map">
+      <DependentUpon>harita-anten-kaydet.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-anten-kaydet2.min.js.map">
+      <DependentUpon>harita-anten-kaydet2.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-anten-kaydet3.min.js.map">
+      <DependentUpon>harita-anten-kaydet3.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-anten-musteri.min.js.map">
+      <DependentUpon>harita-anten-musteri.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-anten-musteri2.min.js.map">
+      <DependentUpon>harita-anten-musteri2.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-antenler.min.js.map">
+      <DependentUpon>harita-antenler.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-antenler2.min.js.map">
+      <DependentUpon>harita-antenler2.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-hazir-anten-kaydet.min.js.map">
+      <DependentUpon>harita-hazir-anten-kaydet.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-hazir-anten.min.js.map">
+      <DependentUpon>harita-hazir-anten.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-hazir-anten2.min.js.map">
+      <DependentUpon>harita-hazir-anten2.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-hazir-anten3.min.js.map">
+      <DependentUpon>harita-hazir-anten3.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-hazir-anten4.min.js.map">
+      <DependentUpon>harita-hazir-anten4.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteri-kaydet-mobil.min.js.map">
+      <DependentUpon>harita-musteri-kaydet-mobil.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteri-kaydet-mobil2.min.js.map">
+      <DependentUpon>harita-musteri-kaydet-mobil2.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteri-kaydet-mobil3.min.js.map">
+      <DependentUpon>harita-musteri-kaydet-mobil3.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteri-kaydet.min.js.map">
+      <DependentUpon>harita-musteri-kaydet.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteriler-geo-test.min.js.map">
+      <DependentUpon>harita-musteriler-geo-test.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteriler-geo.min.js.map">
+      <DependentUpon>harita-musteriler-geo.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteriler.min.js.map">
+      <DependentUpon>harita-musteriler.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-musteriler2.min.js.map">
+      <DependentUpon>harita-musteriler2.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-anten-geo.min.js.map">
+      <DependentUpon>harita-tek-anten-geo.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-anten.min.js.map">
+      <DependentUpon>harita-tek-anten.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-anten2.min.js.map">
+      <DependentUpon>harita-tek-anten2.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-anten3.min.js.map">
+      <DependentUpon>harita-tek-anten3.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-musteri.min.js.map">
+      <DependentUpon>harita-tek-musteri.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-musteri2.min.js.map">
+      <DependentUpon>harita-tek-musteri2.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-musteri3.min.js.map">
+      <DependentUpon>harita-tek-musteri3.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-tek-musteri4.min.js.map">
+      <DependentUpon>harita-tek-musteri4.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-anten-musteri3.min.js.map">
+      <DependentUpon>harita-anten-musteri3.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-anten-musteri-geo.min.js.map">
+      <DependentUpon>harita-anten-musteri-geo.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\harita-servisler.min.js.map">
+      <DependentUpon>harita-servisler.min.js</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-2.1.3.intellisense.js" />
+    <Content Include="Scripts\harita-anten-kaydet.js" />
+    <Content Include="Scripts\harita-anten-kaydet2.js" />
+    <Content Include="Scripts\harita-antenler.js" />
+    <Content Include="Scripts\harita-anten-musteri.js" />
+    <Content Include="Scripts\harita-musteri-kaydet.js" />
+    <Content Include="Scripts\harita-musteriler.js" />
+    <Content Include="Scripts\harita-tek-anten.js" />
+    <Content Include="Scripts\harita-tek-musteri.js" />
+    <Content Include="Scripts\jquery-2.1.3.js" />
+    <Content Include="Scripts\jquery-2.1.3.min.js" />
+    <Content Include="Scripts\jquery.metisMenu.js" />
+    <Content Include="Scripts\jquery.metisMenu.min.js" />
+    <Content Include="Scripts\less-1.4.1.min.js" />
+    <Content Include="Scripts\maps.google.polygon.containsLatLng.js" />
+    <Content Include="Scripts\maps.google.polygon.containsLatLng.min.js">
+      <DependentUpon>maps.google.polygon.containsLatLng.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\pace.js" />
+    <Content Include="Scripts\pace.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\siminta.js" />
+    <Content Include="Scripts\siminta.min.js" />
+    <Content Include="Scripts\v3_epoly.js" />
+    <Content Include="Scripts\v3_epoly.min.js">
+      <DependentUpon>v3_epoly.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <None Include="Service References\NetGsm\configuration91.svcinfo" />
+    <None Include="Service References\NetGsm\configuration.svcinfo" />
+    <None Include="Service References\NetGsm\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="TeknikTeknik\SatisEkle.aspx" />
+    <Content Include="TeknikTeknik\Servis.aspx" />
+    <Content Include="TeknikTeknik\ServisDetay.aspx" />
+    <Content Include="TeknikTeknik\ServisDetayList.aspx" />
+    <Content Include="TeknikTeknik\ServisEkle.aspx" />
+    <Content Include="TeknikTeknik\ServisHesaplar.aspx" />
+    <Content Include="TeknikTeknik\ServislerCanli.aspx" />
+    <Content Include="TeknikTeknik\ServisMaliyetler.aspx" />
+    <Content Include="TeknikTeknik\ServisPaketler.aspx" />
+    <Content Include="TeknikTeknik\ServisPaketleri.aspx" />
+    <Content Include="TeknikTeknik\ServisTamirci.aspx" />
+    <Content Include="Temalar\Ortak\GenelTema.html" />
+    <Content Include="Temalar\Ortak\GunuGelenTema.html" />
+    <Content Include="Temalar\Ortak\KrediYuklendiTema.html" />
+    <Content Include="Temalar\Ortak\MailTema.html" />
+    <Content Include="Temalar\Ortak\ServisBaslamaTema.html" />
+    <Content Include="Temalar\Ortak\ServisKararOnayTema.html" />
+    <Content Include="Temalar\Ortak\ServisKararTema.html" />
+    <Content Include="Temalar\Ortak\ServisSonlanmaTema.html" />
+    <Content Include="Temalar\Ortak\YaklasanKrediTema.html" />
+    <Content Include="Temalar\Ortak\TahsilatHaberTema.html" />
+    <Content Include="test.html" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Bundle.config" />
+    <Content Include="Scripts\jquery-2.1.3.min.map" />
+    <Content Include="Scripts\jquery.metisMenu.min.js.map" />
+    <Content Include="Scripts\siminta.min.js.map" />
+    <Content Include="Scripts\maps.google.polygon.containsLatLng.min.js.map">
+      <DependentUpon>maps.google.polygon.containsLatLng.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\v3_epoly.min.js.map">
+      <DependentUpon>v3_epoly.min.js</DependentUpon>
+    </Content>
+    <None Include="Service References\NetGsm\SMS.wsdl" />
+    <None Include="Service References\NetGsm\SMS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NetGsm\SMS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\NetGsm\TeknikServis.NetGsm.gelensmsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\NetGsm\TeknikServis.NetGsm.gondericiadlariResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\NetGsm\TeknikServis.NetGsm.krediResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\NetGsm\TeknikServis.NetGsm.paketkampanyaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\NetGsm\TeknikServis.NetGsm.raporResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\NetGsm\TeknikServis.NetGsm.rapor_v2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\NetGsm\TeknikServis.NetGsm.sms_gonder_1nResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\NetGsm\TeknikServis.NetGsm.sms_gonder_nnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebOn.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebOn.Debug.config">
+      <DependentUpon>WebOn.config</DependentUpon>
+    </Content>
+    <Content Include="WebOn.Release.config">
+      <DependentUpon>WebOn.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Giris.aspx.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Giris.aspx.designer.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSuper\AdminOlustur.aspx.cs">
+      <DependentUpon>AdminOlustur.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSuper\AdminOlustur.aspx.designer.cs">
+      <DependentUpon>AdminOlustur.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSuper\AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSuper\AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSuper\firma.cs">
+      <DependentUpon>firmaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSuper\Firmalar.aspx.cs">
+      <DependentUpon>Firmalar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSuper\Firmalar.aspx.designer.cs">
+      <DependentUpon>Firmalar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSuper\firmaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>firmaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSuper\firmaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>firmaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSuper\firmaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>firmaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSuper\Super.Master.cs">
+      <DependentUpon>Super.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSuper\Super.Master.designer.cs">
+      <DependentUpon>Super.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BayiAyarlari.aspx.cs">
+      <DependentUpon>BayiAyarlari.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BayiAyarlari.aspx.designer.cs">
+      <DependentUpon>BayiAyarlari.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BilgitapPanel.aspx.cs">
+      <DependentUpon>BilgitapPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BilgitapPanel.aspx.designer.cs">
+      <DependentUpon>BilgitapPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FaturaTasarim.aspx.cs">
+      <DependentUpon>FaturaTasarim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FaturaTasarim.aspx.designer.cs">
+      <DependentUpon>FaturaTasarim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MailAyarlari.aspx.cs">
+      <DependentUpon>MailAyarlari.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MailAyarlari.aspx.designer.cs">
+      <DependentUpon>MailAyarlari.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SmsAyarlari.aspx.cs">
+      <DependentUpon>SmsAyarlari.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SmsAyarlari.aspx.designer.cs">
+      <DependentUpon>SmsAyarlari.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Tasarimci.aspx.cs">
+      <DependentUpon>Tasarimci.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Tasarimci.aspx.designer.cs">
+      <DependentUpon>Tasarimci.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AntenController.cs" />
+    <Compile Include="Baski.aspx.cs">
+      <DependentUpon>Baski.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Baski.aspx.designer.cs">
+      <DependentUpon>Baski.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustQ.aspx.cs">
+      <DependentUpon>CustQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustQ.aspx.designer.cs">
+      <DependentUpon>CustQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Deneme.aspx.cs">
+      <DependentUpon>Deneme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deneme.aspx.designer.cs">
+      <DependentUpon>Deneme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LisansError.aspx.cs">
+      <DependentUpon>LisansError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LisansError.aspx.designer.cs">
+      <DependentUpon>LisansError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Baslangic.cs" />
+    <Compile Include="Models\Anten.cs" />
+    <Compile Include="MusteriantenController.cs" />
+    <Compile Include="MusteriDetayBilgileri.aspx.cs">
+      <DependentUpon>MusteriDetayBilgileri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusteriDetayBilgileri.aspx.designer.cs">
+      <DependentUpon>MusteriDetayBilgileri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Performans.cs" />
+    <Compile Include="Raporlar\RaporSorgu.aspx.cs">
+      <DependentUpon>RaporSorgu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Raporlar\RaporSorgu.aspx.designer.cs">
+      <DependentUpon>RaporSorgu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlar\TekRaporView.aspx.cs">
+      <DependentUpon>TekRaporView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Raporlar\TekRaporView.aspx.designer.cs">
+      <DependentUpon>TekRaporView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriservisController.cs" />
+    <Compile Include="Sonuc.aspx.cs">
+      <DependentUpon>Sonuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sonuc.aspx.designer.cs">
+      <DependentUpon>Sonuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikAlim\AlimDetaylar.aspx.cs">
+      <DependentUpon>AlimDetaylar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikAlim\AlimDetaylar.aspx.designer.cs">
+      <DependentUpon>AlimDetaylar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikAlim\Alimlar.aspx.cs">
+      <DependentUpon>Alimlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikAlim\Alimlar.aspx.designer.cs">
+      <DependentUpon>Alimlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikAlim\CihazGruplar.aspx.cs">
+      <DependentUpon>CihazGruplar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikAlim\CihazGruplar.aspx.designer.cs">
+      <DependentUpon>CihazGruplar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikAlim\MusteriUrunAra.aspx.cs">
+      <DependentUpon>MusteriUrunAra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikAlim\MusteriUrunAra.aspx.designer.cs">
+      <DependentUpon>MusteriUrunAra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikAlim\MusteriUrunler.aspx.cs">
+      <DependentUpon>MusteriUrunler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikAlim\MusteriUrunler.aspx.designer.cs">
+      <DependentUpon>MusteriUrunler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikAlim\Stoklar.aspx.cs">
+      <DependentUpon>Stoklar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikAlim\Stoklar.aspx.designer.cs">
+      <DependentUpon>Stoklar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\Bankalar.aspx.cs">
+      <DependentUpon>Bankalar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\Bankalar.aspx.designer.cs">
+      <DependentUpon>Bankalar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\Cekler.aspx.cs">
+      <DependentUpon>Cekler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\Cekler.aspx.designer.cs">
+      <DependentUpon>Cekler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\Hareketler.aspx.cs">
+      <DependentUpon>Hareketler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\Hareketler.aspx.designer.cs">
+      <DependentUpon>Hareketler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\KartExtre.aspx.cs">
+      <DependentUpon>KartExtre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\KartExtre.aspx.designer.cs">
+      <DependentUpon>KartExtre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\KartExtre2.aspx.cs">
+      <DependentUpon>KartExtre2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\KartExtre2.aspx.designer.cs">
+      <DependentUpon>KartExtre2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\KartExtreOdemeler.aspx.cs">
+      <DependentUpon>KartExtreOdemeler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\KartExtreOdemeler.aspx.designer.cs">
+      <DependentUpon>KartExtreOdemeler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\Kartlar.aspx.cs">
+      <DependentUpon>Kartlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\Kartlar.aspx.designer.cs">
+      <DependentUpon>Kartlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\Ode.aspx.cs">
+      <DependentUpon>Ode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\Ode.aspx.designer.cs">
+      <DependentUpon>Ode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\OdemeTahsilatlar.aspx.cs">
+      <DependentUpon>OdemeTahsilatlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\OdemeTahsilatlar.aspx.designer.cs">
+      <DependentUpon>OdemeTahsilatlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\Poslar.aspx.cs">
+      <DependentUpon>Poslar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\Poslar.aspx.designer.cs">
+      <DependentUpon>Poslar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikAlim\SatinAl.aspx.cs">
+      <DependentUpon>SatinAl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikAlim\SatinAl.aspx.designer.cs">
+      <DependentUpon>SatinAl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikFatura\FaturaBasim.aspx.cs">
+      <DependentUpon>FaturaBasim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikFatura\FaturaBasim.aspx.designer.cs">
+      <DependentUpon>FaturaBasim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikFatura\FaturaManuel.aspx.cs">
+      <DependentUpon>FaturaManuel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikFatura\FaturaManuel.aspx.designer.cs">
+      <DependentUpon>FaturaManuel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\Antenler.aspx.cs">
+      <DependentUpon>Antenler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\Antenler.aspx.designer.cs">
+      <DependentUpon>Antenler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\ButunAntenler.aspx.cs">
+      <DependentUpon>ButunAntenler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\ButunAntenler.aspx.designer.cs">
+      <DependentUpon>ButunAntenler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\ButunAntenMusteri.aspx.cs">
+      <DependentUpon>ButunAntenMusteri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\ButunAntenMusteri.aspx.designer.cs">
+      <DependentUpon>ButunAntenMusteri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\ButunAntenMusteri2.aspx.cs">
+      <DependentUpon>ButunAntenMusteri2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\ButunAntenMusteri2.aspx.designer.cs">
+      <DependentUpon>ButunAntenMusteri2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\ButunServisler.aspx.cs">
+      <DependentUpon>ButunServisler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\ButunServisler.aspx.designer.cs">
+      <DependentUpon>ButunServisler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\HaritaAntenKaydet.aspx.cs">
+      <DependentUpon>HaritaAntenKaydet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\HaritaAntenKaydet.aspx.designer.cs">
+      <DependentUpon>HaritaAntenKaydet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\HaritaAntenKaydet3.aspx.cs">
+      <DependentUpon>HaritaAntenKaydet3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\HaritaAntenKaydet3.aspx.designer.cs">
+      <DependentUpon>HaritaAntenKaydet3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\HaritaMusteriKaydetMobil.aspx.cs">
+      <DependentUpon>HaritaMusteriKaydetMobil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\HaritaMusteriKaydetMobil.aspx.designer.cs">
+      <DependentUpon>HaritaMusteriKaydetMobil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Ayarlar.aspx.cs">
+      <DependentUpon>Ayarlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Ayarlar.aspx.designer.cs">
+      <DependentUpon>Ayarlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kullanicilar.aspx.cs">
+      <DependentUpon>Kullanicilar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kullanicilar.aspx.designer.cs">
+      <DependentUpon>Kullanicilar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="TeknikHarita\ButunMusteriler.aspx.cs">
+      <DependentUpon>ButunMusteriler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\ButunMusteriler.aspx.designer.cs">
+      <DependentUpon>ButunMusteriler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\CariDetay.aspx.cs">
+      <DependentUpon>CariDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\CariDetay.aspx.designer.cs">
+      <DependentUpon>CariDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\CariHesapBorclu.aspx.cs">
+      <DependentUpon>CariHesapBorclu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\CariHesapBorclu.aspx.designer.cs">
+      <DependentUpon>CariHesapBorclu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\CariHesaplar.aspx.cs">
+      <DependentUpon>CariHesaplar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\CariHesaplar.aspx.designer.cs">
+      <DependentUpon>CariHesaplar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikEmanet\Emanetler.aspx.cs">
+      <DependentUpon>Emanetler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikEmanet\Emanetler.aspx.designer.cs">
+      <DependentUpon>Emanetler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikEmanet\EmanetVer.aspx.cs">
+      <DependentUpon>EmanetVer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikEmanet\EmanetVer.aspx.designer.cs">
+      <DependentUpon>EmanetVer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikEmanet\EmanetVerMusteri.aspx.cs">
+      <DependentUpon>EmanetVerMusteri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikEmanet\EmanetVerMusteri.aspx.designer.cs">
+      <DependentUpon>EmanetVerMusteri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\AletEdavat.cs" />
+    <Compile Include="Logic\ExportHelpercs.cs" />
+    <Compile Include="Logic\KullaniciIslem.cs" />
+    <Compile Include="Logic\PrintHelper.cs" />
+    <Compile Include="Logic\RoleActions.cs" />
+    <Compile Include="TeknikHarita\HaritaMusteriKaydet.aspx.cs">
+      <DependentUpon>HaritaMusteriKaydet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\HaritaMusteriKaydet.aspx.designer.cs">
+      <DependentUpon>HaritaMusteriKaydet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\HaritaTekMusteri.aspx.cs">
+      <DependentUpon>HaritaTekMusteri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\HaritaTekMusteri.aspx.designer.cs">
+      <DependentUpon>HaritaTekMusteri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="MesajGonder.aspx.cs">
+      <DependentUpon>MesajGonder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MesajGonder.aspx.designer.cs">
+      <DependentUpon>MesajGonder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Musterimiz.cs" />
+    <Compile Include="MusteriController.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Musteri.aspx.cs">
+      <DependentUpon>Musteri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Musteri.aspx.designer.cs">
+      <DependentUpon>Musteri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\HaritaTekMusteriKayitli.aspx.cs">
+      <DependentUpon>HaritaTekMusteriKayitli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\HaritaTekMusteriKayitli.aspx.designer.cs">
+      <DependentUpon>HaritaTekMusteriKayitli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\MusteriAnten.aspx.cs">
+      <DependentUpon>MusteriAnten.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\MusteriAnten.aspx.designer.cs">
+      <DependentUpon>MusteriAnten.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\MusteriAnten2.aspx.cs">
+      <DependentUpon>MusteriAnten2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\MusteriAnten2.aspx.designer.cs">
+      <DependentUpon>MusteriAnten2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\MusteriYolu.aspx.cs">
+      <DependentUpon>MusteriYolu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\MusteriYolu.aspx.designer.cs">
+      <DependentUpon>MusteriYolu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MySqlInitializer.cs" />
+    <Compile Include="TeknikCari\OdemeEkle.aspx.cs">
+      <DependentUpon>OdemeEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\OdemeEkle.aspx.designer.cs">
+      <DependentUpon>OdemeEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikCari\Odemeler.aspx.cs">
+      <DependentUpon>Odemeler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikCari\Odemeler.aspx.designer.cs">
+      <DependentUpon>Odemeler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Print.aspx.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print.aspx.designer.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeknikHarita\TekAnten.aspx.cs">
+      <DependentUpon>TekAnten.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\TekAnten.aspx.designer.cs">
+      <DependentUpon>TekAnten.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikHarita\TekAnten2.aspx.cs">
+      <DependentUpon>TekAnten2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikHarita\TekAnten2.aspx.designer.cs">
+      <DependentUpon>TekAnten2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikSatis\SatisListesi.aspx.cs">
+      <DependentUpon>SatisListesi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikSatis\SatisListesi.aspx.designer.cs">
+      <DependentUpon>SatisListesi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikSatis\PesinSatisFiyatli.aspx.cs">
+      <DependentUpon>PesinSatisFiyatli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikSatis\PesinSatisFiyatli.aspx.designer.cs">
+      <DependentUpon>PesinSatisFiyatli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikSatis\PesinSatis.aspx.cs">
+      <DependentUpon>PesinSatis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikSatis\PesinSatis.aspx.designer.cs">
+      <DependentUpon>PesinSatis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikTeknik\MusteriUrunAra.aspx.cs">
+      <DependentUpon>MusteriUrunAra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\MusteriUrunAra.aspx.designer.cs">
+      <DependentUpon>MusteriUrunAra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikTeknik\MusteriUrunler.aspx.cs">
+      <DependentUpon>MusteriUrunler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\MusteriUrunler.aspx.designer.cs">
+      <DependentUpon>MusteriUrunler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikTeknik\ResimKaydet.aspx.cs">
+      <DependentUpon>ResimKaydet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\ResimKaydet.aspx.designer.cs">
+      <DependentUpon>ResimKaydet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\NetGsm\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikTeknik\SatisEkle.aspx.cs">
+      <DependentUpon>SatisEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\SatisEkle.aspx.designer.cs">
+      <DependentUpon>SatisEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikTeknik\Servis.aspx.cs">
+      <DependentUpon>Servis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\Servis.aspx.designer.cs">
+      <DependentUpon>Servis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisDetay.aspx.cs">
+      <DependentUpon>ServisDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisDetay.aspx.designer.cs">
+      <DependentUpon>ServisDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisDetayList.aspx.cs">
+      <DependentUpon>ServisDetayList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisDetayList.aspx.designer.cs">
+      <DependentUpon>ServisDetayList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisEkle.aspx.cs">
+      <DependentUpon>ServisEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisEkle.aspx.designer.cs">
+      <DependentUpon>ServisEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisHesaplar.aspx.cs">
+      <DependentUpon>ServisHesaplar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisHesaplar.aspx.designer.cs">
+      <DependentUpon>ServisHesaplar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServislerCanli.aspx.cs">
+      <DependentUpon>ServislerCanli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServislerCanli.aspx.designer.cs">
+      <DependentUpon>ServislerCanli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="TeknikTeknik\ServisMaliyetler.aspx.cs">
+      <DependentUpon>ServisMaliyetler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisMaliyetler.aspx.designer.cs">
+      <DependentUpon>ServisMaliyetler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisPaketler.aspx.cs">
+      <DependentUpon>ServisPaketler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisPaketler.aspx.designer.cs">
+      <DependentUpon>ServisPaketler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisPaketleri.aspx.cs">
+      <DependentUpon>ServisPaketleri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisPaketleri.aspx.designer.cs">
+      <DependentUpon>ServisPaketleri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisTamirci.aspx.cs">
+      <DependentUpon>ServisTamirci.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeknikTeknik\ServisTamirci.aspx.designer.cs">
+      <DependentUpon>ServisTamirci.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Temalar\TOL\" />
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServisDAL\ServisDAL.csproj">
+      <Project>{f115947f-a6d2-4710-b92e-3a4e2e2101a4}</Project>
+      <Name>ServisDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeknikServis.Radius\Radius.csproj">
+      <Project>{3755f7c5-5a81-4912-beef-15dedd86ca97}</Project>
+      <Name>Radius</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\NetGsm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2250</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2250/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

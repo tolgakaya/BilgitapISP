@@ -1,0 +1,1505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9mqJCPcEFkGK8+3x7JDYJgAAAAACAAAAAAAQZgAAAAEAACAAAADvJmvi5PqyNePHF8tFzQzkkRJZVo4HToots01nPrTtJgAAAAAOgAAAAAIAACAAAAAW4bFYM44XqCT82vpIP9H3yT8PnzUMyfZkeUinGYaJkyAAAACnPfxb+kGQl78qZn0NxgPVv+S3JaGPaiBzMZ8S6LkmI0AAAAB911R932c6j8EIexcIo6QGsBIkVXfSKidwFeOK1z7Q5FyNrwjvl/YytXYyVekBb3NWP2BYkKOxKtOB/bxCO+lh</EncryptedPassword>
+    <_PublishTargetUrl>ftp://bilgitap.com/httpdocs</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Account/AddPhoneNumber.aspx">
+      <publishTime>08/21/2015 18:55:31</publishTime>
+    </File>
+    <File Include="Account/Confirm.aspx">
+      <publishTime>08/21/2015 18:55:42</publishTime>
+    </File>
+    <File Include="Account/Forgot.aspx">
+      <publishTime>08/21/2015 18:56:09</publishTime>
+    </File>
+    <File Include="Account/Giris.aspx">
+      <publishTime>01/17/2016 16:03:12</publishTime>
+    </File>
+    <File Include="Account/Lockout.aspx">
+      <publishTime>01/17/2016 16:02:23</publishTime>
+    </File>
+    <File Include="Account/Login.aspx">
+      <publishTime>08/21/2015 18:54:33</publishTime>
+    </File>
+    <File Include="Account/Manage.aspx">
+      <publishTime>01/17/2016 15:59:35</publishTime>
+    </File>
+    <File Include="Account/ManageLogins.aspx">
+      <publishTime>01/17/2016 16:02:23</publishTime>
+    </File>
+    <File Include="Account/ManagePassword.aspx">
+      <publishTime>11/30/2015 23:23:12</publishTime>
+    </File>
+    <File Include="Account/OpenAuthProviders.ascx">
+      <publishTime>04/22/2015 12:46:28</publishTime>
+    </File>
+    <File Include="Account/Register.aspx">
+      <publishTime>08/21/2015 18:57:47</publishTime>
+    </File>
+    <File Include="Account/RegisterExternalLogin.aspx">
+      <publishTime>08/21/2015 18:58:02</publishTime>
+    </File>
+    <File Include="Account/ResetPassword.aspx">
+      <publishTime>08/21/2015 18:58:15</publishTime>
+    </File>
+    <File Include="Account/ResetPasswordConfirmation.aspx">
+      <publishTime>08/21/2015 18:58:28</publishTime>
+    </File>
+    <File Include="Account/TwoFactorAuthenticationSignIn.aspx">
+      <publishTime>08/21/2015 18:58:44</publishTime>
+    </File>
+    <File Include="Account/VerifyPhoneNumber.aspx">
+      <publishTime>08/21/2015 18:58:56</publishTime>
+    </File>
+    <File Include="Account/Web.config">
+      <publishTime>09/09/2015 18:38:56</publishTime>
+    </File>
+    <File Include="Admin/Ayarlar.aspx">
+      <publishTime>03/14/2016 22:08:17</publishTime>
+    </File>
+    <File Include="Admin/BayiAyarlari.aspx">
+      <publishTime>12/04/2015 00:07:23</publishTime>
+    </File>
+    <File Include="Admin/Bayiler.aspx">
+      <publishTime>03/10/2016 11:04:25</publishTime>
+    </File>
+    <File Include="Admin/BilgitapPanel.aspx">
+      <publishTime>01/31/2016 22:18:52</publishTime>
+    </File>
+    <File Include="Admin/FaturaTasarim.aspx">
+      <publishTime>01/17/2016 16:02:24</publishTime>
+    </File>
+    <File Include="Admin/Kullanicilar.aspx">
+      <publishTime>01/17/2016 16:02:24</publishTime>
+    </File>
+    <File Include="Admin/KullaniciOlustur.aspx">
+      <publishTime>01/17/2016 16:02:24</publishTime>
+    </File>
+    <File Include="Admin/MailAyarlari.aspx">
+      <publishTime>01/17/2016 16:02:24</publishTime>
+    </File>
+    <File Include="Admin/Mudurler.aspx">
+      <publishTime>01/20/2016 14:46:50</publishTime>
+    </File>
+    <File Include="Admin/SmsAyarlari.aspx">
+      <publishTime>01/17/2016 16:02:24</publishTime>
+    </File>
+    <File Include="Admin/Tahsilatcilar.aspx">
+      <publishTime>01/17/2016 16:02:24</publishTime>
+    </File>
+    <File Include="Admin/Tasarimci.aspx">
+      <publishTime>01/10/2016 16:53:55</publishTime>
+    </File>
+    <File Include="Admin/Web.config">
+      <publishTime>01/08/2016 12:38:03</publishTime>
+    </File>
+    <File Include="AdminSuper/AdminOlustur.aspx">
+      <publishTime>01/17/2016 16:02:24</publishTime>
+    </File>
+    <File Include="AdminSuper/AdminPage.aspx">
+      <publishTime>01/17/2016 16:02:24</publishTime>
+    </File>
+    <File Include="Antenler.aspx">
+      <publishTime>09/11/2015 22:00:25</publishTime>
+    </File>
+    <File Include="Baski.aspx">
+      <publishTime>01/17/2016 16:02:25</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>04/22/2015 12:46:12</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
+      <publishTime>04/22/2015 16:30:29</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.jQuery.dll">
+      <publishTime>04/22/2015 16:30:44</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Data.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:05</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.DataAccess.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:11</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Office.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:21</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.PivotGrid.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Printing.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:21</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.RichEdit.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:41</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Sparkline.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:24</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.ASPxHtmlEditor.v15.1.resources.dll">
+      <publishTime>07/11/2015 21:42:56</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.ASPxSpellChecker.v15.1.resources.dll">
+      <publishTime>07/11/2015 21:42:58</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:42:57</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Xpo.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:31</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraCharts.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:33</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraGauges.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:34</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v15.1.Web.resources.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Charts.v15.1.Core.dll">
+      <publishTime>11/07/2015 21:43:33</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Data.v15.1.dll">
+      <publishTime>11/07/2015 21:43:05</publishTime>
+    </File>
+    <File Include="bin/DevExpress.DataAccess.v15.1.dll">
+      <publishTime>11/07/2015 21:43:11</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Office.v15.1.Core.dll">
+      <publishTime>11/07/2015 21:43:21</publishTime>
+    </File>
+    <File Include="bin/DevExpress.PivotGrid.v15.1.Core.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Printing.v15.1.Core.dll">
+      <publishTime>11/07/2015 21:43:21</publishTime>
+    </File>
+    <File Include="bin/DevExpress.RichEdit.v15.1.Core.dll">
+      <publishTime>11/07/2015 21:43:41</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Sparkline.v15.1.Core.dll">
+      <publishTime>11/07/2015 21:43:24</publishTime>
+    </File>
+    <File Include="bin/DevExpress.SpellChecker.v15.1.Core.dll">
+      <publishTime>07/11/2015 21:43:24</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxHtmlEditor.v15.1.dll">
+      <publishTime>07/11/2015 21:42:56</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxSpellChecker.v15.1.dll">
+      <publishTime>07/11/2015 21:42:58</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxThemes.v15.1.dll">
+      <publishTime>11/07/2015 21:43:00</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.v15.1.dll">
+      <publishTime>11/07/2015 21:42:58</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Xpo.v15.1.dll">
+      <publishTime>11/07/2015 21:43:31</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraCharts.v15.1.dll">
+      <publishTime>11/07/2015 21:43:33</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraGauges.v15.1.Core.dll">
+      <publishTime>11/07/2015 21:43:34</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v15.1.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v15.1.Web.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/22/2015 17:09:46</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/22/2015 17:09:46</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Data.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:05</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.DataAccess.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:13</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Office.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:21</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.PivotGrid.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Printing.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:21</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.RichEdit.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:41</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Sparkline.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:24</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.ASPxHtmlEditor.v15.1.resources.dll">
+      <publishTime>07/11/2015 21:42:56</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.ASPxSpellChecker.v15.1.resources.dll">
+      <publishTime>07/11/2015 21:42:58</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:42:58</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Xpo.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:31</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraCharts.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:33</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraGauges.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:34</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v15.1.Web.resources.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>05/07/2015 10:14:25</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Data.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:05</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.DataAccess.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:13</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Office.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:21</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.PivotGrid.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Printing.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:21</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.RichEdit.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:41</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Sparkline.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:24</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.ASPxHtmlEditor.v15.1.resources.dll">
+      <publishTime>07/11/2015 21:42:56</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.ASPxSpellChecker.v15.1.resources.dll">
+      <publishTime>07/11/2015 21:42:58</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:42:58</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Xpo.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:31</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraCharts.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:33</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraGauges.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:34</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v15.1.Web.resources.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
+      <publishTime>04/22/2015 12:46:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>04/22/2015 12:46:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>04/22/2015 12:46:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>04/22/2015 12:46:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Web.Optimization.WebForms.dll">
+      <publishTime>04/22/2015 12:46:23</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>04/22/2015 12:46:37</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>04/22/2015 12:46:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>04/22/2015 12:46:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>04/22/2015 12:46:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>04/22/2015 12:46:39</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>04/22/2015 12:46:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>04/22/2015 12:46:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>04/22/2015 12:46:43</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>04/22/2015 12:46:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.Common.dll">
+      <publishTime>12/29/2015 18:24:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.ProcessingObjectModel.DLL">
+      <publishTime>12/29/2015 18:24:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WebForms.dll">
+      <publishTime>12/29/2015 18:24:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.MSAjax.dll">
+      <publishTime>04/22/2015 12:46:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ScriptManager.WebForms.dll">
+      <publishTime>04/22/2015 12:46:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/22/2015 12:46:22</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>07/09/2015 16:02:09</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.Entity.EF6.dll">
+      <publishTime>07/09/2015 16:02:44</publishTime>
+    </File>
+    <File Include="bin/MySql.Web.dll">
+      <publishTime>07/09/2015 16:02:31</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/22/2015 12:46:13</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>04/22/2015 12:46:42</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Data.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:05</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.DataAccess.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:13</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Office.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:21</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.PivotGrid.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Printing.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:21</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.RichEdit.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:41</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Sparkline.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:24</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.ASPxHtmlEditor.v15.1.resources.dll">
+      <publishTime>07/11/2015 21:42:56</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.ASPxSpellChecker.v15.1.resources.dll">
+      <publishTime>07/11/2015 21:42:58</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:42:58</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Xpo.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:31</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraCharts.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:33</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraGauges.v15.1.Core.resources.dll">
+      <publishTime>11/07/2015 21:43:34</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraReports.v15.1.resources.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraReports.v15.1.Web.resources.dll">
+      <publishTime>11/07/2015 21:43:39</publishTime>
+    </File>
+    <File Include="bin/ServisDAL.dll">
+      <publishTime>04/19/2016 14:51:54</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>08/30/2015 17:47:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>08/30/2015 17:47:45</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Cors.dll">
+      <publishTime>08/30/2015 19:09:23</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>08/30/2015 17:47:45</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/05/2015 11:17:22</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>04/22/2015 12:46:15</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>04/22/2015 12:46:37</publishTime>
+    </File>
+    <File Include="bin/TeknikServis.dll">
+      <publishTime>04/19/2016 14:52:13</publishTime>
+    </File>
+    <File Include="bin/TeknikServis.Radius.dll">
+      <publishTime>04/15/2016 11:15:03</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>04/22/2015 12:46:11</publishTime>
+    </File>
+    <File Include="Bundle.config">
+      <publishTime>10/04/2015 20:29:05</publishTime>
+    </File>
+    <File Include="ButunAntenler.aspx">
+      <publishTime>08/30/2015 17:16:52</publishTime>
+    </File>
+    <File Include="ButunAntenMusteri.aspx">
+      <publishTime>08/30/2015 21:49:35</publishTime>
+    </File>
+    <File Include="ButunMusteriler.aspx">
+      <publishTime>08/30/2015 10:31:56</publishTime>
+    </File>
+    <File Include="CariDetay.aspx">
+      <publishTime>08/29/2015 03:32:48</publishTime>
+    </File>
+    <File Include="CariHesapBorclu.aspx">
+      <publishTime>08/29/2015 03:01:49</publishTime>
+    </File>
+    <File Include="CariHesaplar.aspx">
+      <publishTime>08/30/2015 10:44:09</publishTime>
+    </File>
+    <File Include="Content/alertify-bootstrap-3.css">
+      <publishTime>04/24/2015 00:42:58</publishTime>
+    </File>
+    <File Include="Content/alertify-bootstrap-3.min.css">
+      <publishTime>08/30/2015 00:23:32</publishTime>
+    </File>
+    <File Include="Content/alertify-bootstrap.css">
+      <publishTime>04/24/2015 00:42:58</publishTime>
+    </File>
+    <File Include="Content/alertify-bootstrap.min.css">
+      <publishTime>08/30/2015 00:23:37</publishTime>
+    </File>
+    <File Include="Content/alertify.css">
+      <publishTime>04/24/2015 00:42:58</publishTime>
+    </File>
+    <File Include="Content/alertify.min.css">
+      <publishTime>08/30/2015 00:23:51</publishTime>
+    </File>
+    <File Include="Content/bootstrap-colorpicker.css">
+      <publishTime>08/20/2015 16:13:03</publishTime>
+    </File>
+    <File Include="Content/bootstrap-colorpicker.min.css">
+      <publishTime>08/30/2015 00:04:38</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datetimepicker.css">
+      <publishTime>04/29/2015 19:46:45</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datetimepicker.min.css">
+      <publishTime>04/29/2015 19:46:43</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>04/22/2015 16:30:32</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>04/22/2015 16:30:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>04/22/2015 16:30:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>04/22/2015 16:33:34</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>04/22/2015 16:30:32</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>04/22/2015 16:33:34</publishTime>
+    </File>
+    <File Include="Content/bootstrap/alerts.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/badges.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/bootstrap.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/breadcrumbs.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/button-groups.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/buttons.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/carousel.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/close.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/code.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/component-animations.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/dropdowns.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/forms.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/glyphicons.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/grid.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/input-groups.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/jumbotron.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/labels.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/list-group.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/media.less">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/modals.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/navbar.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/navs.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/normalize.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/pager.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/pagination.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/panels.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/popovers.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/print.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/progress-bars.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/responsive-utilities.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/scaffolding.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/tables.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/theme.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/thumbnails.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/tooltip.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/type.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/utilities.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/variables.less">
+      <publishTime>04/29/2015 15:17:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap/wells.less">
+      <publishTime>04/29/2015 15:17:29</publishTime>
+    </File>
+    <File Include="Content/dropzone.css">
+      <publishTime>11/28/2015 16:26:26</publishTime>
+    </File>
+    <File Include="Content/font-awesome.css">
+      <publishTime>08/25/2015 01:28:28</publishTime>
+    </File>
+    <File Include="Content/font-awesome.min.css">
+      <publishTime>08/25/2015 01:28:28</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.eot">
+      <publishTime>08/25/2015 02:16:06</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.svg">
+      <publishTime>08/25/2015 02:16:06</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.ttf">
+      <publishTime>08/25/2015 02:16:06</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.woff">
+      <publishTime>08/25/2015 02:16:06</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.woff2">
+      <publishTime>08/25/2015 02:16:06</publishTime>
+    </File>
+    <File Include="Content/fonts/FontAwesome.otf">
+      <publishTime>08/25/2015 02:16:06</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/29/2015 15:17:29</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/29/2015 15:17:29</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/29/2015 15:17:29</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/29/2015 15:17:28</publishTime>
+    </File>
+    <File Include="Content/less/bootstrap-datetimepicker-build.less">
+      <publishTime>04/29/2015 15:17:32</publishTime>
+    </File>
+    <File Include="Content/less/_bootstrap-datetimepicker.less">
+      <publishTime>04/29/2015 15:17:32</publishTime>
+    </File>
+    <File Include="Content/main-style.css">
+      <publishTime>01/10/2016 01:01:06</publishTime>
+    </File>
+    <File Include="Content/main-style.min.css">
+      <publishTime>01/10/2016 01:01:06</publishTime>
+    </File>
+    <File Include="Content/pace-theme-big-counter.css">
+      <publishTime>04/22/2015 16:33:34</publishTime>
+    </File>
+    <File Include="Content/pace-theme-big-counter.min.css">
+      <publishTime>08/30/2015 00:24:32</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>08/29/2015 00:25:24</publishTime>
+    </File>
+    <File Include="Content/Site.min.css">
+      <publishTime>08/30/2015 00:24:38</publishTime>
+    </File>
+    <File Include="Content/social-buttons.css">
+      <publishTime>04/22/2015 16:33:34</publishTime>
+    </File>
+    <File Include="Content/style.css">
+      <publishTime>01/02/2016 00:25:55</publishTime>
+    </File>
+    <File Include="Content/style.min.css">
+      <publishTime>01/02/2016 01:47:39</publishTime>
+    </File>
+    <File Include="Content/timeline.css">
+      <publishTime>04/22/2015 16:33:34</publishTime>
+    </File>
+    <File Include="css/font-awesome.css">
+      <publishTime>08/30/2015 23:29:11</publishTime>
+    </File>
+    <File Include="css/font-awesome.min.css">
+      <publishTime>08/30/2015 23:29:10</publishTime>
+    </File>
+    <File Include="CustQ.aspx">
+      <publishTime>12/07/2015 16:39:37</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>01/02/2016 12:16:06</publishTime>
+    </File>
+    <File Include="Deneme.aspx">
+      <publishTime>04/10/2016 21:54:47</publishTime>
+    </File>
+    <File Include="DenemeRadius.aspx">
+      <publishTime>09/10/2015 20:38:45</publishTime>
+    </File>
+    <File Include="Emanetler.aspx">
+      <publishTime>08/30/2015 01:51:34</publishTime>
+    </File>
+    <File Include="EmanetVer.aspx">
+      <publishTime>08/28/2015 21:00:31</publishTime>
+    </File>
+    <File Include="EmanetVerMusteri.aspx">
+      <publishTime>08/30/2015 01:49:31</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/22/2015 12:45:47</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>08/30/2015 23:29:10</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>08/30/2015 23:29:10</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>08/30/2015 23:29:10</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>08/30/2015 23:29:10</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff2">
+      <publishTime>08/30/2015 23:29:10</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>08/30/2015 23:29:10</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/22/2015 16:30:31</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/22/2015 16:30:31</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/22/2015 16:30:31</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/22/2015 16:30:31</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>04/22/2015 16:30:31</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/22/2015 12:45:47</publishTime>
+    </File>
+    <File Include="HaritaAntenKaydet.aspx">
+      <publishTime>09/11/2015 22:04:13</publishTime>
+    </File>
+    <File Include="HaritaMusteriKaydet.aspx">
+      <publishTime>09/12/2015 01:29:56</publishTime>
+    </File>
+    <File Include="HaritaTekMusteri.aspx">
+      <publishTime>08/30/2015 22:32:30</publishTime>
+    </File>
+    <File Include="Icon.png">
+      <publishTime>04/22/2015 16:30:31</publishTime>
+    </File>
+    <File Include="img/ajax_loader_blue_64.gif">
+      <publishTime>08/30/2015 01:01:02</publishTime>
+    </File>
+    <File Include="img/anten.png">
+      <publishTime>08/11/2015 19:18:49</publishTime>
+    </File>
+    <File Include="img/anten2.png">
+      <publishTime>08/11/2015 19:19:34</publishTime>
+    </File>
+    <File Include="img/anten3.png">
+      <publishTime>08/11/2015 19:24:30</publishTime>
+    </File>
+    <File Include="img/find_user.png">
+      <publishTime>04/25/2015 00:34:30</publishTime>
+    </File>
+    <File Include="img/logo.png">
+      <publishTime>04/25/2015 23:18:14</publishTime>
+    </File>
+    <File Include="img/musteri.png">
+      <publishTime>08/11/2015 19:22:10</publishTime>
+    </File>
+    <File Include="img/musteri2.png">
+      <publishTime>08/11/2015 19:27:44</publishTime>
+    </File>
+    <File Include="img/user.jpg">
+      <publishTime>04/22/2015 16:55:09</publishTime>
+    </File>
+    <File Include="MasterPage.master">
+      <publishTime>04/12/2016 11:16:58</publishTime>
+    </File>
+    <File Include="MesajGonder.aspx">
+      <publishTime>02/19/2016 21:16:31</publishTime>
+    </File>
+    <File Include="Musteri.aspx">
+      <publishTime>02/12/2016 00:13:12</publishTime>
+    </File>
+    <File Include="MusteriDetayBilgileri.aspx">
+      <publishTime>04/09/2016 17:26:31</publishTime>
+    </File>
+    <File Include="MusteriYolu.aspx">
+      <publishTime>09/11/2015 23:46:39</publishTime>
+    </File>
+    <File Include="Notlarim.aspx">
+      <publishTime>02/06/2016 14:37:00</publishTime>
+    </File>
+    <File Include="OdemeEkle.aspx">
+      <publishTime>08/28/2015 20:48:58</publishTime>
+    </File>
+    <File Include="Odemeler.aspx">
+      <publishTime>08/29/2015 03:07:43</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>12/29/2015 18:25:48</publishTime>
+    </File>
+    <File Include="Print.aspx">
+      <publishTime>04/28/2015 17:42:36</publishTime>
+    </File>
+    <File Include="Raporlar/dsCustomerSchema.xsc">
+      <publishTime>11/06/2015 19:55:55</publishTime>
+    </File>
+    <File Include="Raporlar/dsCustomerSchema.xss">
+      <publishTime>11/06/2015 19:55:55</publishTime>
+    </File>
+    <File Include="Raporlar/dsEmanet.xsc">
+      <publishTime>11/24/2015 15:51:58</publishTime>
+    </File>
+    <File Include="Raporlar/dsEmanet.xss">
+      <publishTime>11/24/2015 15:51:58</publishTime>
+    </File>
+    <File Include="Raporlar/dsMakbuz.xsc">
+      <publishTime>11/13/2015 20:39:45</publishTime>
+    </File>
+    <File Include="Raporlar/dsMakbuz.xss">
+      <publishTime>11/13/2015 20:39:45</publishTime>
+    </File>
+    <File Include="Raporlar/RaporSorgu.aspx">
+      <publishTime>03/14/2016 21:40:33</publishTime>
+    </File>
+    <File Include="ResimKaydet.aspx">
+      <publishTime>08/26/2015 03:19:33</publishTime>
+    </File>
+    <File Include="Scripts/alertify.js">
+      <publishTime>08/29/2015 23:44:26</publishTime>
+    </File>
+    <File Include="Scripts/alertify.min.js">
+      <publishTime>08/29/2015 23:44:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-colorpicker.js">
+      <publishTime>08/20/2015 16:12:29</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-colorpicker.min.js">
+      <publishTime>08/29/2015 23:53:21</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-colorpicker.min.js.map">
+      <publishTime>08/29/2015 23:53:23</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datetimepicker.js">
+      <publishTime>04/29/2015 19:46:43</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datetimepicker.min.js">
+      <publishTime>04/29/2015 19:46:38</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>04/22/2015 16:30:31</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>04/22/2015 16:30:31</publishTime>
+    </File>
+    <File Include="Scripts/Dropzone.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Scripts/harita-anten-kaydet.js">
+      <publishTime>08/16/2015 23:58:15</publishTime>
+    </File>
+    <File Include="Scripts/harita-anten-kaydet.min.js">
+      <publishTime>11/17/2015 19:50:59</publishTime>
+    </File>
+    <File Include="Scripts/harita-anten-kaydet.min.js.map">
+      <publishTime>11/17/2015 19:51:01</publishTime>
+    </File>
+    <File Include="Scripts/harita-anten-kaydet2.js">
+      <publishTime>09/11/2015 22:52:59</publishTime>
+    </File>
+    <File Include="Scripts/harita-anten-kaydet2.min.js">
+      <publishTime>11/17/2015 19:51:08</publishTime>
+    </File>
+    <File Include="Scripts/harita-anten-kaydet2.min.js.map">
+      <publishTime>11/17/2015 19:51:09</publishTime>
+    </File>
+    <File Include="Scripts/harita-anten-musteri.js">
+      <publishTime>11/25/2015 20:50:56</publishTime>
+    </File>
+    <File Include="Scripts/harita-anten-musteri.min.js">
+      <publishTime>11/25/2015 20:51:09</publishTime>
+    </File>
+    <File Include="Scripts/harita-anten-musteri.min.js.map">
+      <publishTime>11/25/2015 20:51:10</publishTime>
+    </File>
+    <File Include="Scripts/harita-antenler.js">
+      <publishTime>11/25/2015 20:44:22</publishTime>
+    </File>
+    <File Include="Scripts/harita-antenler.min.js">
+      <publishTime>11/25/2015 20:45:21</publishTime>
+    </File>
+    <File Include="Scripts/harita-antenler.min.js.map">
+      <publishTime>11/25/2015 20:45:22</publishTime>
+    </File>
+    <File Include="Scripts/harita-musteri-kaydet-mobil.js">
+      <publishTime>11/14/2015 13:54:24</publishTime>
+    </File>
+    <File Include="Scripts/harita-musteri-kaydet-mobil.min.js">
+      <publishTime>11/17/2015 19:51:41</publishTime>
+    </File>
+    <File Include="Scripts/harita-musteri-kaydet-mobil.min.js.map">
+      <publishTime>11/17/2015 19:51:42</publishTime>
+    </File>
+    <File Include="Scripts/harita-musteri-kaydet.js">
+      <publishTime>11/14/2015 11:44:32</publishTime>
+    </File>
+    <File Include="Scripts/harita-musteri-kaydet.min.js">
+      <publishTime>11/17/2015 19:51:48</publishTime>
+    </File>
+    <File Include="Scripts/harita-musteri-kaydet.min.js.map">
+      <publishTime>11/17/2015 19:51:49</publishTime>
+    </File>
+    <File Include="Scripts/harita-musteriler.js">
+      <publishTime>11/25/2015 20:44:21</publishTime>
+    </File>
+    <File Include="Scripts/harita-musteriler.min.js">
+      <publishTime>11/25/2015 20:45:05</publishTime>
+    </File>
+    <File Include="Scripts/harita-musteriler.min.js.map">
+      <publishTime>11/25/2015 20:45:06</publishTime>
+    </File>
+    <File Include="Scripts/harita-tek-anten.js">
+      <publishTime>11/25/2015 20:44:21</publishTime>
+    </File>
+    <File Include="Scripts/harita-tek-anten.min.js">
+      <publishTime>11/25/2015 20:44:52</publishTime>
+    </File>
+    <File Include="Scripts/harita-tek-anten.min.js.map">
+      <publishTime>11/25/2015 20:44:53</publishTime>
+    </File>
+    <File Include="Scripts/harita-tek-musteri.js">
+      <publishTime>11/25/2015 20:44:14</publishTime>
+    </File>
+    <File Include="Scripts/harita-tek-musteri.min.js">
+      <publishTime>11/25/2015 20:44:39</publishTime>
+    </File>
+    <File Include="Scripts/harita-tek-musteri.min.js.map">
+      <publishTime>11/25/2015 20:44:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.3.js">
+      <publishTime>04/22/2015 16:30:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.3.min.js">
+      <publishTime>04/22/2015 16:30:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.3.min.map">
+      <publishTime>04/22/2015 16:30:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery.metisMenu.js">
+      <publishTime>04/22/2015 16:32:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery.metisMenu.min.js">
+      <publishTime>04/22/2015 16:32:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery.metisMenu.min.js.map">
+      <publishTime>04/22/2015 16:32:28</publishTime>
+    </File>
+    <File Include="Scripts/less-1.4.1.min.js">
+      <publishTime>04/29/2015 15:17:09</publishTime>
+    </File>
+    <File Include="Scripts/maps.google.polygon.containsLatLng.js">
+      <publishTime>08/13/2015 13:59:51</publishTime>
+    </File>
+    <File Include="Scripts/maps.google.polygon.containsLatLng.min.js">
+      <publishTime>08/30/2015 00:22:27</publishTime>
+    </File>
+    <File Include="Scripts/maps.google.polygon.containsLatLng.min.js.map">
+      <publishTime>08/30/2015 00:22:28</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>04/22/2015 12:46:08</publishTime>
+    </File>
+    <File Include="Scripts/moment-with-locales.js">
+      <publishTime>04/29/2015 15:17:32</publishTime>
+    </File>
+    <File Include="Scripts/moment-with-locales.min.js">
+      <publishTime>04/29/2015 15:17:31</publishTime>
+    </File>
+    <File Include="Scripts/moment.js">
+      <publishTime>04/29/2015 15:17:32</publishTime>
+    </File>
+    <File Include="Scripts/moment.min.js">
+      <publishTime>04/29/2015 15:17:32</publishTime>
+    </File>
+    <File Include="Scripts/npm.js">
+      <publishTime>04/22/2015 16:30:31</publishTime>
+    </File>
+    <File Include="Scripts/pace.js">
+      <publishTime>08/29/2015 22:47:01</publishTime>
+    </File>
+    <File Include="Scripts/pace.min.js">
+      <publishTime>08/29/2015 22:47:01</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>04/22/2015 12:46:07</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>04/22/2015 12:46:07</publishTime>
+    </File>
+    <File Include="Scripts/siminta.js">
+      <publishTime>08/29/2015 23:35:26</publishTime>
+    </File>
+    <File Include="Scripts/siminta.min.js">
+      <publishTime>08/29/2015 23:35:08</publishTime>
+    </File>
+    <File Include="Scripts/siminta.min.js.map">
+      <publishTime>08/29/2015 23:35:26</publishTime>
+    </File>
+    <File Include="Scripts/Tasarim/ace.js">
+      <publishTime>01/08/2016 11:12:27</publishTime>
+    </File>
+    <File Include="Scripts/Tasarim/knockout-3.4.0.js">
+      <publishTime>01/08/2016 11:06:32</publishTime>
+    </File>
+    <File Include="Scripts/v3_epoly.js">
+      <publishTime>08/07/2015 18:37:34</publishTime>
+    </File>
+    <File Include="Scripts/v3_epoly.min.js">
+      <publishTime>08/30/2015 00:22:55</publishTime>
+    </File>
+    <File Include="Scripts/v3_epoly.min.js.map">
+      <publishTime>08/30/2015 00:22:55</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/DetailsView.js">
+      <publishTime>04/22/2015 12:46:20</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/Focus.js">
+      <publishTime>04/22/2015 12:46:20</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/GridView.js">
+      <publishTime>04/22/2015 12:46:20</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/Menu.js">
+      <publishTime>04/22/2015 12:46:20</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MenuStandards.js">
+      <publishTime>04/22/2015 12:46:20</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjax.js">
+      <publishTime>04/22/2015 12:46:19</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxApplicationServices.js">
+      <publishTime>04/22/2015 12:46:19</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxComponentModel.js">
+      <publishTime>04/22/2015 12:46:19</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxCore.js">
+      <publishTime>04/22/2015 12:46:19</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxGlobalization.js">
+      <publishTime>04/22/2015 12:46:19</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxHistory.js">
+      <publishTime>04/22/2015 12:46:19</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxNetwork.js">
+      <publishTime>04/22/2015 12:46:19</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxSerialization.js">
+      <publishTime>04/22/2015 12:46:19</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxTimer.js">
+      <publishTime>04/22/2015 12:46:19</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxWebForms.js">
+      <publishTime>04/22/2015 12:46:19</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/MSAjax/MicrosoftAjaxWebServices.js">
+      <publishTime>04/22/2015 12:46:19</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/SmartNav.js">
+      <publishTime>04/22/2015 12:46:20</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/TreeView.js">
+      <publishTime>04/22/2015 12:46:20</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebForms.js">
+      <publishTime>04/22/2015 12:46:20</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebParts.js">
+      <publishTime>04/22/2015 12:46:20</publishTime>
+    </File>
+    <File Include="Scripts/WebForms/WebUIValidation.js">
+      <publishTime>04/22/2015 12:46:20</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>01/08/2016 11:23:14</publishTime>
+    </File>
+    <File Include="Service References/NetGsm/TeknikServis.NetGsm.gelensmsResponse.datasource">
+      <publishTime>10/29/2015 00:11:51</publishTime>
+    </File>
+    <File Include="Service References/NetGsm/TeknikServis.NetGsm.gondericiadlariResponse.datasource">
+      <publishTime>10/29/2015 00:11:56</publishTime>
+    </File>
+    <File Include="Service References/NetGsm/TeknikServis.NetGsm.krediResponse.datasource">
+      <publishTime>10/29/2015 00:11:53</publishTime>
+    </File>
+    <File Include="Service References/NetGsm/TeknikServis.NetGsm.paketkampanyaResponse.datasource">
+      <publishTime>10/29/2015 00:11:54</publishTime>
+    </File>
+    <File Include="Service References/NetGsm/TeknikServis.NetGsm.raporResponse.datasource">
+      <publishTime>10/29/2015 00:11:55</publishTime>
+    </File>
+    <File Include="Service References/NetGsm/TeknikServis.NetGsm.rapor_v2Response.datasource">
+      <publishTime>10/29/2015 00:11:56</publishTime>
+    </File>
+    <File Include="Service References/NetGsm/TeknikServis.NetGsm.sms_gonder_1nResponse.datasource">
+      <publishTime>10/29/2015 00:11:53</publishTime>
+    </File>
+    <File Include="Service References/NetGsm/TeknikServis.NetGsm.sms_gonder_nnResponse.datasource">
+      <publishTime>10/29/2015 00:11:52</publishTime>
+    </File>
+    <File Include="ServisBelgesi.aspx">
+      <publishTime>04/28/2015 22:19:55</publishTime>
+    </File>
+    <File Include="ServisDetay.aspx">
+      <publishTime>02/09/2015 22:38:21</publishTime>
+    </File>
+    <File Include="ServisDetayList.aspx">
+      <publishTime>08/28/2015 12:10:38</publishTime>
+    </File>
+    <File Include="ServisEkle.aspx">
+      <publishTime>07/09/2015 17:42:47</publishTime>
+    </File>
+    <File Include="ServisHesapEkle.aspx">
+      <publishTime>08/28/2015 16:46:56</publishTime>
+    </File>
+    <File Include="ServisHesaplar.aspx">
+      <publishTime>08/30/2015 01:51:12</publishTime>
+    </File>
+    <File Include="ServislerCanli.aspx">
+      <publishTime>08/30/2015 01:51:25</publishTime>
+    </File>
+    <File Include="Site.Mobile.Master">
+      <publishTime>04/22/2015 12:46:25</publishTime>
+    </File>
+    <File Include="Sonuc.aspx">
+      <publishTime>02/03/2016 14:57:14</publishTime>
+    </File>
+    <File Include="TekAnten.aspx">
+      <publishTime>08/30/2015 23:41:17</publishTime>
+    </File>
+    <File Include="TeknikAlim/AlimDetaylar.aspx">
+      <publishTime>03/14/2016 21:56:22</publishTime>
+    </File>
+    <File Include="TeknikAlim/Alimlar.aspx">
+      <publishTime>03/14/2016 21:56:22</publishTime>
+    </File>
+    <File Include="TeknikAlim/MusteriUrunAra.aspx">
+      <publishTime>01/17/2016 16:02:28</publishTime>
+    </File>
+    <File Include="TeknikAlim/MusteriUrunler.aspx">
+      <publishTime>01/17/2016 16:02:28</publishTime>
+    </File>
+    <File Include="TeknikAlim/SatinAl.aspx">
+      <publishTime>03/14/2016 21:56:22</publishTime>
+    </File>
+    <File Include="TeknikAlim/Stoklar.aspx">
+      <publishTime>02/29/2016 21:45:09</publishTime>
+    </File>
+    <File Include="TeknikBayi/BayiCari.aspx">
+      <publishTime>03/11/2016 23:58:07</publishTime>
+    </File>
+    <File Include="TeknikBayi/BayiDetayBilgileri.aspx">
+      <publishTime>03/14/2016 21:56:21</publishTime>
+    </File>
+    <File Include="TeknikBayi/BayiHareketleri.aspx">
+      <publishTime>03/15/2016 00:14:43</publishTime>
+    </File>
+    <File Include="TeknikBayi/Bayiler.aspx">
+      <publishTime>03/10/2016 16:41:49</publishTime>
+    </File>
+    <File Include="TeknikCari/Bankalar.aspx">
+      <publishTime>01/17/2016 16:02:29</publishTime>
+    </File>
+    <File Include="TeknikCari/CariDetay.aspx">
+      <publishTime>04/09/2016 17:10:40</publishTime>
+    </File>
+    <File Include="TeknikCari/CariHesapBorclu.aspx">
+      <publishTime>02/11/2016 22:47:58</publishTime>
+    </File>
+    <File Include="TeknikCari/CariHesaplar.aspx">
+      <publishTime>02/12/2016 15:37:56</publishTime>
+    </File>
+    <File Include="TeknikCari/Cekler.aspx">
+      <publishTime>01/17/2016 16:02:29</publishTime>
+    </File>
+    <File Include="TeknikCari/Faturalar.aspx">
+      <publishTime>01/17/2016 16:02:29</publishTime>
+    </File>
+    <File Include="TeknikCari/Hareketler.aspx">
+      <publishTime>03/14/2016 21:56:21</publishTime>
+    </File>
+    <File Include="TeknikCari/KartExtre.aspx">
+      <publishTime>03/14/2016 21:56:21</publishTime>
+    </File>
+    <File Include="TeknikCari/KartExtre2.aspx">
+      <publishTime>04/14/2016 18:40:23</publishTime>
+    </File>
+    <File Include="TeknikCari/KartExtreOdemeler.aspx">
+      <publishTime>04/13/2016 21:56:52</publishTime>
+    </File>
+    <File Include="TeknikCari/Kartlar.aspx">
+      <publishTime>04/14/2016 18:09:14</publishTime>
+    </File>
+    <File Include="TeknikCari/Ode.aspx">
+      <publishTime>04/11/2016 16:39:50</publishTime>
+    </File>
+    <File Include="TeknikCari/OdemeEkle.aspx">
+      <publishTime>03/16/2016 11:29:29</publishTime>
+    </File>
+    <File Include="TeknikCari/Odemeler.aspx">
+      <publishTime>04/09/2016 17:40:32</publishTime>
+    </File>
+    <File Include="TeknikCari/OdemeTahsilatlar.aspx">
+      <publishTime>04/09/2016 17:40:32</publishTime>
+    </File>
+    <File Include="TeknikCari/Poslar.aspx">
+      <publishTime>01/17/2016 19:49:11</publishTime>
+    </File>
+    <File Include="TeknikEmanet/Emanetler.aspx">
+      <publishTime>01/17/2016 18:20:46</publishTime>
+    </File>
+    <File Include="TeknikEmanet/EmanetVer.aspx">
+      <publishTime>01/17/2016 16:02:30</publishTime>
+    </File>
+    <File Include="TeknikEmanet/EmanetVerMusteri.aspx">
+      <publishTime>01/17/2016 16:02:30</publishTime>
+    </File>
+    <File Include="TeknikFatura/FaturaBasim.aspx">
+      <publishTime>03/30/2016 16:00:53</publishTime>
+    </File>
+    <File Include="TeknikFatura/FaturaManuel.aspx">
+      <publishTime>01/17/2016 16:02:30</publishTime>
+    </File>
+    <File Include="TeknikHarita/Antenler.aspx">
+      <publishTime>01/17/2016 18:20:46</publishTime>
+    </File>
+    <File Include="TeknikHarita/ButunAntenler.aspx">
+      <publishTime>12/08/2015 23:00:31</publishTime>
+    </File>
+    <File Include="TeknikHarita/ButunAntenMusteri.aspx">
+      <publishTime>11/25/2015 20:20:54</publishTime>
+    </File>
+    <File Include="TeknikHarita/ButunMusteriler.aspx">
+      <publishTime>11/25/2015 20:22:50</publishTime>
+    </File>
+    <File Include="TeknikHarita/HaritaAntenKaydet.aspx">
+      <publishTime>11/25/2015 20:24:54</publishTime>
+    </File>
+    <File Include="TeknikHarita/HaritaMusteriKaydet.aspx">
+      <publishTime>11/25/2015 20:28:54</publishTime>
+    </File>
+    <File Include="TeknikHarita/HaritaMusteriKaydetMobil.aspx">
+      <publishTime>11/18/2015 00:26:40</publishTime>
+    </File>
+    <File Include="TeknikHarita/HaritaTekMusteri.aspx">
+      <publishTime>11/25/2015 20:30:39</publishTime>
+    </File>
+    <File Include="TeknikHarita/MusteriYolu.aspx">
+      <publishTime>11/27/2015 16:45:54</publishTime>
+    </File>
+    <File Include="TeknikHarita/TekAnten.aspx">
+      <publishTime>11/25/2015 20:39:17</publishTime>
+    </File>
+    <File Include="TeknikTahsilatci/Manage.aspx">
+      <publishTime>11/30/2015 23:44:22</publishTime>
+    </File>
+    <File Include="TeknikTahsilatci/ManagePassword.aspx">
+      <publishTime>11/30/2015 23:24:02</publishTime>
+    </File>
+    <File Include="TeknikTahsilatci/Tahsilat.Master">
+      <publishTime>01/10/2016 17:15:38</publishTime>
+    </File>
+    <File Include="TeknikTahsilatci/TahsilatBelgesi.aspx">
+      <publishTime>01/10/2016 15:49:49</publishTime>
+    </File>
+    <File Include="TeknikTahsilatci/TahsilatEkle.aspx">
+      <publishTime>01/10/2016 12:47:55</publishTime>
+    </File>
+    <File Include="TeknikTahsilatci/TahsilatlarFG.aspx">
+      <publishTime>03/14/2016 21:56:17</publishTime>
+    </File>
+    <File Include="TeknikTahsilatci/Tahsilatlarim.aspx">
+      <publishTime>03/14/2016 22:01:14</publishTime>
+    </File>
+    <File Include="TeknikTahsilatci/TahsilatTamamla.aspx">
+      <publishTime>11/28/2015 22:24:23</publishTime>
+    </File>
+    <File Include="TeknikTahsilatci/TeslimRaporu.aspx">
+      <publishTime>11/29/2015 10:45:48</publishTime>
+    </File>
+    <File Include="TeknikTeknik/MusteriUrunAra.aspx">
+      <publishTime>01/17/2016 16:02:31</publishTime>
+    </File>
+    <File Include="TeknikTeknik/MusteriUrunler.aspx">
+      <publishTime>03/14/2016 22:02:55</publishTime>
+    </File>
+    <File Include="TeknikTeknik/ResimKaydet.aspx">
+      <publishTime>08/26/2015 03:19:33</publishTime>
+    </File>
+    <File Include="TeknikTeknik/SatisEkle.aspx">
+      <publishTime>03/14/2016 22:01:44</publishTime>
+    </File>
+    <File Include="TeknikTeknik/ServisBelgesi.aspx">
+      <publishTime>01/17/2016 16:02:31</publishTime>
+    </File>
+    <File Include="TeknikTeknik/ServisDetay.aspx">
+      <publishTime>01/17/2016 16:02:31</publishTime>
+    </File>
+    <File Include="TeknikTeknik/ServisDetayList.aspx">
+      <publishTime>02/13/2016 00:00:48</publishTime>
+    </File>
+    <File Include="TeknikTeknik/ServisEkle.aspx">
+      <publishTime>03/29/2016 15:33:52</publishTime>
+    </File>
+    <File Include="TeknikTeknik/ServisHesapEkle.aspx">
+      <publishTime>03/14/2016 22:02:54</publishTime>
+    </File>
+    <File Include="TeknikTeknik/ServisHesaplar.aspx">
+      <publishTime>03/14/2016 22:02:54</publishTime>
+    </File>
+    <File Include="TeknikTeknik/ServislerCanli.aspx">
+      <publishTime>02/10/2016 15:34:29</publishTime>
+    </File>
+    <File Include="TeknikTeknik/ServisPaketler.aspx">
+      <publishTime>01/20/2016 11:03:56</publishTime>
+    </File>
+    <File Include="TeknikTeknik/ServisPaketleri.aspx">
+      <publishTime>01/20/2016 11:47:57</publishTime>
+    </File>
+    <File Include="Temalar/Ortak/GenelTema.html">
+      <publishTime>11/30/2015 15:23:14</publishTime>
+    </File>
+    <File Include="Temalar/Ortak/GunuGelenTema.html">
+      <publishTime>11/30/2015 13:39:23</publishTime>
+    </File>
+    <File Include="Temalar/Ortak/KrediYuklendiTema.html">
+      <publishTime>11/29/2015 17:49:28</publishTime>
+    </File>
+    <File Include="Temalar/Ortak/MailTema.html">
+      <publishTime>11/30/2015 15:25:27</publishTime>
+    </File>
+    <File Include="Temalar/Ortak/ServisBaslamaTema.html">
+      <publishTime>11/29/2015 18:44:46</publishTime>
+    </File>
+    <File Include="Temalar/Ortak/ServisKararOnayTema.html">
+      <publishTime>11/29/2015 19:24:07</publishTime>
+    </File>
+    <File Include="Temalar/Ortak/ServisKararTema.html">
+      <publishTime>11/29/2015 19:19:39</publishTime>
+    </File>
+    <File Include="Temalar/Ortak/ServisSonlanmaTema.html">
+      <publishTime>11/29/2015 21:07:36</publishTime>
+    </File>
+    <File Include="Temalar/Ortak/TahsilatHaberTema.html">
+      <publishTime>11/30/2015 11:19:01</publishTime>
+    </File>
+    <File Include="Temalar/Ortak/YaklasanKrediTema.html">
+      <publishTime>11/30/2015 13:39:08</publishTime>
+    </File>
+    <File Include="ViewSwitcher.ascx">
+      <publishTime>04/22/2015 12:46:25</publishTime>
+    </File>
+    <File Include="Web - local.config">
+      <publishTime>12/28/2015 22:07:05</publishTime>
+    </File>
+    <File Include="Web - local.Debug.config">
+      <publishTime>12/28/2015 22:07:05</publishTime>
+    </File>
+    <File Include="Web - local.Release.config">
+      <publishTime>12/28/2015 22:07:05</publishTime>
+    </File>
+    <File Include="Web-.config">
+      <publishTime>01/05/2016 02:03:11</publishTime>
+    </File>
+    <File Include="web-cros.config">
+      <publishTime>08/30/2015 19:08:13</publishTime>
+    </File>
+    <File Include="web-cros.Debug.config">
+      <publishTime>08/30/2015 19:08:13</publishTime>
+    </File>
+    <File Include="web-cros.Release.config">
+      <publishTime>08/30/2015 19:08:13</publishTime>
+    </File>
+    <File Include="Web-local.config">
+      <publishTime>01/10/2016 12:58:12</publishTime>
+    </File>
+    <File Include="Web-local.Debug.config">
+      <publishTime>12/28/2015 22:07:05</publishTime>
+    </File>
+    <File Include="Web-local.Release.config">
+      <publishTime>12/28/2015 22:07:05</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/07/2016 16:30:02</publishTime>
+    </File>
+    <File Include="WebLoc.config">
+      <publishTime>03/18/2016 13:39:03</publishTime>
+    </File>
+    <File Include="WebLoc.Debug.config">
+      <publishTime>12/28/2015 22:07:05</publishTime>
+    </File>
+    <File Include="WebLoc.Release.config">
+      <publishTime>12/28/2015 22:07:05</publishTime>
+    </File>
+    <File Include="WebLocal.config">
+      <publishTime>03/18/2016 13:39:03</publishTime>
+    </File>
+    <File Include="WebLocal.Debug.config">
+      <publishTime>12/28/2015 22:07:05</publishTime>
+    </File>
+    <File Include="WebLocal.Release.config">
+      <publishTime>12/28/2015 22:07:05</publishTime>
+    </File>
+    <File Include="WeboN.config">
+      <publishTime>01/25/2016 15:39:41</publishTime>
+    </File>
+    <File Include="WeboN.Debug.config">
+      <publishTime>01/09/2016 16:51:06</publishTime>
+    </File>
+    <File Include="WeboN.Release.config">
+      <publishTime>01/09/2016 16:51:06</publishTime>
+    </File>
+    <File Include="Web_local.config">
+      <publishTime>01/11/2016 11:42:18</publishTime>
+    </File>
+    <File Include="Web_local.Debug.config">
+      <publishTime>12/28/2015 22:07:05</publishTime>
+    </File>
+    <File Include="Web_local.Release.config">
+      <publishTime>12/28/2015 22:07:05</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

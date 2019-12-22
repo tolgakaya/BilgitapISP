@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="radiusModelStoreContainer" CdmEntityContainer="radiusEntities">
+    <EntitySetMapping Name="alim_detays">
+      <EntityTypeMapping TypeName="radiusModel.alim_detays">
+        <MappingFragment StoreEntitySet="alim_detays">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="yekun" ColumnName="yekun" />
+          <ScalarProperty Name="kdv" ColumnName="kdv" />
+          <ScalarProperty Name="tutar" ColumnName="tutar" />
+          <ScalarProperty Name="adet" ColumnName="adet" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="cihaz_adi" ColumnName="cihaz_adi" />
+          <ScalarProperty Name="cihaz_id" ColumnName="cihaz_id" />
+          <ScalarProperty Name="cust_id" ColumnName="cust_id" />
+          <ScalarProperty Name="alim_id" ColumnName="alim_id" />
+          <ScalarProperty Name="detay_id" ColumnName="detay_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="alims">
+      <EntityTypeMapping TypeName="radiusModel.alim">
+        <MappingFragment StoreEntitySet="alims">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="toplam_yekun" ColumnName="toplam_yekun" />
+          <ScalarProperty Name="toplam_kdv" ColumnName="toplam_kdv" />
+          <ScalarProperty Name="toplam_tutar" ColumnName="toplam_tutar" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="belge_no" ColumnName="belge_no" />
+          <ScalarProperty Name="alim_tarih" ColumnName="alim_tarih" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="konu" ColumnName="konu" />
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+          <ScalarProperty Name="alim_id" ColumnName="alim_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ayargenels">
+      <EntityTypeMapping TypeName="radiusModel.ayargenel">
+        <MappingFragment StoreEntitySet="ayargenels">
+          <ScalarProperty Name="cift_taraf" ColumnName="cift_taraf" />
+          <ScalarProperty Name="lisanstarih" ColumnName="lisanstarih" />
+          <ScalarProperty Name="sonfatura" ColumnName="sonfatura" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="fifo" ColumnName="fifo" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ayars">
+      <EntityTypeMapping TypeName="radiusModel.ayar">
+        <MappingFragment StoreEntitySet="ayars">
+          <ScalarProperty Name="gonderen" ColumnName="gonderen" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="tur" ColumnName="tur" />
+          <ScalarProperty Name="aktif_adres" ColumnName="aktif_adres" />
+          <ScalarProperty Name="Mail_Kimden" ColumnName="Mail_Kimden" />
+          <ScalarProperty Name="Mail_PW" ColumnName="Mail_PW" />
+          <ScalarProperty Name="Mail_UserName" ColumnName="Mail_UserName" />
+          <ScalarProperty Name="Mail_Port" ColumnName="Mail_Port" />
+          <ScalarProperty Name="Mail_Server" ColumnName="Mail_Server" />
+          <ScalarProperty Name="Ayar_ID" ColumnName="Ayar_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bankas">
+      <EntityTypeMapping TypeName="radiusModel.banka">
+        <MappingFragment StoreEntitySet="bankas">
+          <ScalarProperty Name="bakiye" ColumnName="bakiye" />
+          <ScalarProperty Name="cikis" ColumnName="cikis" />
+          <ScalarProperty Name="giris" ColumnName="giris" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="banka_adi" ColumnName="banka_adi" />
+          <ScalarProperty Name="banka_id" ColumnName="banka_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="carihesaps">
+      <EntityTypeMapping TypeName="radiusModel.carihesap">
+        <MappingFragment StoreEntitySet="carihesaps">
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="son_mesaj" ColumnName="son_mesaj" />
+          <ScalarProperty Name="kullanici" ColumnName="kullanici" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="ToplamBakiye" ColumnName="ToplamBakiye" />
+          <ScalarProperty Name="NetAlacak" ColumnName="NetAlacak" />
+          <ScalarProperty Name="ToplamOdedigimiz" ColumnName="ToplamOdedigimiz" />
+          <ScalarProperty Name="ToplamAlacak" ColumnName="ToplamAlacak" />
+          <ScalarProperty Name="NetBorc" ColumnName="NetBorc" />
+          <ScalarProperty Name="ToplamOdenen" ColumnName="ToplamOdenen" />
+          <ScalarProperty Name="ToplamBorc" ColumnName="ToplamBorc" />
+          <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cekhesaps">
+      <EntityTypeMapping TypeName="radiusModel.cekhesap">
+        <MappingFragment StoreEntitySet="cekhesaps">
+          <ScalarProperty Name="islem" ColumnName="islem" />
+          <ScalarProperty Name="kasa_id" ColumnName="kasa_id" />
+          <ScalarProperty Name="banka_id" ColumnName="banka_id" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="alinan" ColumnName="alinan" />
+          <ScalarProperty Name="cekildi" ColumnName="cekildi" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="tahsilat_tarih" ColumnName="tahsilat_tarih" />
+          <ScalarProperty Name="vade_tarih" ColumnName="vade_tarih" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="Musteri_ID" ColumnName="Musteri_ID" />
+          <ScalarProperty Name="odeme_id" ColumnName="odeme_id" />
+          <ScalarProperty Name="nettutar" ColumnName="nettutar" />
+          <ScalarProperty Name="masraf" ColumnName="masraf" />
+          <ScalarProperty Name="tutar" ColumnName="tutar" />
+          <ScalarProperty Name="belge_no" ColumnName="belge_no" />
+          <ScalarProperty Name="cek_id" ColumnName="cek_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cihaz_fifos">
+      <EntityTypeMapping TypeName="radiusModel.cihaz_fifos">
+        <MappingFragment StoreEntitySet="cihaz_fifos">
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="fiyat" ColumnName="fiyat" />
+          <ScalarProperty Name="bakiye" ColumnName="bakiye" />
+          <ScalarProperty Name="cikis" ColumnName="cikis" />
+          <ScalarProperty Name="giris" ColumnName="giris" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="cihaz_id" ColumnName="cihaz_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cihaz_garantis">
+      <EntityTypeMapping TypeName="radiusModel.cihaz_garantis">
+        <MappingFragment StoreEntitySet="cihaz_garantis">
+          <ScalarProperty Name="adet" ColumnName="adet" />
+          <ScalarProperty Name="servicehesap_id" ColumnName="servicehesap_id" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="iade_tutar" ColumnName="iade_tutar" />
+          <ScalarProperty Name="satis_tutar" ColumnName="satis_tutar" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="bitis" ColumnName="bitis" />
+          <ScalarProperty Name="baslangic" ColumnName="baslangic" />
+          <ScalarProperty Name="cihaz_id" ColumnName="cihaz_id" />
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cihaz_stoks">
+      <EntityTypeMapping TypeName="radiusModel.cihaz_stoks">
+        <MappingFragment StoreEntitySet="cihaz_stoks">
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="satis_fiyati" ColumnName="satis_fiyati" />
+          <ScalarProperty Name="son_alis_fiyati" ColumnName="son_alis_fiyati" />
+          <ScalarProperty Name="bakiye" ColumnName="bakiye" />
+          <ScalarProperty Name="cikis" ColumnName="cikis" />
+          <ScalarProperty Name="giris" ColumnName="giris" />
+          <ScalarProperty Name="garanti_suresi" ColumnName="garanti_suresi" />
+          <ScalarProperty Name="seri_no" ColumnName="seri_no" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="cihaz_adi" ColumnName="cihaz_adi" />
+          <ScalarProperty Name="cihaz_id" ColumnName="cihaz_id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cihazs">
+      <EntityTypeMapping TypeName="radiusModel.cihaz">
+        <MappingFragment StoreEntitySet="cihazs">
+          <ScalarProperty Name="barkod" ColumnName="barkod" />
+          <ScalarProperty Name="grupid" ColumnName="grupid" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="garanti_suresi" ColumnName="garanti_suresi" />
+          <ScalarProperty Name="seri_no" ColumnName="seri_no" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="cihaz_adi" ColumnName="cihaz_adi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kart_caris">
+      <EntityTypeMapping TypeName="radiusModel.kart_caris">
+        <MappingFragment StoreEntitySet="kart_caris">
+          <ScalarProperty Name="kart_adi" ColumnName="kart_adi" />
+          <ScalarProperty Name="bakiye" ColumnName="bakiye" />
+          <ScalarProperty Name="odenen" ColumnName="odenen" />
+          <ScalarProperty Name="borc" ColumnName="borc" />
+          <ScalarProperty Name="kart_id" ColumnName="kart_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kart_hesaps">
+      <EntityTypeMapping TypeName="radiusModel.kart_hesaps">
+        <MappingFragment StoreEntitySet="kart_hesaps">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="Musteri_ID" ColumnName="Musteri_ID" />
+          <ScalarProperty Name="islem" ColumnName="islem" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="cekildi" ColumnName="cekildi" />
+          <ScalarProperty Name="toplam_tutar" ColumnName="toplam_tutar" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="tutar" ColumnName="tutar" />
+          <ScalarProperty Name="extre_tarih" ColumnName="extre_tarih" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="odeme_id" ColumnName="odeme_id" />
+          <ScalarProperty Name="kart_id" ColumnName="kart_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kart_odemes">
+      <EntityTypeMapping TypeName="radiusModel.kart_odemes">
+        <MappingFragment StoreEntitySet="kart_odemes">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="tutar" ColumnName="tutar" />
+          <ScalarProperty Name="kart_id" ColumnName="kart_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kart_tanims">
+      <EntityTypeMapping TypeName="radiusModel.kart_tanims">
+        <MappingFragment StoreEntitySet="kart_tanims">
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="devreden_bakiye" ColumnName="devreden_bakiye" />
+          <ScalarProperty Name="extre_tarih" ColumnName="extre_tarih" />
+          <ScalarProperty Name="kart_adi" ColumnName="kart_adi" />
+          <ScalarProperty Name="kart_id" ColumnName="kart_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kasaharekets">
+      <EntityTypeMapping TypeName="radiusModel.kasahareket">
+        <MappingFragment StoreEntitySet="kasaharekets">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="Musteri_ID" ColumnName="Musteri_ID" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="islem" ColumnName="islem" />
+          <ScalarProperty Name="KasaTur" ColumnName="KasaTur" />
+          <ScalarProperty Name="aktif_bakiye" ColumnName="aktif_bakiye" />
+          <ScalarProperty Name="Odeme_ID" ColumnName="Odeme_ID" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="cikis" ColumnName="cikis" />
+          <ScalarProperty Name="giris" ColumnName="giris" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kasahesaps">
+      <EntityTypeMapping TypeName="radiusModel.kasahesap">
+        <MappingFragment StoreEntitySet="kasahesaps">
+          <ScalarProperty Name="kasa_adi" ColumnName="kasa_adi" />
+          <ScalarProperty Name="KasaTur" ColumnName="KasaTur" />
+          <ScalarProperty Name="ToplamBakiye" ColumnName="ToplamBakiye" />
+          <ScalarProperty Name="ToplamCikis" ColumnName="ToplamCikis" />
+          <ScalarProperty Name="ToplamGiris" ColumnName="ToplamGiris" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mail_ayars">
+      <EntityTypeMapping TypeName="radiusModel.mail_ayars">
+        <MappingFragment StoreEntitySet="mail_ayars">
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="aktif" ColumnName="aktif" />
+          <ScalarProperty Name="resim_yol" ColumnName="resim_yol" />
+          <ScalarProperty Name="kritik_gun" ColumnName="kritik_gun" />
+          <ScalarProperty Name="body_mesaj" ColumnName="body_mesaj" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="FirmaTam" ColumnName="FirmaTam" />
+          <ScalarProperty Name="konu" ColumnName="konu" />
+          <ScalarProperty Name="gonderen" ColumnName="gonderen" />
+          <ScalarProperty Name="iliski_id" ColumnName="iliski_id" />
+          <ScalarProperty Name="tur" ColumnName="tur" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="masraf_tips">
+      <EntityTypeMapping TypeName="radiusModel.masraf_tips">
+        <MappingFragment StoreEntitySet="masraf_tips">
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="css" ColumnName="css" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="tip_adi" ColumnName="tip_adi" />
+          <ScalarProperty Name="tip_id" ColumnName="tip_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="musteriodemelers">
+      <EntityTypeMapping TypeName="radiusModel.musteriodemeler">
+        <MappingFragment StoreEntitySet="musteriodemelers">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="islem_tarihi" ColumnName="islem_tarihi" />
+          <ScalarProperty Name="masraf_id" ColumnName="masraf_id" />
+          <ScalarProperty Name="masraf_tipi" ColumnName="masraf_tipi" />
+          <ScalarProperty Name="standart" ColumnName="standart" />
+          <ScalarProperty Name="iade_id" ColumnName="iade_id" />
+          <ScalarProperty Name="mahsup_key" ColumnName="mahsup_key" />
+          <ScalarProperty Name="mahsup" ColumnName="mahsup" />
+          <ScalarProperty Name="extre_tarih" ColumnName="extre_tarih" />
+          <ScalarProperty Name="fatura_id" ColumnName="fatura_id" />
+          <ScalarProperty Name="masraf" ColumnName="masraf" />
+          <ScalarProperty Name="vade_tarih" ColumnName="vade_tarih" />
+          <ScalarProperty Name="belge_no" ColumnName="belge_no" />
+          <ScalarProperty Name="banka_id" ColumnName="banka_id" />
+          <ScalarProperty Name="taksit_sayisi" ColumnName="taksit_sayisi" />
+          <ScalarProperty Name="kart_id" ColumnName="kart_id" />
+          <ScalarProperty Name="pos_id" ColumnName="pos_id" />
+          <ScalarProperty Name="tahsilat_odeme" ColumnName="tahsilat_odeme" />
+          <ScalarProperty Name="tahsilat_turu" ColumnName="tahsilat_turu" />
+          <ScalarProperty Name="taksit_no" ColumnName="taksit_no" />
+          <ScalarProperty Name="kullanici" ColumnName="kullanici" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="Musteri_ID" ColumnName="Musteri_ID" />
+          <ScalarProperty Name="Odeme_ID" ColumnName="Odeme_ID" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="OdemeTarih" ColumnName="OdemeTarih" />
+          <ScalarProperty Name="OdemeMiktar" ColumnName="OdemeMiktar" />
+          <ScalarProperty Name="no" ColumnName="no" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nots">
+      <EntityTypeMapping TypeName="radiusModel.not">
+        <MappingFragment StoreEntitySet="nots">
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="notlar" ColumnName="notlar" />
+          <ScalarProperty Name="not_adi" ColumnName="not_adi" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="panels">
+      <EntityTypeMapping TypeName="radiusModel.panel">
+        <MappingFragment StoreEntitySet="panels">
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="kullanici" ColumnName="kullanici" />
+          <ScalarProperty Name="musteri_sayisi" ColumnName="musteri_sayisi" />
+          <ScalarProperty Name="ToplamBakiye" ColumnName="ToplamBakiye" />
+          <ScalarProperty Name="NetAlacak" ColumnName="NetAlacak" />
+          <ScalarProperty Name="ToplamOdedigimiz" ColumnName="ToplamOdedigimiz" />
+          <ScalarProperty Name="ToplamAlacak" ColumnName="ToplamAlacak" />
+          <ScalarProperty Name="NetBorc" ColumnName="NetBorc" />
+          <ScalarProperty Name="ToplamOdenen" ColumnName="ToplamOdenen" />
+          <ScalarProperty Name="ToplamBorc" ColumnName="ToplamBorc" />
+          <ScalarProperty Name="emanet_sayisi" ColumnName="emanet_sayisi" />
+          <ScalarProperty Name="borclu_sayisi" ColumnName="borclu_sayisi" />
+          <ScalarProperty Name="onay_bekleyen_sayisi" ColumnName="onay_bekleyen_sayisi" />
+          <ScalarProperty Name="servis_sayisi" ColumnName="servis_sayisi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pos_tanims">
+      <EntityTypeMapping TypeName="radiusModel.pos_tanims">
+        <MappingFragment StoreEntitySet="pos_tanims">
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="ikinci_komisyon" ColumnName="ikinci_komisyon" />
+          <ScalarProperty Name="ikinci_sure" ColumnName="ikinci_sure" />
+          <ScalarProperty Name="banka_id" ColumnName="banka_id" />
+          <ScalarProperty Name="pos_adi" ColumnName="pos_adi" />
+          <ScalarProperty Name="pos_id" ColumnName="pos_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="poshesaps">
+      <EntityTypeMapping TypeName="radiusModel.poshesap">
+        <MappingFragment StoreEntitySet="poshesaps">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="Musteri_ID" ColumnName="Musteri_ID" />
+          <ScalarProperty Name="islem" ColumnName="islem" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="tahsilat_id" ColumnName="tahsilat_id" />
+          <ScalarProperty Name="cekildi" ColumnName="cekildi" />
+          <ScalarProperty Name="extre_tarihi" ColumnName="extre_tarihi" />
+          <ScalarProperty Name="net_tutar" ColumnName="net_tutar" />
+          <ScalarProperty Name="komisyon_tutar" ColumnName="komisyon_tutar" />
+          <ScalarProperty Name="komsiyon_oran" ColumnName="komsiyon_oran" />
+          <ScalarProperty Name="tahsilat_tutar" ColumnName="tahsilat_tutar" />
+          <ScalarProperty Name="tahsilat_tarih" ColumnName="tahsilat_tarih" />
+          <ScalarProperty Name="pos_id" ColumnName="pos_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="satislars">
+      <EntityTypeMapping TypeName="radiusModel.satislar">
+        <MappingFragment StoreEntitySet="satislars">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="vd" ColumnName="vd" />
+          <ScalarProperty Name="tc" ColumnName="tc" />
+          <ScalarProperty Name="unvan" ColumnName="unvan" />
+          <ScalarProperty Name="basim_tarih" ColumnName="basim_tarih" />
+          <ScalarProperty Name="fat_seri" ColumnName="fat_seri" />
+          <ScalarProperty Name="fat_no" ColumnName="fat_no" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="stok_id" ColumnName="stok_id" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="yekun" ColumnName="yekun" />
+          <ScalarProperty Name="iskonto_oran" ColumnName="iskonto_oran" />
+          <ScalarProperty Name="bandrol" ColumnName="bandrol" />
+          <ScalarProperty Name="oiv" ColumnName="oiv" />
+          <ScalarProperty Name="otv" ColumnName="otv" />
+          <ScalarProperty Name="kdv" ColumnName="kdv" />
+          <ScalarProperty Name="vergi" ColumnName="vergi" />
+          <ScalarProperty Name="tutar" ColumnName="tutar" />
+          <ScalarProperty Name="adet" ColumnName="adet" />
+          <ScalarProperty Name="cihaz_id" ColumnName="cihaz_id" />
+          <ScalarProperty Name="odeme_id" ColumnName="odeme_id" />
+          <ScalarProperty Name="musteri_id" ColumnName="musteri_id" />
+          <ScalarProperty Name="satis_id" ColumnName="satis_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="service_durums">
+      <EntityTypeMapping TypeName="radiusModel.service_durums">
+        <MappingFragment StoreEntitySet="service_durums">
+          <ScalarProperty Name="Mail_Tema" ColumnName="Mail_Tema" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="onaymi" ColumnName="onaymi" />
+          <ScalarProperty Name="kararmi" ColumnName="kararmi" />
+          <ScalarProperty Name="sonmu" ColumnName="sonmu" />
+          <ScalarProperty Name="baslangicmi" ColumnName="baslangicmi" />
+          <ScalarProperty Name="Whatsapp" ColumnName="Whatsapp" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="SMS" ColumnName="SMS" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="Durum_ID" ColumnName="Durum_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="service_faturas">
+      <EntityTypeMapping TypeName="radiusModel.service_faturas">
+        <MappingFragment StoreEntitySet="service_faturas">
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="kapanma" ColumnName="kapanma" />
+          <ScalarProperty Name="tahsilat_turu" ColumnName="tahsilat_turu" />
+          <ScalarProperty Name="service_tur" ColumnName="service_tur" />
+          <ScalarProperty Name="basim_tarih" ColumnName="basim_tarih" />
+          <ScalarProperty Name="fat_no" ColumnName="fat_no" />
+          <ScalarProperty Name="fat_seri" ColumnName="fat_seri" />
+          <ScalarProperty Name="toplam_fark" ColumnName="toplam_fark" />
+          <ScalarProperty Name="toplam_maliyet" ColumnName="toplam_maliyet" />
+          <ScalarProperty Name="Yekun" ColumnName="Yekun" />
+          <ScalarProperty Name="KDV" ColumnName="KDV" />
+          <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+          <ScalarProperty Name="usta_id" ColumnName="usta_id" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="service_tips">
+      <EntityTypeMapping TypeName="radiusModel.service_tips">
+        <MappingFragment StoreEntitySet="service_tips">
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="css" ColumnName="css" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="tip_ad" ColumnName="tip_ad" />
+          <ScalarProperty Name="tip_id" ColumnName="tip_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servicedetays">
+      <EntityTypeMapping TypeName="radiusModel.servicedetay">
+        <MappingFragment StoreEntitySet="servicedetays">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="kullanici" ColumnName="kullanici" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+          <ScalarProperty Name="Durum_ID" ColumnName="Durum_ID" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="BelgeYol" ColumnName="BelgeYol" />
+          <ScalarProperty Name="TarihZaman" ColumnName="TarihZaman" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="DetayID" ColumnName="DetayID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servicehesaps">
+      <EntityTypeMapping TypeName="radiusModel.servicehesap">
+        <MappingFragment StoreEntitySet="servicehesaps">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="kullanici" ColumnName="kullanici" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="toplam_maliyet" ColumnName="toplam_maliyet" />
+          <ScalarProperty Name="birim_maliyet" ColumnName="birim_maliyet" />
+          <ScalarProperty Name="stok_id" ColumnName="stok_id" />
+          <ScalarProperty Name="Onay_tarih" ColumnName="Onay_tarih" />
+          <ScalarProperty Name="onay" ColumnName="onay" />
+          <ScalarProperty Name="Urun_Kimlik" ColumnName="Urun_Kimlik" />
+          <ScalarProperty Name="Urun_Aciklama" ColumnName="Urun_Aciklama" />
+          <ScalarProperty Name="Urun_GarantiSuresi" ColumnName="Urun_GarantiSuresi" />
+          <ScalarProperty Name="Urun_GarantiBitis" ColumnName="Urun_GarantiBitis" />
+          <ScalarProperty Name="Urun_GarantiBaslangic" ColumnName="Urun_GarantiBaslangic" />
+          <ScalarProperty Name="Urun_Cinsi" ColumnName="Urun_Cinsi" />
+          <ScalarProperty Name="cihaz_gsure" ColumnName="cihaz_gsure" />
+          <ScalarProperty Name="cihaz_adi" ColumnName="cihaz_adi" />
+          <ScalarProperty Name="cihaz_id" ColumnName="cihaz_id" />
+          <ScalarProperty Name="adet" ColumnName="adet" />
+          <ScalarProperty Name="TarihZaman" ColumnName="TarihZaman" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Yekun" ColumnName="Yekun" />
+          <ScalarProperty Name="KDV" ColumnName="KDV" />
+          <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+          <ScalarProperty Name="IslemParca" ColumnName="IslemParca" />
+          <ScalarProperty Name="servis_kimlik" ColumnName="servis_kimlik" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="tamirci_id" ColumnName="tamirci_id" />
+          <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+          <ScalarProperty Name="HesapID" ColumnName="HesapID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servis_paket_detays">
+      <EntityTypeMapping TypeName="radiusModel.servis_paket_detays">
+        <MappingFragment StoreEntitySet="servis_paket_detays">
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="cihaz_gsure" ColumnName="cihaz_gsure" />
+          <ScalarProperty Name="cihaz_adi" ColumnName="cihaz_adi" />
+          <ScalarProperty Name="cihaz_id" ColumnName="cihaz_id" />
+          <ScalarProperty Name="adet" ColumnName="adet" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Yekun" ColumnName="Yekun" />
+          <ScalarProperty Name="KDV" ColumnName="KDV" />
+          <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+          <ScalarProperty Name="IslemParca" ColumnName="IslemParca" />
+          <ScalarProperty Name="paket_adi" ColumnName="paket_adi" />
+          <ScalarProperty Name="paket_id" ColumnName="paket_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servis_pakets">
+      <EntityTypeMapping TypeName="radiusModel.servis_pakets">
+        <MappingFragment StoreEntitySet="servis_pakets">
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="tutar" ColumnName="tutar" />
+          <ScalarProperty Name="paket_adi" ColumnName="paket_adi" />
+          <ScalarProperty Name="paket_id" ColumnName="paket_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sms_ayars">
+      <EntityTypeMapping TypeName="radiusModel.sms_ayars">
+        <MappingFragment StoreEntitySet="sms_ayars">
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="aktif" ColumnName="aktif" />
+          <ScalarProperty Name="tip" ColumnName="tip" />
+          <ScalarProperty Name="kritik_gun" ColumnName="kritik_gun" />
+          <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+          <ScalarProperty Name="gonderen" ColumnName="gonderen" />
+          <ScalarProperty Name="iliski_id" ColumnName="iliski_id" />
+          <ScalarProperty Name="tur" ColumnName="tur" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uruns">
+      <EntityTypeMapping TypeName="radiusModel.urun">
+        <MappingFragment StoreEntitySet="uruns">
+          <ScalarProperty Name="digerno" ColumnName="digerno" />
+          <ScalarProperty Name="imeino" ColumnName="imeino" />
+          <ScalarProperty Name="serino" ColumnName="serino" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="kullanici" ColumnName="kullanici" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="BelgeYol" ColumnName="BelgeYol" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="GarantiSuresi" ColumnName="GarantiSuresi" />
+          <ScalarProperty Name="GarantiBitis" ColumnName="GarantiBitis" />
+          <ScalarProperty Name="GranatiBaslangic" ColumnName="GranatiBaslangic" />
+          <ScalarProperty Name="Cinsi" ColumnName="Cinsi" />
+          <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+          <ScalarProperty Name="urunID" ColumnName="urunID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="yedek_uruns">
+      <EntityTypeMapping TypeName="radiusModel.yedek_uruns">
+        <MappingFragment StoreEntitySet="yedek_uruns">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="kullanici" ColumnName="kullanici" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="tarih_donus" ColumnName="tarih_donus" />
+          <ScalarProperty Name="tarih_verilme" ColumnName="tarih_verilme" />
+          <ScalarProperty Name="urun_aciklama" ColumnName="urun_aciklama" />
+          <ScalarProperty Name="musteri_id" ColumnName="musteri_id" />
+          <ScalarProperty Name="yedek_id" ColumnName="yedek_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="faturas">
+      <EntityTypeMapping TypeName="radiusModel.fatura">
+        <MappingFragment StoreEntitySet="faturas">
+          <ScalarProperty Name="paket_id" ColumnName="paket_id" />
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="tamirci_id" ColumnName="tamirci_id" />
+          <ScalarProperty Name="satis_id" ColumnName="satis_id" />
+          <ScalarProperty Name="islemci_user" ColumnName="islemci_user" />
+          <ScalarProperty Name="guncelleme_tarihi" ColumnName="guncelleme_tarihi" />
+          <ScalarProperty Name="islem_tarihi" ColumnName="islem_tarihi" />
+          <ScalarProperty Name="odeme_tarihi" ColumnName="odeme_tarihi" />
+          <ScalarProperty Name="son_odeme_tarihi" ColumnName="son_odeme_tarihi" />
+          <ScalarProperty Name="servicehesap_id" ColumnName="servicehesap_id" />
+          <ScalarProperty Name="iade_id" ColumnName="iade_id" />
+          <ScalarProperty Name="mahsup_key" ColumnName="mahsup_key" />
+          <ScalarProperty Name="mahsup" ColumnName="mahsup" />
+          <ScalarProperty Name="borc_odeme_id" ColumnName="borc_odeme_id" />
+          <ScalarProperty Name="masraf" ColumnName="masraf" />
+          <ScalarProperty Name="vade_tarih" ColumnName="vade_tarih" />
+          <ScalarProperty Name="belge_no" ColumnName="belge_no" />
+          <ScalarProperty Name="taksit_sayisi" ColumnName="taksit_sayisi" />
+          <ScalarProperty Name="tahsilat_aciklama" ColumnName="tahsilat_aciklama" />
+          <ScalarProperty Name="service_id" ColumnName="service_id" />
+          <ScalarProperty Name="hesap_id" ColumnName="hesap_id" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="tahsilat_turu" ColumnName="tahsilat_turu" />
+          <ScalarProperty Name="tur" ColumnName="tur" />
+          <ScalarProperty Name="odendi" ColumnName="odendi" />
+          <ScalarProperty Name="basim_tarih" ColumnName="basim_tarih" />
+          <ScalarProperty Name="fat_no" ColumnName="fat_no" />
+          <ScalarProperty Name="fat_seri" ColumnName="fat_seri" />
+          <ScalarProperty Name="OIV" ColumnName="OIV" />
+          <ScalarProperty Name="KDV" ColumnName="KDV" />
+          <ScalarProperty Name="vergisiz_tutar" ColumnName="vergisiz_tutar" />
+          <ScalarProperty Name="bakiye" ColumnName="bakiye" />
+          <ScalarProperty Name="odenen" ColumnName="odenen" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="tamirci_maliyet" ColumnName="tamirci_maliyet" />
+          <ScalarProperty Name="tutar" ColumnName="tutar" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="tc" ColumnName="tc" />
+          <ScalarProperty Name="sattis_tarih" ColumnName="sattis_tarih" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="taksit_no" ColumnName="taksit_no" />
+          <ScalarProperty Name="no" ColumnName="no" />
+          <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="services">
+      <EntityTypeMapping TypeName="radiusModel.service">
+        <MappingFragment StoreEntitySet="services">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="barcode" ColumnName="barcode" />
+          <ScalarProperty Name="durum_id" ColumnName="durum_id" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="kullanici" ColumnName="kullanici" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="olusturan_Kullanici" ColumnName="olusturan_Kullanici" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="SonDurum" ColumnName="SonDurum" />
+          <ScalarProperty Name="tip_id" ColumnName="tip_id" />
+          <ScalarProperty Name="Servis_Kimlik_No" ColumnName="Servis_Kimlik_No" />
+          <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+          <ScalarProperty Name="KapanmaZamani" ColumnName="KapanmaZamani" />
+          <ScalarProperty Name="AcilmaZamani" ColumnName="AcilmaZamani" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="SonAtananID" ColumnName="SonAtananID" />
+          <ScalarProperty Name="son_dis_servis" ColumnName="son_dis_servis" />
+          <ScalarProperty Name="tamirci_id" ColumnName="tamirci_id" />
+          <ScalarProperty Name="usta" ColumnName="usta" />
+          <ScalarProperty Name="usta_id" ColumnName="usta_id" />
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="radiusModel.customer">
+        <MappingFragment StoreEntitySet="customers">
+          <ScalarProperty Name="antenid" ColumnName="antenid" />
+          <ScalarProperty Name="expire" ColumnName="expire" />
+          <ScalarProperty Name="paket_id" ColumnName="paket_id" />
+          <ScalarProperty Name="vd" ColumnName="vd" />
+          <ScalarProperty Name="unvan" ColumnName="unvan" />
+          <ScalarProperty Name="disservis" ColumnName="disservis" />
+          <ScalarProperty Name="usta" ColumnName="usta" />
+          <ScalarProperty Name="tedarikci" ColumnName="tedarikci" />
+          <ScalarProperty Name="musteri" ColumnName="musteri" />
+          <ScalarProperty Name="prim_kar" ColumnName="prim_kar" />
+          <ScalarProperty Name="prim_yekun" ColumnName="prim_yekun" />
+          <ScalarProperty Name="istihbarat" ColumnName="istihbarat" />
+          <ScalarProperty Name="pasif" ColumnName="pasif" />
+          <ScalarProperty Name="Long" ColumnName="Long" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Firma" ColumnName="Firma" />
+          <ScalarProperty Name="tanimlayici" ColumnName="tanimlayici" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefon_cep" ColumnName="telefon_cep" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="CustID" ColumnName="CustID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cihaz_grups">
+      <EntityTypeMapping TypeName="radiusModel.cihaz_grups">
+        <MappingFragment StoreEntitySet="cihaz_grups">
+          <ScalarProperty Name="otv" ColumnName="otv" />
+          <ScalarProperty Name="oiv" ColumnName="oiv" />
+          <ScalarProperty Name="kdv" ColumnName="kdv" />
+          <ScalarProperty Name="grupadi" ColumnName="grupadi" />
+          <ScalarProperty Name="grupid" ColumnName="grupid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="manuels">
+      <EntityTypeMapping TypeName="radiusModel.manuel">
+        <MappingFragment StoreEntitySet="manuels">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="inserted" ColumnName="inserted" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="yekun" ColumnName="yekun" />
+          <ScalarProperty Name="oiv" ColumnName="oiv" />
+          <ScalarProperty Name="otv" ColumnName="otv" />
+          <ScalarProperty Name="kdv" ColumnName="kdv" />
+          <ScalarProperty Name="tutar" ColumnName="tutar" />
+          <ScalarProperty Name="unvan" ColumnName="unvan" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="abonelik_pakets">
+      <EntityTypeMapping TypeName="radiusModel.abonelik_pakets">
+        <MappingFragment StoreEntitySet="abonelik_pakets">
+          <ScalarProperty Name="iptal" ColumnName="iptal" />
+          <ScalarProperty Name="fiyat" ColumnName="fiyat" />
+          <ScalarProperty Name="gun" ColumnName="gun" />
+          <ScalarProperty Name="paket_adi" ColumnName="paket_adi" />
+          <ScalarProperty Name="paket_id" ColumnName="paket_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="antens">
+      <EntityTypeMapping TypeName="radiusModel.anten">
+        <MappingFragment StoreEntitySet="antens">
+          <ScalarProperty Name="end_Long" ColumnName="end_Long" />
+          <ScalarProperty Name="end_Lat" ColumnName="end_Lat" />
+          <ScalarProperty Name="start_Long" ColumnName="start_Long" />
+          <ScalarProperty Name="start_Lat" ColumnName="start_Lat" />
+          <ScalarProperty Name="center_Long" ColumnName="center_Long" />
+          <ScalarProperty Name="center_Lat" ColumnName="center_Lat" />
+          <ScalarProperty Name="anten_adi" ColumnName="anten_adi" />
+          <ScalarProperty Name="anten_id" ColumnName="anten_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

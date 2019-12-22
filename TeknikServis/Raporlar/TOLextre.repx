@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="15.1.6.0" ControlType="ServisDAL.extreX, ServisDAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Version="15.1" Landscape="true" Name="extreX" PageWidth="1100" PageHeight="850" DataSource="#Ref-50">
+  <Bands>
+    <Item1 ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" Ref="0" />
+    <Item2 ControlType="ReportHeaderBand" HeightF="240.5834" Name="ReportHeader" Ref="23">
+      <Controls>
+        <Item1 ControlType="XRLine" LineWidth="2" SizeF="878.9583, 3" LocationFloat="11.04169, 230.5833" Name="xrLine3" Ref="1" />
+        <Item2 ControlType="XRLine" LineWidth="2" SizeF="496.6666, 2.999973" LocationFloat="199.5834, 50.70832" Name="xrLine1" Ref="2" />
+        <Item3 ControlType="XRLabel" SizeF="259.375, 23" LocationFloat="315.0407, 53.70833" TextAlignment="MiddleCenter" Text="tarihAralik" Name="tarihAralik" Padding="2,2,0,0,100" Ref="3">
+          <StylePriority UseTextAlignment="false" />
+        </Item3>
+        <Item4 ControlType="XRLabel" SizeF="206.0823, 21.95833" LocationFloat="693.9177, 10.00001" Text="tarih" Name="tarih" Padding="2,2,0,0,100" Ref="4" />
+        <Item5 ControlType="XRLabel" SizeF="302.2646, 23" LocationFloat="299.8188, 27.70834" TextAlignment="MiddleCenter" Text="MÜŞTERİ EXTRESİ" Name="xrLabel1" Padding="2,2,0,0,100" Font="Times New Roman, 12pt, style=Bold" Ref="5">
+          <StylePriority UseFont="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 ControlType="XRLabel" SizeF="289.8188, 23" LocationFloat="10.00001, 76.70835" Text="musteri" Name="musteri" Padding="2,2,0,0,100" Font="Times New Roman, 12pt, style=Bold" Ref="6">
+          <StylePriority UseFont="false" />
+        </Item6>
+        <Item7 ControlType="XRLabel" SizeF="134.375, 23.00001" LocationFloat="220.2491, 138.1667" TextAlignment="MiddleLeft" Text="toplamBorc" Name="toplamBorc" Padding="2,2,0,0,100" Borders="Top, Bottom" Ref="7">
+          <StylePriority UseBorders="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 ControlType="XRLabel" SizeF="134.375, 23.00001" LocationFloat="220.2491, 184.1667" TextAlignment="MiddleLeft" Text="netBorc" Name="netBorc" Padding="2,2,0,0,100" Borders="Top, Bottom" Ref="8">
+          <StylePriority UseBorders="false" UseTextAlignment="false" />
+        </Item8>
+        <Item9 ControlType="XRLabel" SizeF="134.375, 23.00001" LocationFloat="506.7074, 184.1667" TextAlignment="MiddleLeft" Text="netAlacak" Name="netAlacak" Padding="2,2,0,0,100" Borders="Top, Bottom" Ref="9">
+          <StylePriority UseBorders="false" UseTextAlignment="false" />
+        </Item9>
+        <Item10 ControlType="XRLabel" SizeF="134.375, 23.00001" LocationFloat="506.7074, 138.1667" TextAlignment="MiddleLeft" Text="toplamAlacak" Name="toplamAlacak" Padding="2,2,0,0,100" Borders="Top, Bottom" Ref="10">
+          <StylePriority UseBorders="false" UseTextAlignment="false" />
+        </Item10>
+        <Item11 ControlType="XRLabel" SizeF="134.375, 23.00001" LocationFloat="506.7074, 161.1667" TextAlignment="MiddleLeft" Text="toplamOdedigimiz" Name="toplamOdedigimiz" Padding="2,2,0,0,100" Borders="Top, Bottom" Ref="11">
+          <StylePriority UseBorders="false" UseTextAlignment="false" />
+        </Item11>
+        <Item12 ControlType="XRLabel" SizeF="100, 23" LocationFloat="120.249, 138.1667" TextAlignment="MiddleLeft" Text="Toplam Borç" Name="xrLabel7" Padding="2,2,0,0,100" Borders="Top, Bottom" Font="Times New Roman, 9.75pt, style=Bold" Ref="12">
+          <StylePriority UseBorders="false" UseFont="false" UseTextAlignment="false" />
+        </Item12>
+        <Item13 ControlType="XRLabel" SizeF="100, 23" LocationFloat="120.249, 161.1667" TextAlignment="MiddleLeft" Text="Toplam Ödenen" Name="xrLabel8" Padding="2,2,0,0,100" Borders="Top, Bottom" Font="Times New Roman, 9.75pt, style=Bold" Ref="13">
+          <StylePriority UseBorders="false" UseFont="false" UseTextAlignment="false" />
+        </Item13>
+        <Item14 ControlType="XRLabel" SizeF="100, 23" LocationFloat="120.249, 184.1667" TextAlignment="MiddleLeft" Text="Net Borç" Name="xrLabel9" Padding="2,2,0,0,100" Borders="Top, Bottom" Font="Times New Roman, 9.75pt, style=Bold" Ref="14">
+          <StylePriority UseBorders="false" UseFont="false" UseTextAlignment="false" />
+        </Item14>
+        <Item15 ControlType="XRLabel" SizeF="100, 23" LocationFloat="406.7074, 138.1667" TextAlignment="MiddleLeft" Text="Toplam Alacak" Name="xrLabel12" Padding="2,2,0,0,100" Borders="Top, Bottom" Font="Times New Roman, 9.75pt, style=Bold" Ref="15">
+          <StylePriority UseBorders="false" UseFont="false" UseTextAlignment="false" />
+        </Item15>
+        <Item16 ControlType="XRLabel" SizeF="100, 23" LocationFloat="406.7074, 161.1667" TextAlignment="MiddleLeft" Text="Toplam Ödenen" Name="xrLabel11" Padding="2,2,0,0,100" Borders="Top, Bottom" Font="Times New Roman, 9.75pt, style=Bold" Ref="16">
+          <StylePriority UseBorders="false" UseFont="false" UseTextAlignment="false" />
+        </Item16>
+        <Item17 ControlType="XRLabel" SizeF="100, 23" LocationFloat="406.7074, 184.1667" TextAlignment="MiddleLeft" Text="Net Alacak" Name="xrLabel10" Padding="2,2,0,0,100" Borders="Top, Bottom" Font="Times New Roman, 9.75pt, style=Bold" Ref="17">
+          <StylePriority UseBorders="false" UseFont="false" UseTextAlignment="false" />
+        </Item17>
+        <Item18 ControlType="XRLabel" SizeF="100, 23" LocationFloat="255.6658, 207.5834" TextAlignment="MiddleLeft" Text="NET BAKİYE" Name="xrLabel13" Padding="2,2,0,0,100" Borders="None" Font="Times New Roman, 9.75pt, style=Bold" Ref="18">
+          <StylePriority UseBorders="false" UseFont="false" UseTextAlignment="false" />
+        </Item18>
+        <Item19 ControlType="XRLabel" SizeF="134.375, 23.00001" LocationFloat="355.6658, 207.5833" TextAlignment="MiddleLeft" Text="netBakiye" Name="netBakiye" Padding="2,2,0,0,100" Borders="None" Font="Times New Roman, 9.75pt, style=Bold" Ref="19">
+          <StylePriority UseBorders="false" UseFont="false" UseTextAlignment="false" />
+        </Item19>
+        <Item20 ControlType="XRLabel" SizeF="289.8188, 23" LocationFloat="11.04169, 99.70837" Text="Musteri tc" Name="tc" Padding="2,2,0,0,100" Ref="20" />
+        <Item21 ControlType="XRLabel" SizeF="134.375, 23.00001" LocationFloat="220.2491, 161.1667" TextAlignment="MiddleLeft" Text="toplanOdenen" Name="toplanOdenen" Padding="2,2,0,0,100" Borders="Top, Bottom" Ref="21">
+          <StylePriority UseBorders="false" UseTextAlignment="false" />
+        </Item21>
+        <Item22 ControlType="XRLabel" SizeF="100, 23" LocationFloat="20.25, 27.78" Text="test" Name="label1" Padding="2,2,0,0,100" Ref="22">
+          <index>0</index>
+        </Item22>
+      </Controls>
+    </Item2>
+    <Item3 ControlType="PageHeaderBand" HeightF="51.04167" Name="PageHeader" Ref="32">
+      <Controls>
+        <Item1 ControlType="XRTable" TextAlignment="MiddleLeft" SizeF="807.9982, 25" LocationFloat="10.00001, 26.04167" Name="xrTable2" Borders="Top, Bottom" Ref="31">
+          <Rows>
+            <Item1 ControlType="XRTableRow" Weight="1" Name="xrTableRow3" Ref="30">
+              <Cells>
+                <Item1 ControlType="XRTableCell" Weight="1" Text="Tarih" Name="xrTableCell2" Ref="24" />
+                <Item2 ControlType="XRTableCell" Weight="1.7653084989204166" Text="İşlem" Name="xrTableCell3" Ref="25" />
+                <Item3 ControlType="XRTableCell" Weight="1.586404944964444" Text="Konu" Name="xrTableCell1" Ref="26" />
+                <Item4 ControlType="XRTableCell" Weight="1.9740287569255994" Text="Açıklama" Name="xrTableCell6" Ref="27" />
+                <Item5 ControlType="XRTableCell" Weight="0.7018278210447922" Text="Borç" Name="xrTableCell4" Ref="28" />
+                <Item6 ControlType="XRTableCell" Weight="0.6819510893796394" Text="Alacak" Name="xrTableCell5" Ref="29" />
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority UseBorders="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item3>
+    <Item4 ControlType="DetailBand" HeightF="27.08333" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" Ref="41">
+      <Controls>
+        <Item1 ControlType="XRTable" TextAlignment="MiddleLeft" SizeF="807.9982, 25" LocationFloat="10.00001, 0" EvenStyleName="xrControlStyle1" Name="xrTable1" Borders="Top, Bottom" Ref="40">
+          <Rows>
+            <Item1 ControlType="XRTableRow" Weight="1" Name="xrTableRow1" Ref="39">
+              <Cells>
+                <Item1 ControlType="XRTableCell" Weight="1" Text="tarihcell" Name="tarihh" Ref="33" />
+                <Item2 ControlType="XRTableCell" Weight="1.7653078390995027" Text="islem" Name="islem" Ref="34" />
+                <Item3 ControlType="XRTableCell" Weight="1.5864053223924213" Text="konu" Name="konu" Ref="35" />
+                <Item4 ControlType="XRTableCell" Weight="1.974028437728915" Text="aciklama" Name="aciklama" Ref="36" />
+                <Item5 ControlType="XRTableCell" Weight="0.7018271971454899" Text="borc" Name="borc" Ref="37" />
+                <Item6 ControlType="XRTableCell" Weight="0.6819514902349593" Text="alacak" Name="alacak" Ref="38" />
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority UseBorders="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item4>
+    <Item5 ControlType="PageFooterBand" HeightF="65.625" Name="PageFooter" Ref="47">
+      <Controls>
+        <Item1 ControlType="XRLabel" SizeF="134.375, 23.00001" LocationFloat="525.874, 18.35416" Text="Telefon" Name="firmaTel" Padding="2,2,0,0,100" Ref="42" />
+        <Item2 ControlType="XRLabel" SizeF="134.375, 23.00001" LocationFloat="391.4991, 18.35416" Text="Web" Name="firmaWeb" Padding="2,2,0,0,100" Ref="43" />
+        <Item3 ControlType="XRLabel" SizeF="639.9999, 23.00002" LocationFloat="137.9574, 41.35411" TextAlignment="MiddleCenter" Text="Adres" Name="firmaAdres" Padding="2,2,0,0,100" Ref="44">
+          <StylePriority UseTextAlignment="false" />
+        </Item3>
+        <Item4 ControlType="XRLabel" SizeF="157.2917, 23.00002" LocationFloat="234.2074, 18.35416" Text="Firma Adı" Name="firmaAdi" Padding="2,2,0,0,100" Ref="45" />
+        <Item5 ControlType="XRLine" SizeF="630, 14.99998" LocationFloat="147.9574, 3.354168" Name="xrLine2" Ref="46" />
+      </Controls>
+    </Item5>
+    <Item6 ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" Ref="48" />
+  </Bands>
+  <StyleSheet>
+    <Item1 BorderStyle="Inset" StringFormat="Near;Near;0;None;Character;Default" Name="xrControlStyle1" Padding="0,0,0,0,100" BackColor="Gainsboro" Ref="49" />
+  </StyleSheet>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v15.1" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" Ref="50" />
+  </ObjectStorage>
+  <Extensions>
+    <Item1 Key="DataSerializationExtension" Value="DevExpress.XtraReports.Web.ReportDesigner.DefaultDataSerializer" Ref="51" />
+  </Extensions>
+</XtraReportsLayoutSerializer>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="15.1.6.0" ControlType="ServisDAL.GelirGiderAylikX, ServisDAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Version="15.1" Name="GelirGiderAylikX" PageWidth="850" PageHeight="1100">
+  <Bands>
+    <Item1 ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" Ref="0" />
+    <Item2 ControlType="ReportHeaderBand" Name="ReportHeader" Ref="5">
+      <Controls>
+        <Item1 ControlType="XRPageInfo" Format="{0:d MMMM yyyy dddd HH:mm}" PageInfo="DateTime" SizeF="175, 23" LocationFloat="475.0001, 0" Name="xrPageInfo1" Padding="2,2,0,0,100" Ref="1" />
+        <Item2 ControlType="XRLabel" SizeF="187.5, 23" LocationFloat="204.1667, 44.58335" TextAlignment="MiddleCenter" Text="tarih-aralığı" Name="tarih_aralik" Padding="2,2,0,0,100" Ref="2">
+          <StylePriority UseTextAlignment="false" />
+        </Item2>
+        <Item3 ControlType="XRLabel" SizeF="258.3333, 23" LocationFloat="169.7919, 21.58337" TextAlignment="MiddleCenter" Text="PERİYODİK ARALIKLI RAPOR" Name="xrLabel1" Padding="2,2,0,0,100" Font="Times New Roman, 12pt, style=Bold" Ref="3">
+          <StylePriority UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 ControlType="XRLabel" SizeF="100, 23" LocationFloat="16.67, 0" Text="label1" Name="label1" Padding="2,2,0,0,100" Ref="4">
+          <index>0</index>
+        </Item4>
+      </Controls>
+    </Item2>
+    <Item3 ControlType="DetailBand" HeightF="28.125" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" Ref="7">
+      <Controls>
+        <Item1 ControlType="XRLabel" SizeF="649.9999, 23" LocationFloat="0.00009536743, 0" Text="grup_adi" Name="ay" BackColor="DarkGreen" Padding="2,2,0,0,100" ForeColor="White" Ref="6">
+          <StylePriority UseBackColor="false" UseForeColor="false" />
+        </Item1>
+      </Controls>
+    </Item3>
+    <Item4 ControlType="DetailReportBand" HeightF="76.04168" Name="DetailReport" Ref="28" DataSource="#Ref-32">
+      <Bands>
+        <Item1 ControlType="DetailBand" HeightF="26.04168" Name="Detail1" Ref="14">
+          <Controls>
+            <Item1 ControlType="XRPanel" SizeF="649.9999, 26.04168" LocationFloat="0.00009536743, 0" Name="xrPanel1" BackColor="Black" Ref="13">
+              <Controls>
+                <Item1 ControlType="XRLabel" AutoWidth="true" SizeF="112.5, 23" LocationFloat="20.83333, 0" Text="grup_adi" Name="grup_adi0" BackColor="Black" Padding="2,2,0,0,100" Font="Times New Roman, 10pt, style=Bold" ForeColor="White" Ref="8">
+                  <StylePriority UseBackColor="false" UseFont="false" UseForeColor="false" />
+                </Item1>
+                <Item2 ControlType="XRLabel" AutoWidth="true" SizeF="44.79167, 23" LocationFloat="169.7918, 0" Text="adet" Name="adet0" BackColor="Black" Padding="2,2,0,0,100" Font="Times New Roman, 10pt, style=Bold" ForeColor="White" Ref="9">
+                  <StylePriority UseBackColor="false" UseFont="false" UseForeColor="false" />
+                </Item2>
+                <Item3 ControlType="XRLabel" AutoWidth="true" SizeF="100, 23" LocationFloat="415.625, 0" Text="Toplam" Name="grup_toplam0" BackColor="Black" Padding="2,2,0,0,100" Font="Times New Roman, 10pt, style=Bold" ForeColor="White" Ref="10">
+                  <StylePriority UseBackColor="false" UseFont="false" UseForeColor="false" />
+                </Item3>
+                <Item4 ControlType="XRLabel" AutoWidth="true" SizeF="44.79167, 23" LocationFloat="214.5835, 0" Text="Adet" Name="xrLabel2" BackColor="Black" Padding="2,2,0,0,100" Font="Times New Roman, 10pt, style=Bold" ForeColor="White" Ref="11">
+                  <StylePriority UseBackColor="false" UseFont="false" UseForeColor="false" />
+                </Item4>
+                <Item5 ControlType="XRLabel" AutoWidth="true" SizeF="115, 23" LocationFloat="300.625, 0" Text="TOPLAM(TL)" Name="xrLabel3" BackColor="Black" Padding="2,2,0,0,100" Font="Times New Roman, 10pt, style=Bold" ForeColor="White" Ref="12">
+                  <StylePriority UseBackColor="false" UseFont="false" UseForeColor="false" />
+                </Item5>
+              </Controls>
+              <StylePriority UseBackColor="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 ControlType="DetailReportBand" HeightF="50" Name="DetailReport1" Ref="27" DataSource="#Ref-32">
+          <Bands>
+            <Item1 ControlType="ReportHeaderBand" HeightF="25" Name="ReportHeader1" Ref="20">
+              <Controls>
+                <Item1 ControlType="XRTable" SizeF="649.9999, 25" LocationFloat="0.00009536743, 0" Name="xrTable2" Borders="All" Ref="19">
+                  <Rows>
+                    <Item1 ControlType="XRTableRow" Weight="1" Name="xrTableRow2" Ref="18">
+                      <Cells>
+                        <Item1 ControlType="XRTableCell" Weight="2.6354169519631165" Text="GRUP" Name="xrTableCell1" Ref="15" />
+                        <Item2 ControlType="XRTableCell" Weight="1.0729162634147853" Text="ADET" Name="xrTableCell2" Ref="16" />
+                        <Item3 ControlType="XRTableCell" Weight="2.389583349563504" Text="TUTAR" Name="xrTableCell3" Ref="17" />
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                  <StylePriority UseBorders="false" />
+                </Item1>
+              </Controls>
+            </Item1>
+            <Item2 ControlType="DetailBand" HeightF="25" Name="Detail2" Ref="26">
+              <Controls>
+                <Item1 ControlType="XRTable" SizeF="649.9999, 25" LocationFloat="0.00009536743, 0" Name="xrTable1" Borders="Top, Bottom" Ref="25">
+                  <Rows>
+                    <Item1 ControlType="XRTableRow" Weight="1" Name="xrTableRow1" Ref="24">
+                      <Cells>
+                        <Item1 ControlType="XRTableCell" Weight="2.6354169519631165" Text="grup_adi" Name="grup_adi" Ref="21" />
+                        <Item2 ControlType="XRTableCell" Weight="1.0729162634147853" Text="adet" Name="adet" Ref="22" />
+                        <Item3 ControlType="XRTableCell" Weight="2.389583349563504" Text="tutar" Name="tutar" Ref="23" />
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                  <StylePriority UseBorders="false" />
+                </Item1>
+              </Controls>
+            </Item2>
+          </Bands>
+        </Item2>
+      </Bands>
+    </Item4>
+    <Item5 ControlType="ReportFooterBand" HeightF="200" Name="ReportFooter" Ref="30">
+      <Controls>
+        <Item1 ControlType="XRChart" Borders="None" Name="xrChart1" BorderColor="Black" SizeF="639.9999, 200" LocationFloat="0, 0" Ref="29">
+          <Chart SelectionMode="None" SeriesSelectionMode="Series">
+            <DataContainer>
+              <SeriesTemplate>
+                <View TypeNameSerializable="SideBySideBarSeriesView" />
+                <Label TypeNameSerializable="SideBySideBarSeriesLabel" />
+              </SeriesTemplate>
+            </DataContainer>
+            <Diagram TypeNameSerializable="XYDiagram" />
+          </Chart>
+        </Item1>
+      </Controls>
+    </Item5>
+    <Item6 ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" Ref="31" />
+  </Bands>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v15.1" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" Ref="32" />
+  </ObjectStorage>
+  <Extensions>
+    <Item1 Key="DataSerializationExtension" Value="DevExpress.XtraReports.Web.ReportDesigner.DefaultDataSerializer" Ref="33" />
+  </Extensions>
+</XtraReportsLayoutSerializer>

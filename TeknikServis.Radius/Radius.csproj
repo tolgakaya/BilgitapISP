@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3755F7C5-5A81-4912-BEEF-15DEDD86CA97}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TeknikServis.Radius</RootNamespace>
+    <AssemblyName>TeknikServis.Radius</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.7\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.7\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Web.6.9.7\lib\net45\MySql.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="abonelik_pakets.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="alim.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="alim_detays.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anten.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ayar.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ayargenel.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="banka.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="carihesap.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cekhesap.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cihaz.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cihaz_fifos.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cihaz_garantis.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cihaz_grups.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cihaz_stoks.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="customer.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fatura.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kart_caris.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kart_hesaps.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kart_odemes.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kart_tanims.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kasahareket.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kasahesap.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mail_ayars.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="manuel.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="masraf_tips.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="musteriodemeler.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyContext.cs" />
+    <Compile Include="not.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="panel.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="poshesap.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pos_tanims.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="radiusModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>radiusModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="radiusModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="radiusModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>radiusModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="satislar.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="service.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="servicedetay.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="servicehesap.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="service_durums.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="service_faturas.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="service_tips.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="servis_pakets.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="servis_paket_detays.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sms_ayars.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="urun.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="yedek_uruns.cs">
+      <DependentUpon>radiusModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="radiusModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>radiusModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="radiusModel.edmx.diagram">
+      <DependentUpon>radiusModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="radiusModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>radiusModel.edmx</DependentUpon>
+      <LastGenOutput>radiusModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="radiusModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>radiusModel.edmx</DependentUpon>
+      <LastGenOutput>radiusModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

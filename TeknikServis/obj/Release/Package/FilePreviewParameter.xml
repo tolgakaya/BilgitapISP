@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site/cepservis" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\WIN8\\Documents\\Visual\ Studio\ 2013\\Projects\\CepServis\\TeknikServis\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\WIN8\\Documents\\Visual\ Studio\ 2013\\Projects\\CepServis\\TeknikServis\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="BILGITAP-Web.config Connection String" description="" value="metadata=res://*/radiusModel.csdl|res://*/radiusModel.ssdl|res://*/radiusModel.msl;provider=MySql.Data.MySqlClient;provider connection string=&quot;port=3306;server=localhost;user id=root;password=t0m122;persistsecurityinfo=True;database=radius_bilgitap;convertzerodatetime=True;allowzerodatetime=True&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\WIN8\\Documents\\Visual\ Studio\ 2013\\Projects\\CepServis\\TeknikServis\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BILGITAP']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="server=localhost;User Id=root;password=t0m122;Persist Security Info=True;database=mysqlid" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\WIN8\\Documents\\Visual\ Studio\ 2013\\Projects\\CepServis\\TeknikServis\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="DURU-Web.config Connection String" description="" value="metadata=res://*/radiusModel.csdl|res://*/radiusModel.ssdl|res://*/radiusModel.msl;provider=MySql.Data.MySqlClient;provider connection string=&quot;port=3306;server=localhost;user id=root;password=t0m122;persistsecurityinfo=True;database=radius_duru;convertzerodatetime=True;allowzerodatetime=True;characterset=utf8&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\WIN8\\Documents\\Visual\ Studio\ 2013\\Projects\\CepServis\\TeknikServis\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DURU']/@connectionString" />
+  </parameter>
+  <parameter name="TeknikServis.Radius.radiusEntities-Web.config Connection String" description="" value="TeknikServis.Radius.radiusEntities_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\WIN8\\Documents\\Visual\ Studio\ 2013\\Projects\\CepServis\\TeknikServis\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TeknikServis.Radius.radiusEntities']/@connectionString" />
+  </parameter>
+  <parameter name="TOL-Web.config Connection String" description="" value="metadata=res://*/radiusModel.csdl|res://*/radiusModel.ssdl|res://*/radiusModel.msl;provider=MySql.Data.MySqlClient;provider connection string=&quot;port=3306;server=localhost;user id=root;password=t0m122;persistsecurityinfo=True;database=radius_tol;Charset=utf8;convertzerodatetime=True;allowzerodatetime=True&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\WIN8\\Documents\\Visual\ Studio\ 2013\\Projects\\CepServis\\TeknikServis\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TOL']/@connectionString" />
+  </parameter>
+  <parameter name="TOLBILISIM-Web.config Connection String" description="" value="metadata=res://*/radiusModel.csdl|res://*/radiusModel.ssdl|res://*/radiusModel.msl;provider=MySql.Data.MySqlClient;provider connection string=&quot;port=3306;server=localhost;user id=root;password=t0m122;persistsecurityinfo=True;database=radius_tol;convertzerodatetime=True;allowzerodatetime=True;characterset=utf8&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\WIN8\\Documents\\Visual\ Studio\ 2013\\Projects\\CepServis\\TeknikServis\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TOLBILISIM']/@connectionString" />
+  </parameter>
+  <parameter name="LocalMySqlServer-Web.config Connection String" description="LocalMySqlServer Connection String used in web.config by the application to access the database." value="" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\WIN8\\Documents\\Visual\ Studio\ 2013\\Projects\\CepServis\\TeknikServis\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='LocalMySqlServer']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="rm_invoices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="invgroup" Type="Boolean" Nullable="false" />
+    <Property Name="invnum" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="managername" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" />
+    <Property Name="bytesdl" Type="Int64" Nullable="false" />
+    <Property Name="bytesul" Type="Int64" Nullable="false" />
+    <Property Name="bytescomb" Type="Int64" Nullable="false" />
+    <Property Name="downlimit" Type="Int64" Nullable="false" />
+    <Property Name="uplimit" Type="Int64" Nullable="false" />
+    <Property Name="comblimit" Type="Int64" Nullable="false" />
+    <Property Name="time" Type="Int32" Nullable="false" />
+    <Property Name="uptimelimit" Type="Int64" Nullable="false" />
+    <Property Name="days" Type="Int32" Nullable="false" />
+    <Property Name="expiration" Type="DateTime" Nullable="false" />
+    <Property Name="capdl" Type="Boolean" Nullable="false" />
+    <Property Name="capul" Type="Boolean" Nullable="false" />
+    <Property Name="captotal" Type="Boolean" Nullable="false" />
+    <Property Name="captime" Type="Boolean" Nullable="false" />
+    <Property Name="capdate" Type="Boolean" Nullable="false" />
+    <Property Name="service" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="transid" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="zip" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fullname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="taxid" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="paymentopt" Type="DateTime" Nullable="false" />
+    <Property Name="invtype" Type="Boolean" Nullable="false" />
+    <Property Name="paymode" Type="SByte" Nullable="false" />
+    <Property Name="paid" Type="DateTime" Nullable="false" />
+    <Property Name="price" Type="Decimal" Nullable="false" />
+    <Property Name="tax" Type="Decimal" Nullable="false" />
+    <Property Name="vatpercent" Type="Decimal" Nullable="false" />
+    <Property Name="remark" Type="String" MaxLength="400" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="balance" Type="Decimal" Nullable="false" />
+    <Property Name="gwtransid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rm_services">
+    <Key>
+      <PropertyRef Name="srvid" />
+    </Key>
+    <Property Name="srvid" Type="Int32" Nullable="false" />
+    <Property Name="srvname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descr" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="downrate" Type="Int32" Nullable="false" />
+    <Property Name="uprate" Type="Int32" Nullable="false" />
+    <Property Name="limitdl" Type="Boolean" Nullable="false" />
+    <Property Name="limitul" Type="Boolean" Nullable="false" />
+    <Property Name="limitcomb" Type="Boolean" Nullable="false" />
+    <Property Name="limitexpiration" Type="Boolean" Nullable="false" />
+    <Property Name="limituptime" Type="Boolean" Nullable="false" />
+    <Property Name="poolname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="unitprice" Type="Decimal" Nullable="false" />
+    <Property Name="unitpriceadd" Type="Decimal" Nullable="false" />
+    <Property Name="timebaseexp" Type="Boolean" Nullable="false" />
+    <Property Name="timebaseonline" Type="Boolean" Nullable="false" />
+    <Property Name="timeunitexp" Type="Int32" Nullable="false" />
+    <Property Name="timeunitonline" Type="Int32" Nullable="false" />
+    <Property Name="trafficunitdl" Type="Int32" Nullable="false" />
+    <Property Name="trafficunitul" Type="Int32" Nullable="false" />
+    <Property Name="trafficunitcomb" Type="Int32" Nullable="false" />
+    <Property Name="inittimeexp" Type="Int32" Nullable="false" />
+    <Property Name="inittimeonline" Type="Int32" Nullable="false" />
+    <Property Name="initdl" Type="Int32" Nullable="false" />
+    <Property Name="initul" Type="Int32" Nullable="false" />
+    <Property Name="inittotal" Type="Int32" Nullable="false" />
+    <Property Name="srvtype" Type="Boolean" Nullable="false" />
+    <Property Name="timeaddmodeexp" Type="Boolean" Nullable="false" />
+    <Property Name="timeaddmodeonline" Type="Boolean" Nullable="false" />
+    <Property Name="trafficaddmode" Type="Boolean" Nullable="false" />
+    <Property Name="monthly" Type="Boolean" Nullable="false" />
+    <Property Name="enaddcredits" Type="Boolean" Nullable="false" />
+    <Property Name="minamount" Type="Int32" Nullable="false" />
+    <Property Name="minamountadd" Type="Int32" Nullable="false" />
+    <Property Name="resetcounters" Type="Boolean" Nullable="false" />
+    <Property Name="pricecalcdownload" Type="Boolean" Nullable="false" />
+    <Property Name="pricecalcupload" Type="Boolean" Nullable="false" />
+    <Property Name="pricecalcuptime" Type="Boolean" Nullable="false" />
+    <Property Name="unitpricetax" Type="Decimal" Nullable="false" />
+    <Property Name="unitpriceaddtax" Type="Decimal" Nullable="false" />
+    <Property Name="enableburst" Type="Boolean" Nullable="false" />
+    <Property Name="dlburstlimit" Type="Int32" Nullable="false" />
+    <Property Name="ulburstlimit" Type="Int32" Nullable="false" />
+    <Property Name="dlburstthreshold" Type="Int32" Nullable="false" />
+    <Property Name="ulburstthreshold" Type="Int32" Nullable="false" />
+    <Property Name="dlbursttime" Type="Int32" Nullable="false" />
+    <Property Name="ulbursttime" Type="Int32" Nullable="false" />
+    <Property Name="enableservice" Type="Int32" Nullable="false" />
+    <Property Name="dlquota" Type="Int64" Nullable="false" />
+    <Property Name="ulquota" Type="Int64" Nullable="false" />
+    <Property Name="combquota" Type="Int64" Nullable="false" />
+    <Property Name="timequota" Type="Int64" Nullable="false" />
+    <Property Name="priority" Type="Int16" Nullable="false" />
+    <Property Name="nextsrvid" Type="Int32" Nullable="false" />
+    <Property Name="dailynextsrvid" Type="Int32" Nullable="false" />
+    <Property Name="disnextsrvid" Type="Int32" Nullable="false" />
+    <Property Name="availucp" Type="Boolean" Nullable="false" />
+    <Property Name="renew" Type="Boolean" Nullable="false" />
+    <Property Name="carryover" Type="Boolean" Nullable="false" />
+    <Property Name="policymapdl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="policymapul" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="custattr" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="gentftp" Type="Boolean" Nullable="false" />
+    <Property Name="cmcfg" Type="String" MaxLength="10240" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="advcmcfg" Type="Boolean" Nullable="false" />
+    <Property Name="addamount" Type="Int32" Nullable="false" />
+    <Property Name="ignstatip" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rm_users">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="groupid" Type="Int32" Nullable="false" />
+    <Property Name="enableuser" Type="Boolean" Nullable="false" />
+    <Property Name="uplimit" Type="Int64" Nullable="false" />
+    <Property Name="downlimit" Type="Int64" Nullable="false" />
+    <Property Name="comblimit" Type="Int64" Nullable="false" />
+    <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="company" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="zip" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="gpslat" Type="Decimal" Nullable="false" />
+    <Property Name="gpslong" Type="Decimal" Nullable="false" />
+    <Property Name="mac" Type="String" MaxLength="17" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usemacauth" Type="Boolean" Nullable="false" />
+    <Property Name="expiration" Type="DateTime" Nullable="false" />
+    <Property Name="uptimelimit" Type="Int64" Nullable="false" />
+    <Property Name="srvid" Type="Int32" Nullable="false" />
+    <Property Name="staticipcm" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="staticipcpe" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ipmodecm" Type="Boolean" Nullable="false" />
+    <Property Name="ipmodecpe" Type="Boolean" Nullable="false" />
+    <Property Name="poolidcm" Type="Int32" Nullable="false" />
+    <Property Name="poolidcpe" Type="Int32" Nullable="false" />
+    <Property Name="createdon" Type="DateTime" Nullable="false" />
+    <Property Name="acctype" Type="Boolean" Nullable="false" />
+    <Property Name="credits" Type="Decimal" Nullable="false" />
+    <Property Name="cardfails" Type="SByte" Nullable="false" />
+    <Property Name="createdby" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="owner" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="taxid" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="maccm" Type="String" MaxLength="17" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="custattr" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="warningsent" Type="Boolean" Nullable="false" />
+    <Property Name="verifycode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="verified" Type="Boolean" Nullable="false" />
+    <Property Name="selfreg" Type="Boolean" Nullable="false" />
+    <Property Name="verifyfails" Type="SByte" Nullable="false" />
+    <Property Name="verifysentnum" Type="SByte" Nullable="false" />
+    <Property Name="verifymobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contractid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contractvalid" Type="DateTime" Nullable="false" />
+    <Property Name="actcode" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pswactsmsnum" Type="SByte" Nullable="false" />
+    <Property Name="alertemail" Type="Boolean" Nullable="false" />
+    <Property Name="alertsms" Type="Boolean" Nullable="false" />
+    <Property Name="lang" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastlogoff" Type="DateTime" />
+  </EntityType>
+  <EntityContainer Name="tolEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="rm_invoices" EntityType="Self.rm_invoices" />
+    <EntitySet Name="rm_services" EntityType="Self.rm_services" />
+    <EntitySet Name="rm_users" EntityType="Self.rm_users" />
+  </EntityContainer>
+</Schema>

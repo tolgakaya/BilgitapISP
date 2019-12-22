@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="firmaModelStoreContainer" CdmEntityContainer="firmaEntities">
+    <EntitySetMapping Name="firmas">
+      <EntityTypeMapping TypeName="firmaModel.firma">
+        <MappingFragment StoreEntitySet="firmas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="config" ColumnName="config" />
+          <ScalarProperty Name="firma_kod" ColumnName="firma_kod" />
+          <ScalarProperty Name="katilma_tarihi" ColumnName="katilma_tarihi" />
+          <ScalarProperty Name="yenileme_tarihi" ColumnName="yenileme_tarihi" />
+          <ScalarProperty Name="expiration" ColumnName="expiration" />
+          <ScalarProperty Name="firma_tam" ColumnName="firma_tam" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="web" ColumnName="web" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,249 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Super.master.cs" Inherits="TeknikServis.AdminSuper.Super" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - BilgiTAP Teknik Servis</title>
+    <%--  <base href="/"/>--%>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <meta name="description" content="Web tabanlı teknik servis yönetim yazılımı" />
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <!--  wrapper -->
+        <div id="wrapper">
+            <!-- navbar top -->
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+                <!-- navbar-header -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a runat="server" id="brr" class="navbar-brand" href="Default.aspx">
+                        <%-- <b>BilgiTAP</b>--%>
+                        <img src="/img/logo.png" alt="" />
+                    </a>
+
+                </div>
+
+                <!-- end navbar-header -->
+                <!-- navbar-top-links -->
+
+                <ul class="nav navbar-top-links navbar-right">
+
+                  
+                    <li >
+                        <a href="/AdminSuper/AdminOlustur"><i class="fa fa-plus fa-2x"></i>Yeni</a>
+                    </li>
+                    <%-- <li class="hidden-md hidden-lg">
+                        <a href="/TeknikTeknik/ServislerCanli"><i class="fa fa-wrench fa-2x"></i>Servis</a>
+                    </li>--%>
+                    <li >
+                        <a href="/AdminSuper/Firmalar"><i class="fa fa-cubes fa-2x"></i>Firmalar</a>
+                    </li>
+                   <li >
+                        <a href="/AdminSuper/Firmalar?tip=aktif"><i class="fa fa-cubes fa-2x"></i>Aktif Firmalar</a>
+                    </li>
+                     <li >
+                        <a href="/AdminSuper/Firmalar?tip=pasif"><i class="fa fa-cubes fa-2x"></i>Pasif Firmalar</a>
+                    </li>
+                    <%--</div>--%>
+                    <!-- main dropdown -->
+
+                 
+                    <li runat="server" id="ayar" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-2x"></i>
+                        </a>
+                        <!-- dropdown user-->
+                        <ul class="dropdown-menu dropdown-user ">
+                            <li><a href="/Admin/Kullanicilar"><i class="fa fa-user fa-fw"></i>Kullanıcılar</a>
+                            </li>
+
+                            <li id="liAyar" runat="server"><a href="/Admin/Ayarlar"><i class="fa fa-refresh fa-fw"></i>Ayarlar</a>
+                            </li>
+
+                            <li id="liSms" runat="server"><a href="/Admin/SmsAyarlari"><i class="fa fa-phone-square fa-fw"></i>Sms Ayarlar</a>
+                            </li>
+                            <li id="liMail" runat="server"><a href="/Admin/MailAyarlari"><i class="fa fa-envelope fa-fw"></i>Mail Ayarlar</a>
+                            </li>
+                            <li id="liBayiAyar" runat="server"><a href="/Admin/BayiAyarlari"><i class="fa fa-sitemap fa-fw"></i>Yönetici Ayarları</a>
+                            </li>
+                            <li id="li5" runat="server"><a href="/TeknikTeknik/ServisPaketleri"><i class="fa fa-wrench fa-fw"></i>Servis Paketleri</a>
+                            </li>
+                            <li>
+                                <a href="/TeknikAlim/CihazGruplar"><i class="fa fa-cubes"></i>Ürün Grupları</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/TeknikHarita/Antenler"><i class="fa fa-cubes"></i>Antenler</a>
+                            </li>
+                            <li>
+                                <a href="/TeknikHarita/MusteriAnten"><i class="fa fa-cubes"></i>Müşteri/Anten Listesi</a>
+                            </li>
+                            <li>
+                                <a href="/TeknikHarita/ButunAntenler"><i class="fa fa-cubes"></i>Haritada Antenler</a>
+                            </li>
+                            <li>
+                                <a href="/TeknikHarita/ButunAntenMusteri"><i class="fa fa-cubes"></i>Anten Kapsamında Müşteriler</a>
+                            </li>
+                            <li>
+                                <a href="/TeknikHarita/ButunAntenMusteri2"><i class="fa fa-cubes"></i>Antene Kayıtlı Müşteriler</a>
+                            </li>
+                            <li>
+                                <a href="/TeknikHarita/ButunMusteriler"><i class="fa fa-cubes"></i>Müşteri Haritası</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a runat="server" href="~/Account/Manage" title="Manage your account"><%: Context.User.Identity.GetUserName()  %> !</a></li>
+
+                            <li class="divider"></li>
+                            <li>
+                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Çıkış" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                            </li>
+
+                        </ul>
+                        <!-- end dropdown-user -->
+                    </li>
+                    <!-- end main dropdown -->
+                </ul>
+                <!-- end navbar-top-links -->
+
+            </nav>
+            <!-- end navbar top -->
+
+            <!-- navbar side -->
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <!-- sidebar-collapse -->
+                <div class="sidebar-collapse">
+                    <!-- side-menu -->
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <!-- src="/Uploads/firma.png"-->
+                            <div class="user-section">
+
+                                <div class="user-info">
+                                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                                        <AnonymousTemplate>
+                                            <div class="user-section-inner">
+                                                <img src="img/user.jpg" class="img-circle" alt="" />
+                                            </div>
+                                        </AnonymousTemplate>
+                                        <LoggedInTemplate>
+                                            <div class="user-section-inner">
+
+                                            <%--    <img id="res" runat="server" src="<%#resim()%>" class="img-circle" alt="" />--%>
+                                            </div>
+                                            <ul class="user-text-online">
+                                                <li><a runat="server" href="~/Account/Manage" title="Manage your account"><%: Context.User.Identity.GetUserName()  %> !</a></li>
+
+                                                <%--<asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Çıkış" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />--%>
+                                            </ul>
+                                        </LoggedInTemplate>
+                                    </asp:LoginView>
+                                </div>
+                            </div>
+
+                            <!--end user image section-->
+                        </li>
+                    
+                        
+                    <%--    <li id="roporLi" runat="server">
+                            <a href="#"><i class="fa fa-area-chart fa-2x"></i>&nbsp Raporlar<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/Raporlar/TekRaporView">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Günlük Rapor</a>
+                                </li>
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=odeme_tahsilat">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Ödeme ve Tahsilatlar</a>
+                                </li>
+
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=gider_raporu">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Ödeme Raporu</a>
+                                </li>
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=tahsilat_raporu">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Tahsilat Raporu</a>
+                                </li>
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=satis_raporu">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Satış Raporu</a>
+                                </li>
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=odeme_tahsilat_gruplu">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Tahsilat/Ödeme Özet</a>
+                                </li>
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=odeme_tahsilat_satis">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Tahsilat/Ödeme/Satış</a>
+                                </li>
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=periyodik_rapor">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Periyodik Rapor</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">&nbsp</a>
+                                </li>
+                            </ul>
+                        </li>--%>
+                      
+
+                        <!-- end side-menu -->
+                </div>
+                <!-- end sidebar-collapse -->
+            </nav>
+            <!-- end navbar side -->
+
+            <asp:ScriptManager runat="server" EnablePageMethods="true">
+                <Scripts>
+                    <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                    <%--Framework Scripts--%>
+                    <asp:ScriptReference Name="MsAjaxBundle" />
+                    <asp:ScriptReference Name="jquery" />
+                    <asp:ScriptReference Name="bootstrap" />
+                    <asp:ScriptReference Name="respond" />
+                    <asp:ScriptReference Name="pace" />
+                    <asp:ScriptReference Name="metis" />
+                    <asp:ScriptReference Name="siminta" />
+                    <asp:ScriptReference Name="moments" />
+                    <asp:ScriptReference Name="momentlocals" />
+                    <asp:ScriptReference Name="datetime" />
+                    <%--    <asp:ScriptReference Name="anten-kaydet" />--%>
+                    <asp:ScriptReference Name="alertify" />
+                    <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                    <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                    <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                    <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                    <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                    <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                    <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                    <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                    <asp:ScriptReference Name="WebFormsBundle" />
+                    <%--Site Scripts--%>
+                </Scripts>
+            </asp:ScriptManager>
+            <div id="page-wrapper">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+
+
+
+
+
+
+        </div>
+        <!-- end wrapper -->
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="firmaModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="firmas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="config" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="firma_kod" Type="varchar" MaxLength="20" />
+    <Property Name="katilma_tarihi" Type="datetime" Precision="0" />
+    <Property Name="yenileme_tarihi" Type="datetime" Precision="0" />
+    <Property Name="expiration" Type="datetime" Precision="0" />
+    <Property Name="firma_tam" Type="varchar" MaxLength="200" />
+    <Property Name="adres" Type="varchar" MaxLength="200" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="web" Type="varchar" MaxLength="100" />
+    <Property Name="tel" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityContainer Name="firmaModelStoreContainer">
+    <EntitySet Name="firmas" EntityType="Self.firmas" Schema="bilgitap_lisans" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

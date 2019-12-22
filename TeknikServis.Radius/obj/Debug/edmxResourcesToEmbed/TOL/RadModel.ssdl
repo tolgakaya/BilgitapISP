@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tolModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="rm_invoices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="invgroup" Type="bool" Nullable="false" />
+    <Property Name="invnum" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="managername" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="bytesdl" Type="bigint" Nullable="false" />
+    <Property Name="bytesul" Type="bigint" Nullable="false" />
+    <Property Name="bytescomb" Type="bigint" Nullable="false" />
+    <Property Name="downlimit" Type="bigint" Nullable="false" />
+    <Property Name="uplimit" Type="bigint" Nullable="false" />
+    <Property Name="comblimit" Type="bigint" Nullable="false" />
+    <Property Name="time" Type="int" Nullable="false" />
+    <Property Name="uptimelimit" Type="bigint" Nullable="false" />
+    <Property Name="days" Type="int" Nullable="false" />
+    <Property Name="expiration" Type="date" Nullable="false" />
+    <Property Name="capdl" Type="bool" Nullable="false" />
+    <Property Name="capul" Type="bool" Nullable="false" />
+    <Property Name="captotal" Type="bool" Nullable="false" />
+    <Property Name="captime" Type="bool" Nullable="false" />
+    <Property Name="capdate" Type="bool" Nullable="false" />
+    <Property Name="service" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="comment" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="transid" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="amount" Type="decimal" Precision="13" Scale="2" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="city" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="zip" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="country" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="state" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="taxid" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="paymentopt" Type="date" Nullable="false" />
+    <Property Name="invtype" Type="bool" Nullable="false" />
+    <Property Name="paymode" Type="tinyint" Nullable="false" />
+    <Property Name="paid" Type="date" Nullable="false" />
+    <Property Name="price" Type="decimal" Precision="25" Scale="6" Nullable="false" />
+    <Property Name="tax" Type="decimal" Precision="25" Scale="6" Nullable="false" />
+    <Property Name="vatpercent" Type="decimal" Precision="4" Scale="2" Nullable="false" />
+    <Property Name="remark" Type="varchar" MaxLength="400" Nullable="false" />
+    <Property Name="balance" Type="decimal" Precision="20" Scale="2" Nullable="false" />
+    <Property Name="gwtransid" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="phone" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="mobile" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rm_services">
+    <Key>
+      <PropertyRef Name="srvid" />
+    </Key>
+    <Property Name="srvid" Type="int" Nullable="false" />
+    <Property Name="srvname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="descr" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="downrate" Type="int" Nullable="false" />
+    <Property Name="uprate" Type="int" Nullable="false" />
+    <Property Name="limitdl" Type="bool" Nullable="false" />
+    <Property Name="limitul" Type="bool" Nullable="false" />
+    <Property Name="limitcomb" Type="bool" Nullable="false" />
+    <Property Name="limitexpiration" Type="bool" Nullable="false" />
+    <Property Name="limituptime" Type="bool" Nullable="false" />
+    <Property Name="poolname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="unitprice" Type="decimal" Precision="25" Scale="6" Nullable="false" />
+    <Property Name="unitpriceadd" Type="decimal" Precision="25" Scale="6" Nullable="false" />
+    <Property Name="timebaseexp" Type="bool" Nullable="false" />
+    <Property Name="timebaseonline" Type="bool" Nullable="false" />
+    <Property Name="timeunitexp" Type="int" Nullable="false" />
+    <Property Name="timeunitonline" Type="int" Nullable="false" />
+    <Property Name="trafficunitdl" Type="int" Nullable="false" />
+    <Property Name="trafficunitul" Type="int" Nullable="false" />
+    <Property Name="trafficunitcomb" Type="int" Nullable="false" />
+    <Property Name="inittimeexp" Type="int" Nullable="false" />
+    <Property Name="inittimeonline" Type="int" Nullable="false" />
+    <Property Name="initdl" Type="int" Nullable="false" />
+    <Property Name="initul" Type="int" Nullable="false" />
+    <Property Name="inittotal" Type="int" Nullable="false" />
+    <Property Name="srvtype" Type="bool" Nullable="false" />
+    <Property Name="timeaddmodeexp" Type="bool" Nullable="false" />
+    <Property Name="timeaddmodeonline" Type="bool" Nullable="false" />
+    <Property Name="trafficaddmode" Type="bool" Nullable="false" />
+    <Property Name="monthly" Type="bool" Nullable="false" />
+    <Property Name="enaddcredits" Type="bool" Nullable="false" />
+    <Property Name="minamount" Type="int" Nullable="false" />
+    <Property Name="minamountadd" Type="int" Nullable="false" />
+    <Property Name="resetcounters" Type="bool" Nullable="false" />
+    <Property Name="pricecalcdownload" Type="bool" Nullable="false" />
+    <Property Name="pricecalcupload" Type="bool" Nullable="false" />
+    <Property Name="pricecalcuptime" Type="bool" Nullable="false" />
+    <Property Name="unitpricetax" Type="decimal" Precision="25" Scale="6" Nullable="false" />
+    <Property Name="unitpriceaddtax" Type="decimal" Precision="25" Scale="6" Nullable="false" />
+    <Property Name="enableburst" Type="bool" Nullable="false" />
+    <Property Name="dlburstlimit" Type="int" Nullable="false" />
+    <Property Name="ulburstlimit" Type="int" Nullable="false" />
+    <Property Name="dlburstthreshold" Type="int" Nullable="false" />
+    <Property Name="ulburstthreshold" Type="int" Nullable="false" />
+    <Property Name="dlbursttime" Type="int" Nullable="false" />
+    <Property Name="ulbursttime" Type="int" Nullable="false" />
+    <Property Name="enableservice" Type="int" Nullable="false" />
+    <Property Name="dlquota" Type="bigint" Nullable="false" />
+    <Property Name="ulquota" Type="bigint" Nullable="false" />
+    <Property Name="combquota" Type="bigint" Nullable="false" />
+    <Property Name="timequota" Type="bigint" Nullable="false" />
+    <Property Name="priority" Type="smallint" Nullable="false" />
+    <Property Name="nextsrvid" Type="int" Nullable="false" />
+    <Property Name="dailynextsrvid" Type="int" Nullable="false" />
+    <Property Name="disnextsrvid" Type="int" Nullable="false" />
+    <Property Name="availucp" Type="bool" Nullable="false" />
+    <Property Name="renew" Type="bool" Nullable="false" />
+    <Property Name="carryover" Type="bool" Nullable="false" />
+    <Property Name="policymapdl" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="policymapul" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="custattr" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="gentftp" Type="bool" Nullable="false" />
+    <Property Name="cmcfg" Type="varchar" MaxLength="10240" Nullable="false" />
+    <Property Name="advcmcfg" Type="bool" Nullable="false" />
+    <Property Name="addamount" Type="int" Nullable="false" />
+    <Property Name="ignstatip" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rm_users">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="groupid" Type="int" Nullable="false" />
+    <Property Name="enableuser" Type="bool" Nullable="false" />
+    <Property Name="uplimit" Type="bigint" Nullable="false" />
+    <Property Name="downlimit" Type="bigint" Nullable="false" />
+    <Property Name="comblimit" Type="bigint" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="company" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="mobile" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="city" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="zip" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="country" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="state" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="comment" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="gpslat" Type="decimal" Precision="17" Scale="14" Nullable="false" />
+    <Property Name="gpslong" Type="decimal" Precision="17" Scale="14" Nullable="false" />
+    <Property Name="mac" Type="varchar" MaxLength="17" Nullable="false" />
+    <Property Name="usemacauth" Type="bool" Nullable="false" />
+    <Property Name="expiration" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="uptimelimit" Type="bigint" Nullable="false" />
+    <Property Name="srvid" Type="int" Nullable="false" />
+    <Property Name="staticipcm" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="staticipcpe" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ipmodecm" Type="bool" Nullable="false" />
+    <Property Name="ipmodecpe" Type="bool" Nullable="false" />
+    <Property Name="poolidcm" Type="int" Nullable="false" />
+    <Property Name="poolidcpe" Type="int" Nullable="false" />
+    <Property Name="createdon" Type="date" Nullable="false" />
+    <Property Name="acctype" Type="bool" Nullable="false" />
+    <Property Name="credits" Type="decimal" Precision="20" Scale="2" Nullable="false" />
+    <Property Name="cardfails" Type="tinyint" Nullable="false" />
+    <Property Name="createdby" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="taxid" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="maccm" Type="varchar" MaxLength="17" Nullable="false" />
+    <Property Name="custattr" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="warningsent" Type="bool" Nullable="false" />
+    <Property Name="verifycode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="verified" Type="bool" Nullable="false" />
+    <Property Name="selfreg" Type="bool" Nullable="false" />
+    <Property Name="verifyfails" Type="tinyint" Nullable="false" />
+    <Property Name="verifysentnum" Type="tinyint" Nullable="false" />
+    <Property Name="verifymobile" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="contractid" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="contractvalid" Type="date" Nullable="false" />
+    <Property Name="actcode" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="pswactsmsnum" Type="tinyint" Nullable="false" />
+    <Property Name="alertemail" Type="bool" Nullable="false" />
+    <Property Name="alertsms" Type="bool" Nullable="false" />
+    <Property Name="lang" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="lastlogoff" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="tolModelStoreContainer">
+    <EntitySet Name="rm_invoices" EntityType="Self.rm_invoices" Schema="radius2" store:Type="Tables" />
+    <EntitySet Name="rm_services" EntityType="Self.rm_services" Schema="radius2" store:Type="Tables" />
+    <EntitySet Name="rm_users" EntityType="Self.rm_users" Schema="radius2" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

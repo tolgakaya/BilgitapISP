@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="43a7ea8e7eda470e9230b8de2d5d7a09" Name="Diagram1" ZoomLevel="67">
+        <EntityTypeShape EntityType="radiusModel.alim_detays" Width="1.5" PointX="8.25" PointY="33.75" />
+        <EntityTypeShape EntityType="radiusModel.alim" Width="1.5" PointX="3" PointY="34" />
+        <EntityTypeShape EntityType="radiusModel.ayargenel" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="radiusModel.ayar" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="radiusModel.banka" Width="1.5" PointX="6" PointY="22.125" />
+        <EntityTypeShape EntityType="radiusModel.carihesap" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="radiusModel.cekhesap" Width="1.5" PointX="3" PointY="28.125" />
+        <EntityTypeShape EntityType="radiusModel.cihaz_fifos" Width="1.5" PointX="6" PointY="10.875" />
+        <EntityTypeShape EntityType="radiusModel.cihaz_garantis" Width="1.5" PointX="6" PointY="27.5" />
+        <EntityTypeShape EntityType="radiusModel.cihaz_stoks" Width="1.5" PointX="6" PointY="6.375" />
+        <EntityTypeShape EntityType="radiusModel.cihaz" Width="1.5" PointX="3.75" PointY="23.75" />
+        <EntityTypeShape EntityType="radiusModel.kart_caris" Width="1.5" PointX="8.25" PointY="47.25" />
+        <EntityTypeShape EntityType="radiusModel.kart_hesaps" Width="1.5" PointX="10.5" PointY="28.125" />
+        <EntityTypeShape EntityType="radiusModel.kart_odemes" Width="1.5" PointX="8.25" PointY="44.125" />
+        <EntityTypeShape EntityType="radiusModel.kart_tanims" Width="1.5" PointX="6" PointY="45.25" />
+        <EntityTypeShape EntityType="radiusModel.kasahareket" Width="1.5" PointX="13.5" PointY="34.375" />
+        <EntityTypeShape EntityType="radiusModel.kasahesap" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="radiusModel.mail_ayars" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="radiusModel.masraf_tips" Width="1.5" PointX="6" PointY="15.125" />
+        <EntityTypeShape EntityType="radiusModel.musteriodemeler" Width="1.5" PointX="8.25" PointY="24.375" />
+        <EntityTypeShape EntityType="radiusModel.not" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="radiusModel.panel" Width="1.5" PointX="8.75" PointY="5.75" />
+        <EntityTypeShape EntityType="radiusModel.pos_tanims" Width="1.5" PointX="6" PointY="18.625" />
+        <EntityTypeShape EntityType="radiusModel.poshesap" Width="1.5" PointX="13.5" PointY="29" />
+        <EntityTypeShape EntityType="radiusModel.satislar" Width="1.5" PointX="13.5" PointY="22.375" />
+        <EntityTypeShape EntityType="radiusModel.service_durums" Width="1.5" PointX="5.25" PointY="49.375" />
+        <EntityTypeShape EntityType="radiusModel.service_faturas" Width="1.5" PointX="6" PointY="32.375" />
+        <EntityTypeShape EntityType="radiusModel.service_tips" Width="1.5" PointX="3" PointY="39.875" />
+        <EntityTypeShape EntityType="radiusModel.servicedetay" Width="1.5" PointX="7.5" PointY="39.375" />
+        <EntityTypeShape EntityType="radiusModel.servicehesap" Width="1.5" PointX="10.5" PointY="33.625" />
+        <EntityTypeShape EntityType="radiusModel.servis_paket_detays" Width="1.5" PointX="9" PointY="19.5" />
+        <EntityTypeShape EntityType="radiusModel.servis_pakets" Width="1.5" PointX="6.75" PointY="2.25" />
+        <EntityTypeShape EntityType="radiusModel.sms_ayars" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="radiusModel.urun" Width="1.5" PointX="3" PointY="43.625" />
+        <EntityTypeShape EntityType="radiusModel.yedek_uruns" Width="1.5" PointX="3" PointY="67.5" />
+        <AssociationConnector Association="radiusModel.alim_detays_ibfk_1" />
+        <AssociationConnector Association="radiusModel.alim_detays_ibfk_2" />
+        <AssociationConnector Association="radiusModel.musteriodemelers_ibfk_4" />
+        <AssociationConnector Association="radiusModel.pos_tanims_ibfk_1" />
+        <AssociationConnector Association="radiusModel.cekhesaps_ibfk_2" />
+        <AssociationConnector Association="radiusModel.cihaz_fifos_ibfk_1" />
+        <AssociationConnector Association="radiusModel.cihaz_garanti_kisit" />
+        <AssociationConnector Association="radiusModel.cihazIadeKisit" />
+        <AssociationConnector Association="radiusModel.stokKisit1" />
+        <AssociationConnector Association="radiusModel.cihaz_id" />
+        <AssociationConnector Association="radiusModel.paket_cihaz_kisit" />
+        <AssociationConnector Association="radiusModel.servicehesaps_ibfk_3" />
+        <AssociationConnector Association="radiusModel.cari_tanim_kartR" />
+        <AssociationConnector Association="radiusModel.kart_hesaps_ibfk_1" />
+        <AssociationConnector Association="radiusModel.kart_hesaps_ibfk_3" />
+        <AssociationConnector Association="radiusModel.kartTanimOdemeF1" />
+        <AssociationConnector Association="radiusModel.musteriodemelers_ibfk_3" />
+        <AssociationConnector Association="radiusModel.kasaharekets_ibfk_1" />
+        <AssociationConnector Association="radiusModel.masraf_kisit_1" />
+        <AssociationConnector Association="radiusModel.musteriodemelers_ibfk_2" />
+        <AssociationConnector Association="radiusModel.odeme_id" />
+        <AssociationConnector Association="radiusModel.poshesaps_ibfk_4" />
+        <AssociationConnector Association="radiusModel.poshesaps_ibfk_2" />
+        <AssociationConnector Association="radiusModel.servicedetays_ibfk_3" />
+        <AssociationConnector Association="radiusModel.paket_paket_detay_Kisit" />
+        <EntityTypeShape EntityType="radiusModel.fatura" Width="1.5" PointX="15.75" PointY="26.875" />
+        <AssociationConnector Association="radiusModel.faturas_ibfk_1" />
+        <AssociationConnector Association="radiusModel.karar_fatura_kisit2" />
+        <EntityTypeShape EntityType="radiusModel.service" Width="1.5" PointX="5.25" PointY="38" />
+        <AssociationConnector Association="radiusModel.service_faturas_ibfk_1" />
+        <AssociationConnector Association="radiusModel.services_ibfk_4" />
+        <AssociationConnector Association="radiusModel.servicedetays_ibfk_1" />
+        <AssociationConnector Association="radiusModel.servicehesaps_ibfk_2" />
+        <AssociationConnector Association="radiusModel.services_ibfk_5" />
+        <EntityTypeShape EntityType="radiusModel.customer" Width="1.5" PointX="0.75" PointY="42.375" />
+        <AssociationConnector Association="radiusModel.alims_ibfk_1" />
+        <AssociationConnector Association="radiusModel.cekhesaps_ibfk_1" />
+        <AssociationConnector Association="radiusModel.garanti_custom_Kisit" />
+        <AssociationConnector Association="radiusModel.kart_hesaps_ibfk_2" />
+        <AssociationConnector Association="radiusModel.kasaharekets_ibfk_2" />
+        <AssociationConnector Association="radiusModel.musteri_id" />
+        <AssociationConnector Association="radiusModel.musteriodemelers_ibfk_1" />
+        <AssociationConnector Association="radiusModel.poshesaps_ibfk_3" />
+        <AssociationConnector Association="radiusModel.service_faturas_ibfk_2" />
+        <AssociationConnector Association="radiusModel.servicehesaps_ibfk_1" />
+        <AssociationConnector Association="radiusModel.servicehesaps_ibfk_4" />
+        <AssociationConnector Association="radiusModel.services_ibfk_1" />
+        <AssociationConnector Association="radiusModel.services_ibfk_6" />
+        <AssociationConnector Association="radiusModel.tamirci_kisit" />
+        <AssociationConnector Association="radiusModel.uruns_ibfk_1" />
+        <AssociationConnector Association="radiusModel.yedek_uruns_ibfk_1" />
+        <EntityTypeShape EntityType="radiusModel.cihaz_grups" Width="1.5" PointX="1.5" PointY="24.625" />
+        <AssociationConnector Association="radiusModel.cihaz_grup_f" />
+        <EntityTypeShape EntityType="radiusModel.manuel" Width="1.5" PointX="8.375" PointY="10.75" />
+        <EntityTypeShape EntityType="radiusModel.abonelik_pakets" Width="1.5" PointX="0.75" PointY="37.75" />
+        <AssociationConnector Association="radiusModel.fatura_pak_baglantisi" />
+        <AssociationConnector Association="radiusModel.paket_cust_basglantisi" />
+        <AssociationConnector Association="radiusModel.fatura_custome_kst" />
+        <EntityTypeShape EntityType="radiusModel.anten" Width="1.5" PointX="10.375" PointY="10.75" />
+        <AssociationConnector Association="radiusModel.anten_cust_baglanti" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

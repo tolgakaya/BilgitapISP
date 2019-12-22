@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="15.1.6.0" ControlType="ServisDAL.faturaX, ServisDAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" EventsInfo="faturaX,AfterPrint,faturaX_AfterPrint" Version="15.1" PaperKind="A4Rotated" Name="faturaX" Margins="100, 100, 99, 100" PageWidth="1169" PageHeight="827" DataSource="#Ref-38">
+  <Bands>
+    <Item1 ControlType="TopMarginBand" HeightF="99" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" Ref="0" />
+    <Item2 ControlType="PageHeaderBand" HeightF="96.875" Name="PageHeader" Ref="12">
+      <Controls>
+        <Item1 ControlType="XRLabel" SizeF="157.4577, 23" LocationFloat="787.4487, 46.35417" Text="tarih" Multiline="true" Name="tarih2" Padding="2,2,0,0,100" Ref="1" />
+        <Item2 ControlType="XRLabel" SizeF="155.2083, 23" LocationFloat="222.8655, 46.35417" Text="tarih" Multiline="true" Name="tarih" Padding="2,2,0,0,100" Ref="2" />
+        <Item3 ControlType="XRLabel" SizeF="203.834, 23" LocationFloat="565.1571, 69.35419" Text="vergi dairesi" Multiline="true" Name="vd2" Padding="2,2,0,0,100" Ref="3" />
+        <Item4 ControlType="XRLabel" SizeF="191.6667, 23" LocationFloat="14.53211, 69.35416" Text="vergi dairesi" Multiline="true" Name="vd" Padding="2,2,0,0,100" Ref="4" />
+        <Item5 ControlType="XRLabel" SizeF="203.834, 23" LocationFloat="565.1571, 0.3541311" Text="Adi" Multiline="true" Name="lblAdi2" Padding="2,2,0,0,100" Ref="5" />
+        <Item6 ControlType="XRLabel" SizeF="203.834, 23" LocationFloat="565.1571, 46.35417" Text="TC/VergiNo" Multiline="true" Name="lblTc2" Padding="2,2,0,0,100" Ref="6" />
+        <Item7 ControlType="XRLabel" SizeF="191.6667, 23" LocationFloat="14.53211, 46.35413" Text="TC/VergiNo" Multiline="true" Name="lblTc" Padding="2,2,0,0,100" Ref="7" />
+        <Item8 ControlType="XRLabel" SizeF="191.6667, 23" LocationFloat="14.53211, 0.3541311" Text="Adi" Multiline="true" Name="lblAdi" Padding="2,2,0,0,100" Ref="8" />
+        <Item9 ControlType="XRLabel" SizeF="190.625, 23" LocationFloat="14.53211, 23.35412" Text="Adres" Multiline="true" Name="adres" Padding="2,2,0,0,100" Ref="9" />
+        <Item10 ControlType="XRLabel" SizeF="203.834, 23" LocationFloat="565.1571, 23.35415" Text="Adres" Multiline="true" Name="adres2" Padding="2,2,0,0,100" Ref="10" />
+        <Item11 ControlType="XRLabel" SizeF="100, 23" LocationFloat="222.85, 0.35" Text="tasarım test" Name="label1" Padding="2,2,0,0,100" Ref="11">
+          <index>0</index>
+        </Item11>
+      </Controls>
+    </Item2>
+    <Item3 ControlType="DetailBand" HeightF="25.0001" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" Ref="25">
+      <Controls>
+        <Item1 ControlType="XRTable" SizeF="425.9172, 25" LocationFloat="514.1666, 0" Name="xrTable2" Ref="18">
+          <Rows>
+            <Item1 ControlType="XRTableRow" Weight="1" Name="xrTableRow2" Ref="17">
+              <Cells>
+                <Item1 ControlType="XRTableCell" Weight="2.190700636875402" Text="cinsi" Name="cinsi2" Ref="13" />
+                <Item2 ControlType="XRTableCell" Weight="0.5870957593679329" Text="miktar" Name="miktar2" Ref="14" />
+                <Item3 ControlType="XRTableCell" Weight="0.596024359800635" Text="fiyat" Name="fiyat2" Ref="15" />
+                <Item4 ControlType="XRTableCell" Weight="0.5524245941626797" Text="tutar" Name="tutar2" Ref="16" />
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+        <Item2 ControlType="XRTable" SizeF="426.0417, 25" LocationFloat="4.791641, 0.00009536743" Name="xrTable1" Ref="24">
+          <Rows>
+            <Item1 ControlType="XRTableRow" Weight="1" Name="xrTableRow1" Ref="23">
+              <Cells>
+                <Item1 ControlType="XRTableCell" Weight="1.8470347197994608" Text="cinsi" Name="cinsi" Ref="19" />
+                <Item2 ControlType="XRTableCell" Weight="0.8347375064022756" Text="miktar" Name="miktar" Ref="20" />
+                <Item3 ControlType="XRTableCell" Weight="0.5672165180138761" Text="fiyat" Name="fiyat" Ref="21" />
+                <Item4 ControlType="XRTableCell" Weight="0.678403552056198" Text="tutar" Name="tutar" Ref="22" />
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item2>
+      </Controls>
+    </Item3>
+    <Item4 ControlType="ReportFooterBand" HeightF="115" Name="ReportFooter" Ref="36">
+      <Controls>
+        <Item1 ControlType="XRLabel" SizeF="100, 23" LocationFloat="272.5, 0" Text="toplam" Name="toplam" Padding="2,2,0,0,100" Ref="26" />
+        <Item2 ControlType="XRLabel" SizeF="100, 23" LocationFloat="272.5, 22.99999" Text="kdv" Name="kdv" Padding="2,2,0,0,100" Ref="27" />
+        <Item3 ControlType="XRLabel" SizeF="100, 23" LocationFloat="272.5, 45.99997" Text="oiv" Name="oiv" Padding="2,2,0,0,100" Ref="28" />
+        <Item4 ControlType="XRLabel" SizeF="100, 23" LocationFloat="272.5, 68.99995" Text="geneltoplam" Name="gtoplam" Padding="2,2,0,0,100" Ref="29" />
+        <Item5 ControlType="XRLabel" SizeF="100, 23" LocationFloat="781.875, 68.99995" Text="geneltoplam" Name="gtoplam2" Padding="2,2,0,0,100" Ref="30" />
+        <Item6 ControlType="XRLabel" SizeF="100, 23" LocationFloat="781.875, 45.99997" Text="oiv" Name="oiv2" Padding="2,2,0,0,100" Ref="31" />
+        <Item7 ControlType="XRLabel" SizeF="100, 23" LocationFloat="781.875, 22.99999" Text="kdv" Name="kdv2" Padding="2,2,0,0,100" Ref="32" />
+        <Item8 ControlType="XRLabel" SizeF="100, 23" LocationFloat="781.875, 0" Text="toplam" Name="toplam2" Padding="2,2,0,0,100" Ref="33" />
+        <Item9 ControlType="XRLabel" SizeF="278.75, 23" LocationFloat="93.75003, 91.99995" Text="yazı ile" Name="yazi" Padding="2,2,0,0,100" Ref="34" />
+        <Item10 ControlType="XRLabel" SizeF="210, 23" LocationFloat="671.875, 91.99995" Text="yazı ile" Name="yazi2" Padding="2,2,0,0,100" Ref="35" />
+      </Controls>
+    </Item4>
+    <Item5 ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" Ref="37" />
+  </Bands>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v15.1" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" Ref="38" />
+  </ObjectStorage>
+  <Extensions>
+    <Item1 Key="DataSerializationExtension" Value="DevExpress.XtraReports.Web.ReportDesigner.DefaultDataSerializer" Ref="39" />
+  </Extensions>
+</XtraReportsLayoutSerializer>

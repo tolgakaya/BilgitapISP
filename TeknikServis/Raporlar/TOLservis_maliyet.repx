@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="15.1.6.0" ControlType="ServisDAL.Raporlama.ServisMaliyetlerX, ServisDAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Version="15.1" Name="ServisMaliyetlerX" PageWidth="850" PageHeight="1100" DataSource="#Ref-54">
+  <Bands>
+    <Item1 ControlType="TopMarginBand" Name="TopMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" Ref="0" />
+    <Item2 ControlType="ReportHeaderBand" HeightF="58.33333" Name="ReportHeader" Ref="5">
+      <Controls>
+        <Item1 ControlType="XRLabel" SizeF="187.5, 23" LocationFloat="462.5, 0" Text="tarih" Name="tarih" Padding="2,2,0,0,100" Ref="1" />
+        <Item2 ControlType="XRLabel" SizeF="187.5, 23" LocationFloat="210.1042, 22.99999" TextAlignment="MiddleCenter" Text="tarih-aralığı" Name="tarih_aralik" Padding="2,2,0,0,100" Ref="2">
+          <StylePriority UseTextAlignment="false" />
+        </Item2>
+        <Item3 ControlType="XRLabel" SizeF="242.7083, 23" LocationFloat="187.5663, 0" TextAlignment="MiddleCenter" Text="SERVİS MALİYET LİSTESİ" Name="baslik" Padding="2,2,0,0,100" Font="Times New Roman, 12pt, style=Bold" Ref="3">
+          <StylePriority UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 ControlType="XRLabel" SizeF="100, 23" LocationFloat="42.07, 23" Text="label1" Name="label1" Padding="2,2,0,0,100" Ref="4">
+          <index>0</index>
+        </Item4>
+      </Controls>
+    </Item2>
+    <Item3 ControlType="GroupHeaderBand" HeightF="33.33333" Name="GroupHeader2" Ref="13">
+      <Controls>
+        <Item1 ControlType="XRTable" ForeColor="White" SizeF="639.9999, 25" LocationFloat="10.00001, 0" Name="xrTable4" BackColor="Black" Ref="12">
+          <Rows>
+            <Item1 ControlType="XRTableRow" Weight="1" Name="xrTableRow4" Ref="11">
+              <Cells>
+                <Item1 ControlType="XRTableCell" Weight="1.3208349450446482" Text="Servis Kimlik" Name="xrTableCell6" Ref="6" />
+                <Item2 ControlType="XRTableCell" Weight="1.482291047226877" Text="Müşteri Adı" Multiline="true" Name="xrTableCell7" Ref="7" />
+                <Item3 ControlType="XRTableCell" Weight="1.7218754226866961" Text="Cihaz" Name="xrTableCell8" Ref="8" />
+                <Item4 ControlType="XRTableCell" Weight="0.9989583194075125" Text="Tutar" Name="xrTableCell9" Ref="9" />
+                <Item5 ControlType="XRTableCell" Weight="0.8760407407875818" Text="Maliyet" Name="xrTableCell10" Ref="10" />
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority UseBackColor="false" UseForeColor="false" />
+        </Item1>
+      </Controls>
+    </Item3>
+    <Item4 ControlType="DetailBand" HeightF="25" Name="Detail" TextAlignment="TopLeft" Padding="0,0,0,0,100" Ref="21">
+      <Controls>
+        <Item1 ControlType="XRTable" ForeColor="White" SizeF="639.9999, 25" LocationFloat="10.00001, 0" Name="xrTable2" BackColor="Black" Ref="20">
+          <Rows>
+            <Item1 ControlType="XRTableRow" Weight="1" Name="xrTableRow2" Ref="19">
+              <Cells>
+                <Item1 ControlType="XRTableCell" Weight="1.3208349450446482" Text="kimlik" Name="kimlik" Ref="14" />
+                <Item2 ControlType="XRTableCell" Weight="1.482291047226877" Text="Müşteri" Multiline="true" Name="servis_musteri" Ref="15" />
+                <Item3 ControlType="XRTableCell" Weight="1.7218754226866961" Text="cihaz" Name="servis_cihaz" Ref="16" />
+                <Item4 ControlType="XRTableCell" Weight="0.9989583194075125" Text="tutar" Name="servis_tutar" Ref="17" />
+                <Item5 ControlType="XRTableCell" Weight="0.8760407407875818" Text="servis_maliyet" Name="servis_maliyet" Ref="18" />
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority UseBackColor="false" UseForeColor="false" />
+        </Item1>
+      </Controls>
+    </Item4>
+    <Item5 ControlType="DetailReportBand" HeightF="50" Name="DetailReport" Ref="38" DataSource="#Ref-54">
+      <Bands>
+        <Item1 ControlType="GroupHeaderBand" HeightF="25" Name="GroupHeader1" Ref="29">
+          <Controls>
+            <Item1 ControlType="XRTable" TextAlignment="MiddleLeft" Font="Times New Roman, 9.75pt, style=Bold" SizeF="639.9999, 25" LocationFloat="9.99999, 0" Name="xrTable3" BackColor="White" Ref="28">
+              <Rows>
+                <Item1 ControlType="XRTableRow" Weight="1" Name="xrTableRow3" Ref="27">
+                  <Cells>
+                    <Item1 ControlType="XRTableCell" Weight="1.747918528834887" Text="İşlem" Name="xrTableCell1" Ref="22" />
+                    <Item2 ControlType="XRTableCell" Weight="1.711457422155385" Text="Parça" Multiline="true" Name="xrTableCell2" Ref="23" />
+                    <Item3 ControlType="XRTableCell" Weight="0.8510413983090193" Text="Yekün" Name="xrTableCell3" Ref="24" />
+                    <Item4 ControlType="XRTableCell" Weight="0.8281254571474852" Text="Maliyet" Name="xrTableCell4" Ref="25" />
+                    <Item5 ControlType="XRTableCell" Weight="1.1614582620971898" Text="Tarih" Name="xrTableCell5" Ref="26" />
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority UseBackColor="false" UseFont="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 ControlType="DetailBand" HeightF="25" Name="Detail1" Ref="37">
+          <Controls>
+            <Item1 ControlType="XRTable" TextAlignment="MiddleLeft" SizeF="639.9999, 25" LocationFloat="9.999989, 0" OddStyleName="xrControlStyle1" Name="xrTable1" Ref="36">
+              <Rows>
+                <Item1 ControlType="XRTableRow" Weight="1" Name="xrTableRow1" Ref="35">
+                  <Cells>
+                    <Item1 ControlType="XRTableCell" Weight="1.747918528834887" Text="İşlem" Name="hesap_islem" Ref="30" />
+                    <Item2 ControlType="XRTableCell" Weight="1.711457422155385" Text="Parça" Multiline="true" Name="hesap_parca" Ref="31" />
+                    <Item3 ControlType="XRTableCell" Weight="0.8510413983090193" Text="Yekün" Name="hesap_yekun" Ref="32" />
+                    <Item4 ControlType="XRTableCell" Weight="0.8281254571474852" Text="Maliyet" Name="hesap_maliyet" Ref="33" />
+                    <Item5 ControlType="XRTableCell" Weight="1.261457668706539" Text="Tarih" Name="hesap_tarih" Ref="34" />
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item5>
+    <Item6 ControlType="ReportFooterBand" HeightF="83.41662" Name="ReportFooter" Ref="51">
+      <Controls>
+        <Item1 ControlType="XRTable" ForeColor="White" SizeF="639.9999, 25" LocationFloat="9.999943, 52.58331" Name="toplam_satiri" BackColor="Black" Ref="44">
+          <Rows>
+            <Item1 ControlType="XRTableRow" Weight="1" Name="xrTableRow6" Ref="43">
+              <Cells>
+                <Item1 ControlType="XRTableCell" Weight="1.3208349450446482" TextAlignment="MiddleLeft" Text="servis sayisi" Name="toplam_adet" Ref="39">
+                  <StylePriority UseTextAlignment="false" />
+                </Item1>
+                <Item2 ControlType="XRTableCell" Weight="1.482291047226877" TextAlignment="MiddleLeft" Text="toplam tutar" Multiline="true" Name="toplam_tutar" Ref="40">
+                  <StylePriority UseTextAlignment="false" />
+                </Item2>
+                <Item3 ControlType="XRTableCell" Weight="1.7218754226866961" TextAlignment="MiddleLeft" Text="toplam maliyet" Name="toplam_maliyet" Ref="41">
+                  <StylePriority UseTextAlignment="false" />
+                </Item3>
+                <Item4 ControlType="XRTableCell" Weight="1.6239590422386816" TextAlignment="MiddleLeft" Text="fark" Name="toplam_fark" Ref="42">
+                  <StylePriority UseTextAlignment="false" />
+                </Item4>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority UseBackColor="false" UseForeColor="false" />
+        </Item1>
+        <Item2 ControlType="XRTable" ForeColor="White" SizeF="639.9999, 25" LocationFloat="9.99999, 23.95833" Name="xrTable5" BackColor="Black" Ref="50">
+          <Rows>
+            <Item1 ControlType="XRTableRow" Weight="1" Name="xrTableRow5" Ref="49">
+              <Cells>
+                <Item1 ControlType="XRTableCell" Weight="1.3208349450446482" Text="Servis Sayısı" Name="xrTableCell11" Ref="45" />
+                <Item2 ControlType="XRTableCell" Weight="1.482291047226877" Text="Toplam Tutar" Multiline="true" Name="xrTableCell12" Ref="46" />
+                <Item3 ControlType="XRTableCell" Weight="1.7218754226866961" Text="Toplam Maliyet" Name="xrTableCell13" Ref="47" />
+                <Item4 ControlType="XRTableCell" Weight="1.6239590422386816" Text="Tutar-Maliyet Farkı" Name="xrTableCell14" Ref="48" />
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority UseBackColor="false" UseForeColor="false" />
+        </Item2>
+      </Controls>
+    </Item6>
+    <Item7 ControlType="BottomMarginBand" Name="BottomMargin" TextAlignment="TopLeft" Padding="0,0,0,0,100" Ref="52" />
+  </Bands>
+  <StyleSheet>
+    <Item1 BorderStyle="Inset" StringFormat="Near;Near;0;None;Character;Default" Name="xrControlStyle1" Padding="0,0,0,0,100" BackColor="Wheat" Ref="53" />
+  </StyleSheet>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v15.1" Content="~Xtra#NULL" Type="System.Windows.Forms.BindingSource" Ref="54" />
+  </ObjectStorage>
+  <Extensions>
+    <Item1 Key="DataSerializationExtension" Value="DevExpress.XtraReports.Web.ReportDesigner.DefaultDataSerializer" Ref="55" />
+  </Extensions>
+</XtraReportsLayoutSerializer>

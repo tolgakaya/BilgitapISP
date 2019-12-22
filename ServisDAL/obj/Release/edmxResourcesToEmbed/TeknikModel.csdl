@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="teknikvt_yukleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="teknikEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="antens" EntityType="teknikvt_yukleModel.anten" />
+    <EntitySet Name="ayars" EntityType="teknikvt_yukleModel.ayar" />
+    <EntitySet Name="carihesaps" EntityType="teknikvt_yukleModel.carihesap" />
+    <EntitySet Name="customers" EntityType="teknikvt_yukleModel.customer" />
+    <EntitySet Name="emirs" EntityType="teknikvt_yukleModel.emir" />
+    <EntitySet Name="musteriodemelers" EntityType="teknikvt_yukleModel.musteriodemeler" />
+    <EntitySet Name="rm_users" EntityType="teknikvt_yukleModel.rm_users" />
+    <EntitySet Name="service_durums" EntityType="teknikvt_yukleModel.service_durums" />
+    <EntitySet Name="service_tips" EntityType="teknikvt_yukleModel.service_tips" />
+    <EntitySet Name="servicedetays" EntityType="teknikvt_yukleModel.servicedetay" />
+    <EntitySet Name="servicehesaps" EntityType="teknikvt_yukleModel.servicehesap" />
+    <EntitySet Name="services" EntityType="teknikvt_yukleModel.service" />
+    <EntitySet Name="uruns" EntityType="teknikvt_yukleModel.urun" />
+    <EntitySet Name="yedek_uruns" EntityType="teknikvt_yukleModel.yedek_uruns" />
+    <EntitySet Name="panels" EntityType="teknikvt_yukleModel.panel" />
+    <AssociationSet Name="musteriodemelers_ibfk_1" Association="teknikvt_yukleModel.musteriodemelers_ibfk_1">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="musteriodemeler" EntitySet="musteriodemelers" />
+    </AssociationSet>
+    <AssociationSet Name="servicehesaps_ibfk_1" Association="teknikvt_yukleModel.servicehesaps_ibfk_1">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="servicehesap" EntitySet="servicehesaps" />
+    </AssociationSet>
+    <AssociationSet Name="services_ibfk_1" Association="teknikvt_yukleModel.services_ibfk_1">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="service" EntitySet="services" />
+    </AssociationSet>
+    <AssociationSet Name="uruns_ibfk_1" Association="teknikvt_yukleModel.uruns_ibfk_1">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="urun" EntitySet="uruns" />
+    </AssociationSet>
+    <AssociationSet Name="yedek_uruns_ibfk_1" Association="teknikvt_yukleModel.yedek_uruns_ibfk_1">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="yedek_uruns" EntitySet="yedek_uruns" />
+    </AssociationSet>
+    <AssociationSet Name="emirs_ibfk_1" Association="teknikvt_yukleModel.emirs_ibfk_1">
+      <End Role="service" EntitySet="services" />
+      <End Role="emir" EntitySet="emirs" />
+    </AssociationSet>
+    <AssociationSet Name="servicedetays_ibfk_3" Association="teknikvt_yukleModel.servicedetays_ibfk_3">
+      <End Role="service_durums" EntitySet="service_durums" />
+      <End Role="servicedetay" EntitySet="servicedetays" />
+    </AssociationSet>
+    <AssociationSet Name="services_ibfk_4" Association="teknikvt_yukleModel.services_ibfk_4">
+      <End Role="service_tips" EntitySet="service_tips" />
+      <End Role="service" EntitySet="services" />
+    </AssociationSet>
+    <AssociationSet Name="servicedetays_ibfk_1" Association="teknikvt_yukleModel.servicedetays_ibfk_1">
+      <End Role="service" EntitySet="services" />
+      <End Role="servicedetay" EntitySet="servicedetays" />
+    </AssociationSet>
+    <AssociationSet Name="servicehesaps_ibfk_2" Association="teknikvt_yukleModel.servicehesaps_ibfk_2">
+      <End Role="service" EntitySet="services" />
+      <End Role="servicehesap" EntitySet="servicehesaps" />
+    </AssociationSet>
+    <AssociationSet Name="services_ibfk_5" Association="teknikvt_yukleModel.services_ibfk_5">
+      <End Role="urun" EntitySet="uruns" />
+      <End Role="service" EntitySet="services" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="anten">
+    <Key>
+      <PropertyRef Name="anten_id" />
+    </Key>
+    <Property Name="anten_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="anten_adi" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="center_Lat" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="center_Long" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="start_Lat" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="start_Long" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="end_Lat" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="end_Long" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ayar">
+    <Key>
+      <PropertyRef Name="Ayar_ID" />
+    </Key>
+    <Property Name="Ayar_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mail_Server" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mail_Port" Type="Int32" Nullable="false" />
+    <Property Name="Mail_UserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mail_PW" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mail_Kimden" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="carihesap">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="Int32" Nullable="false" />
+    <Property Name="ToplamBorc" Type="Decimal" Nullable="false" />
+    <Property Name="ToplamOdenen" Type="Decimal" Nullable="false" />
+    <Property Name="ToplamBakiye" Type="Decimal" Nullable="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="CustID" />
+    </Key>
+    <Property Name="CustID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Adres" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="telefon" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="telefon_cep" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="tanimlayici" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Lat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Long" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="musteriodemelers" Relationship="teknikvt_yukleModel.musteriodemelers_ibfk_1" FromRole="customer" ToRole="musteriodemeler" />
+    <NavigationProperty Name="servicehesaps" Relationship="teknikvt_yukleModel.servicehesaps_ibfk_1" FromRole="customer" ToRole="servicehesap" />
+    <NavigationProperty Name="services" Relationship="teknikvt_yukleModel.services_ibfk_1" FromRole="customer" ToRole="service" />
+    <NavigationProperty Name="uruns" Relationship="teknikvt_yukleModel.uruns_ibfk_1" FromRole="customer" ToRole="urun" />
+    <NavigationProperty Name="yedek_uruns" Relationship="teknikvt_yukleModel.yedek_uruns_ibfk_1" FromRole="customer" ToRole="yedek_uruns" />
+  </EntityType>
+  <EntityType Name="emir">
+    <Key>
+      <PropertyRef Name="EmirID" />
+    </Key>
+    <Property Name="EmirID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceID" Type="Int32" Nullable="false" />
+    <Property Name="AtananID" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Konu" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="EmirTarihi" Type="DateTime" Nullable="false" />
+    <Property Name="TamamlanmaTarihi" Type="DateTime" />
+    <NavigationProperty Name="service" Relationship="teknikvt_yukleModel.emirs_ibfk_1" FromRole="emir" ToRole="service" />
+  </EntityType>
+  <EntityType Name="musteriodemeler">
+    <Key>
+      <PropertyRef Name="Odeme_ID" />
+    </Key>
+    <Property Name="KullaniciID" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="OdemeMiktar" Type="Decimal" Nullable="false" />
+    <Property Name="OdemeTarih" Type="DateTime" Nullable="false" />
+    <Property Name="Aciklama" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Odeme_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Musteri_ID" Type="Int32" Nullable="false" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="customer" Relationship="teknikvt_yukleModel.musteriodemelers_ibfk_1" FromRole="musteriodemeler" ToRole="customer" />
+  </EntityType>
+  <EntityType Name="rm_users">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="groupid" Type="Int32" Nullable="false" />
+    <Property Name="enableuser" Type="Boolean" Nullable="false" />
+    <Property Name="uplimit" Type="Int64" Nullable="false" />
+    <Property Name="downlimit" Type="Int64" Nullable="false" />
+    <Property Name="comblimit" Type="Int64" Nullable="false" />
+    <Property Name="firstname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="company" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="mobile" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="zip" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="comment" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="gpslat" Type="Decimal" Nullable="false" />
+    <Property Name="gpslong" Type="Decimal" Nullable="false" />
+    <Property Name="mac" Type="String" Nullable="false" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Name="usemacauth" Type="Boolean" Nullable="false" />
+    <Property Name="expiration" Type="DateTime" Nullable="false" />
+    <Property Name="uptimelimit" Type="Int64" Nullable="false" />
+    <Property Name="srvid" Type="Int32" Nullable="false" />
+    <Property Name="staticipcm" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="staticipcpe" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ipmodecm" Type="Boolean" Nullable="false" />
+    <Property Name="ipmodecpe" Type="Boolean" Nullable="false" />
+    <Property Name="poolidcm" Type="Int32" Nullable="false" />
+    <Property Name="poolidcpe" Type="Int32" Nullable="false" />
+    <Property Name="createdon" Type="DateTime" Nullable="false" />
+    <Property Name="acctype" Type="Boolean" Nullable="false" />
+    <Property Name="credits" Type="Decimal" Nullable="false" />
+    <Property Name="cardfails" Type="SByte" Nullable="false" />
+    <Property Name="createdby" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="owner" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="taxid" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="maccm" Type="String" Nullable="false" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Name="custattr" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="warningsent" Type="Boolean" Nullable="false" />
+    <Property Name="verifycode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="verified" Type="Boolean" Nullable="false" />
+    <Property Name="selfreg" Type="Boolean" Nullable="false" />
+    <Property Name="verifyfails" Type="SByte" Nullable="false" />
+    <Property Name="verifysentnum" Type="SByte" Nullable="false" />
+    <Property Name="verifymobile" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="contractid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contractvalid" Type="DateTime" Nullable="false" />
+    <Property Name="actcode" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="pswactsmsnum" Type="SByte" Nullable="false" />
+    <Property Name="alertemail" Type="Boolean" Nullable="false" />
+    <Property Name="alertsms" Type="Boolean" Nullable="false" />
+    <Property Name="lang" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="lastlogoff" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="service_durums">
+    <Key>
+      <PropertyRef Name="Durum_ID" />
+    </Key>
+    <Property Name="Durum_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Durum" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="SMS" Type="Boolean" Nullable="false" />
+    <Property Name="Mail" Type="Boolean" Nullable="false" />
+    <Property Name="Whatsapp" Type="Boolean" Nullable="false" />
+    <Property Name="baslangicmi" Type="Boolean" />
+    <Property Name="sonmu" Type="Boolean" />
+    <Property Name="kararmi" Type="Boolean" />
+    <Property Name="onaymi" Type="Boolean" />
+    <Property Name="iptal" Type="Boolean" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="servicedetays" Relationship="teknikvt_yukleModel.servicedetays_ibfk_3" FromRole="service_durums" ToRole="servicedetay" />
+  </EntityType>
+  <EntityType Name="service_tips">
+    <Key>
+      <PropertyRef Name="tip_id" />
+    </Key>
+    <Property Name="tip_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tip_ad" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="aciklama" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="css" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" />
+    <NavigationProperty Name="services" Relationship="teknikvt_yukleModel.services_ibfk_4" FromRole="service_tips" ToRole="service" />
+  </EntityType>
+  <EntityType Name="servicedetay">
+    <Key>
+      <PropertyRef Name="DetayID" />
+    </Key>
+    <Property Name="DetayID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceID" Type="Int32" Nullable="false" />
+    <Property Name="TarihZaman" Type="DateTime" Nullable="false" />
+    <Property Name="BelgeYol" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Aciklama" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Durum_ID" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciID" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" />
+    <Property Name="Baslik" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="service_durums" Relationship="teknikvt_yukleModel.servicedetays_ibfk_3" FromRole="servicedetay" ToRole="service_durums" />
+    <NavigationProperty Name="service" Relationship="teknikvt_yukleModel.servicedetays_ibfk_1" FromRole="servicedetay" ToRole="service" />
+  </EntityType>
+  <EntityType Name="servicehesap">
+    <Key>
+      <PropertyRef Name="HesapID" />
+    </Key>
+    <Property Name="HesapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriID" Type="Int32" Nullable="false" />
+    <Property Name="ServiceID" Type="Int32" Nullable="false" />
+    <Property Name="IslemParca" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Tutar" Type="Decimal" />
+    <Property Name="KDV" Type="Decimal" />
+    <Property Name="Yekun" Type="Decimal" Nullable="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TarihZaman" Type="DateTime" Nullable="false" />
+    <Property Name="onay" Type="Boolean" Nullable="false" />
+    <Property Name="Onay_tarih" Type="DateTime" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="customer" Relationship="teknikvt_yukleModel.servicehesaps_ibfk_1" FromRole="servicehesap" ToRole="customer" />
+    <NavigationProperty Name="service" Relationship="teknikvt_yukleModel.servicehesaps_ibfk_2" FromRole="servicehesap" ToRole="service" />
+  </EntityType>
+  <EntityType Name="service">
+    <Key>
+      <PropertyRef Name="ServiceID" />
+    </Key>
+    <Property Name="ServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustID" Type="Int32" Nullable="false" />
+    <Property Name="SonAtananID" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Aciklama" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="AcilmaZamani" Type="DateTime" Nullable="false" />
+    <Property Name="KapanmaZamani" Type="DateTime" />
+    <Property Name="UrunID" Type="Int32" />
+    <Property Name="Servis_Kimlik_No" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="tip_id" Type="Int32" Nullable="false" />
+    <Property Name="SonDurum" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" />
+    <Property Name="olusturan_Kullanici" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Baslik" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="durum_id" Type="Int32" />
+    <NavigationProperty Name="customer" Relationship="teknikvt_yukleModel.services_ibfk_1" FromRole="service" ToRole="customer" />
+    <NavigationProperty Name="emirs" Relationship="teknikvt_yukleModel.emirs_ibfk_1" FromRole="service" ToRole="emir" />
+    <NavigationProperty Name="service_tips" Relationship="teknikvt_yukleModel.services_ibfk_4" FromRole="service" ToRole="service_tips" />
+    <NavigationProperty Name="servicedetays" Relationship="teknikvt_yukleModel.servicedetays_ibfk_1" FromRole="service" ToRole="servicedetay" />
+    <NavigationProperty Name="servicehesaps" Relationship="teknikvt_yukleModel.servicehesaps_ibfk_2" FromRole="service" ToRole="servicehesap" />
+    <NavigationProperty Name="urun" Relationship="teknikvt_yukleModel.services_ibfk_5" FromRole="service" ToRole="urun" />
+  </EntityType>
+  <EntityType Name="urun">
+    <Key>
+      <PropertyRef Name="urunID" />
+    </Key>
+    <Property Name="urunID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriID" Type="Int32" Nullable="false" />
+    <Property Name="Cinsi" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="GranatiBaslangic" Type="DateTime" />
+    <Property Name="GarantiBitis" Type="DateTime" />
+    <Property Name="GarantiSuresi" Type="Int32" />
+    <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BelgeYol" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="customer" Relationship="teknikvt_yukleModel.uruns_ibfk_1" FromRole="urun" ToRole="customer" />
+    <NavigationProperty Name="services" Relationship="teknikvt_yukleModel.services_ibfk_5" FromRole="urun" ToRole="service" />
+  </EntityType>
+  <EntityType Name="yedek_uruns">
+    <Key>
+      <PropertyRef Name="yedek_id" />
+    </Key>
+    <Property Name="yedek_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="musteri_id" Type="Int32" Nullable="false" />
+    <Property Name="urun_aciklama" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="tarih_verilme" Type="DateTime" Nullable="false" />
+    <Property Name="tarih_donus" Type="DateTime" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="customer" Relationship="teknikvt_yukleModel.yedek_uruns_ibfk_1" FromRole="yedek_uruns" ToRole="customer" />
+  </EntityType>
+  <EntityType Name="panel">
+    <Key>
+      <PropertyRef Name="Firma" />
+      <PropertyRef Name="servis_sayisi" />
+      <PropertyRef Name="onay_bekleyen_sayisi" />
+      <PropertyRef Name="borclu_sayisi" />
+      <PropertyRef Name="emanet_sayisi" />
+      <PropertyRef Name="toplam_borc" />
+      <PropertyRef Name="toplam_odenen" />
+      <PropertyRef Name="toplam_bakiye" />
+      <PropertyRef Name="musteri_sayisi" />
+    </Key>
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="servis_sayisi" Type="Int32" Nullable="false" />
+    <Property Name="onay_bekleyen_sayisi" Type="Int32" Nullable="false" />
+    <Property Name="borclu_sayisi" Type="Int32" Nullable="false" />
+    <Property Name="emanet_sayisi" Type="Int32" Nullable="false" />
+    <Property Name="toplam_borc" Type="Decimal" Nullable="false" />
+    <Property Name="toplam_odenen" Type="Decimal" Nullable="false" />
+    <Property Name="toplam_bakiye" Type="Decimal" Nullable="false" />
+    <Property Name="musteri_sayisi" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="musteriodemelers_ibfk_1">
+    <End Type="teknikvt_yukleModel.customer" Role="customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="teknikvt_yukleModel.musteriodemeler" Role="musteriodemeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="musteriodemeler">
+        <PropertyRef Name="Musteri_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicehesaps_ibfk_1">
+    <End Type="teknikvt_yukleModel.customer" Role="customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="teknikvt_yukleModel.servicehesap" Role="servicehesap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="servicehesap">
+        <PropertyRef Name="MusteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="services_ibfk_1">
+    <End Type="teknikvt_yukleModel.customer" Role="customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="teknikvt_yukleModel.service" Role="service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="service">
+        <PropertyRef Name="CustID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="uruns_ibfk_1">
+    <End Type="teknikvt_yukleModel.customer" Role="customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="teknikvt_yukleModel.urun" Role="urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="urun">
+        <PropertyRef Name="MusteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="yedek_uruns_ibfk_1">
+    <End Type="teknikvt_yukleModel.customer" Role="customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="teknikvt_yukleModel.yedek_uruns" Role="yedek_uruns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="yedek_uruns">
+        <PropertyRef Name="musteri_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="emirs_ibfk_1">
+    <End Type="teknikvt_yukleModel.service" Role="service" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="teknikvt_yukleModel.emir" Role="emir" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="service">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="emir">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicedetays_ibfk_3">
+    <End Type="teknikvt_yukleModel.service_durums" Role="service_durums" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="teknikvt_yukleModel.servicedetay" Role="servicedetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="service_durums">
+        <PropertyRef Name="Durum_ID" />
+      </Principal>
+      <Dependent Role="servicedetay">
+        <PropertyRef Name="Durum_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="services_ibfk_4">
+    <End Type="teknikvt_yukleModel.service_tips" Role="service_tips" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="teknikvt_yukleModel.service" Role="service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="service_tips">
+        <PropertyRef Name="tip_id" />
+      </Principal>
+      <Dependent Role="service">
+        <PropertyRef Name="tip_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicedetays_ibfk_1">
+    <End Type="teknikvt_yukleModel.service" Role="service" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="teknikvt_yukleModel.servicedetay" Role="servicedetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="service">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="servicedetay">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicehesaps_ibfk_2">
+    <End Type="teknikvt_yukleModel.service" Role="service" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="teknikvt_yukleModel.servicehesap" Role="servicehesap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="service">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="servicehesap">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="services_ibfk_5">
+    <End Type="teknikvt_yukleModel.urun" Role="urun" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="teknikvt_yukleModel.service" Role="service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="urun">
+        <PropertyRef Name="urunID" />
+      </Principal>
+      <Dependent Role="service">
+        <PropertyRef Name="UrunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

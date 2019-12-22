@@ -1,0 +1,12 @@
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Debug\TeknikServis.Radius.dll.config
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Debug\TeknikServis.Radius.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Debug\TeknikServis.Radius.pdb
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Debug\EntityFramework.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Debug\MySql.Data.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Debug\MySql.Web.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Debug\EntityFramework.xml
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\obj\Debug\TeknikServis.Radius.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\obj\Debug\TeknikServis.Radius.pdb

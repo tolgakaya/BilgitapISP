@@ -1,0 +1,1805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="radiusModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="radiusEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="alim_detays" EntityType="radiusModel.alim_detays" />
+    <EntitySet Name="alims" EntityType="radiusModel.alim" />
+    <EntitySet Name="ayargenels" EntityType="radiusModel.ayargenel" />
+    <EntitySet Name="ayars" EntityType="radiusModel.ayar" />
+    <EntitySet Name="bankas" EntityType="radiusModel.banka" />
+    <EntitySet Name="carihesaps" EntityType="radiusModel.carihesap" />
+    <EntitySet Name="cekhesaps" EntityType="radiusModel.cekhesap" />
+    <EntitySet Name="cihaz_fifos" EntityType="radiusModel.cihaz_fifos" />
+    <EntitySet Name="cihaz_garantis" EntityType="radiusModel.cihaz_garantis" />
+    <EntitySet Name="cihaz_stoks" EntityType="radiusModel.cihaz_stoks" />
+    <EntitySet Name="cihazs" EntityType="radiusModel.cihaz" />
+    <EntitySet Name="kart_caris" EntityType="radiusModel.kart_caris" />
+    <EntitySet Name="kart_hesaps" EntityType="radiusModel.kart_hesaps" />
+    <EntitySet Name="kart_odemes" EntityType="radiusModel.kart_odemes" />
+    <EntitySet Name="kart_tanims" EntityType="radiusModel.kart_tanims" />
+    <EntitySet Name="kasaharekets" EntityType="radiusModel.kasahareket" />
+    <EntitySet Name="kasahesaps" EntityType="radiusModel.kasahesap" />
+    <EntitySet Name="mail_ayars" EntityType="radiusModel.mail_ayars" />
+    <EntitySet Name="masraf_tips" EntityType="radiusModel.masraf_tips" />
+    <EntitySet Name="musteriodemelers" EntityType="radiusModel.musteriodemeler" />
+    <EntitySet Name="nots" EntityType="radiusModel.not" />
+    <EntitySet Name="panels" EntityType="radiusModel.panel" />
+    <EntitySet Name="pos_tanims" EntityType="radiusModel.pos_tanims" />
+    <EntitySet Name="poshesaps" EntityType="radiusModel.poshesap" />
+    <EntitySet Name="satislars" EntityType="radiusModel.satislar" />
+    <EntitySet Name="service_durums" EntityType="radiusModel.service_durums" />
+    <EntitySet Name="service_faturas" EntityType="radiusModel.service_faturas" />
+    <EntitySet Name="service_tips" EntityType="radiusModel.service_tips" />
+    <EntitySet Name="servicedetays" EntityType="radiusModel.servicedetay" />
+    <EntitySet Name="servicehesaps" EntityType="radiusModel.servicehesap" />
+    <EntitySet Name="servis_paket_detays" EntityType="radiusModel.servis_paket_detays" />
+    <EntitySet Name="servis_pakets" EntityType="radiusModel.servis_pakets" />
+    <EntitySet Name="sms_ayars" EntityType="radiusModel.sms_ayars" />
+    <EntitySet Name="uruns" EntityType="radiusModel.urun" />
+    <EntitySet Name="yedek_uruns" EntityType="radiusModel.yedek_uruns" />
+    <AssociationSet Name="alim_detays_ibfk_1" Association="radiusModel.alim_detays_ibfk_1">
+      <End Role="alim" EntitySet="alims" />
+      <End Role="alim_detays" EntitySet="alim_detays" />
+    </AssociationSet>
+    <AssociationSet Name="alim_detays_ibfk_2" Association="radiusModel.alim_detays_ibfk_2">
+      <End Role="cihaz" EntitySet="cihazs" />
+      <End Role="alim_detays" EntitySet="alim_detays" />
+    </AssociationSet>
+    <AssociationSet Name="musteriodemelers_ibfk_4" Association="radiusModel.musteriodemelers_ibfk_4">
+      <End Role="banka" EntitySet="bankas" />
+      <End Role="musteriodemeler" EntitySet="musteriodemelers" />
+    </AssociationSet>
+    <AssociationSet Name="pos_tanims_ibfk_1" Association="radiusModel.pos_tanims_ibfk_1">
+      <End Role="banka" EntitySet="bankas" />
+      <End Role="pos_tanims" EntitySet="pos_tanims" />
+    </AssociationSet>
+    <AssociationSet Name="cekhesaps_ibfk_2" Association="radiusModel.cekhesaps_ibfk_2">
+      <End Role="musteriodemeler" EntitySet="musteriodemelers" />
+      <End Role="cekhesap" EntitySet="cekhesaps" />
+    </AssociationSet>
+    <AssociationSet Name="cihaz_fifos_ibfk_1" Association="radiusModel.cihaz_fifos_ibfk_1">
+      <End Role="cihaz" EntitySet="cihazs" />
+      <End Role="cihaz_fifos" EntitySet="cihaz_fifos" />
+    </AssociationSet>
+    <AssociationSet Name="cihaz_garanti_kisit" Association="radiusModel.cihaz_garanti_kisit">
+      <End Role="cihaz" EntitySet="cihazs" />
+      <End Role="cihaz_garantis" EntitySet="cihaz_garantis" />
+    </AssociationSet>
+    <AssociationSet Name="cihazIadeKisit" Association="radiusModel.cihazIadeKisit">
+      <End Role="cihaz_garantis" EntitySet="cihaz_garantis" />
+      <End Role="musteriodemeler" EntitySet="musteriodemelers" />
+    </AssociationSet>
+    <AssociationSet Name="stokKisit1" Association="radiusModel.stokKisit1">
+      <End Role="cihaz" EntitySet="cihazs" />
+      <End Role="cihaz_stoks" EntitySet="cihaz_stoks" />
+    </AssociationSet>
+    <AssociationSet Name="cihaz_id" Association="radiusModel.cihaz_id">
+      <End Role="cihaz" EntitySet="cihazs" />
+      <End Role="satislar" EntitySet="satislars" />
+    </AssociationSet>
+    <AssociationSet Name="paket_cihaz_kisit" Association="radiusModel.paket_cihaz_kisit">
+      <End Role="cihaz" EntitySet="cihazs" />
+      <End Role="servis_paket_detays" EntitySet="servis_paket_detays" />
+    </AssociationSet>
+    <AssociationSet Name="servicehesaps_ibfk_3" Association="radiusModel.servicehesaps_ibfk_3">
+      <End Role="cihaz" EntitySet="cihazs" />
+      <End Role="servicehesap" EntitySet="servicehesaps" />
+    </AssociationSet>
+    <AssociationSet Name="cari_tanim_kartR" Association="radiusModel.cari_tanim_kartR">
+      <End Role="kart_tanims" EntitySet="kart_tanims" />
+      <End Role="kart_caris" EntitySet="kart_caris" />
+    </AssociationSet>
+    <AssociationSet Name="kart_hesaps_ibfk_1" Association="radiusModel.kart_hesaps_ibfk_1">
+      <End Role="kart_tanims" EntitySet="kart_tanims" />
+      <End Role="kart_hesaps" EntitySet="kart_hesaps" />
+    </AssociationSet>
+    <AssociationSet Name="kart_hesaps_ibfk_3" Association="radiusModel.kart_hesaps_ibfk_3">
+      <End Role="musteriodemeler" EntitySet="musteriodemelers" />
+      <End Role="kart_hesaps" EntitySet="kart_hesaps" />
+    </AssociationSet>
+    <AssociationSet Name="kartTanimOdemeF1" Association="radiusModel.kartTanimOdemeF1">
+      <End Role="kart_tanims" EntitySet="kart_tanims" />
+      <End Role="kart_odemes" EntitySet="kart_odemes" />
+    </AssociationSet>
+    <AssociationSet Name="musteriodemelers_ibfk_3" Association="radiusModel.musteriodemelers_ibfk_3">
+      <End Role="kart_tanims" EntitySet="kart_tanims" />
+      <End Role="musteriodemeler" EntitySet="musteriodemelers" />
+    </AssociationSet>
+    <AssociationSet Name="kasaharekets_ibfk_1" Association="radiusModel.kasaharekets_ibfk_1">
+      <End Role="musteriodemeler" EntitySet="musteriodemelers" />
+      <End Role="kasahareket" EntitySet="kasaharekets" />
+    </AssociationSet>
+    <AssociationSet Name="masraf_kisit_1" Association="radiusModel.masraf_kisit_1">
+      <End Role="masraf_tips" EntitySet="masraf_tips" />
+      <End Role="musteriodemeler" EntitySet="musteriodemelers" />
+    </AssociationSet>
+    <AssociationSet Name="musteriodemelers_ibfk_2" Association="radiusModel.musteriodemelers_ibfk_2">
+      <End Role="pos_tanims" EntitySet="pos_tanims" />
+      <End Role="musteriodemeler" EntitySet="musteriodemelers" />
+    </AssociationSet>
+    <AssociationSet Name="odeme_id" Association="radiusModel.odeme_id">
+      <End Role="musteriodemeler" EntitySet="musteriodemelers" />
+      <End Role="satislar" EntitySet="satislars" />
+    </AssociationSet>
+    <AssociationSet Name="poshesaps_ibfk_4" Association="radiusModel.poshesaps_ibfk_4">
+      <End Role="musteriodemeler" EntitySet="musteriodemelers" />
+      <End Role="poshesap" EntitySet="poshesaps" />
+    </AssociationSet>
+    <AssociationSet Name="poshesaps_ibfk_2" Association="radiusModel.poshesaps_ibfk_2">
+      <End Role="pos_tanims" EntitySet="pos_tanims" />
+      <End Role="poshesap" EntitySet="poshesaps" />
+    </AssociationSet>
+    <AssociationSet Name="servicedetays_ibfk_3" Association="radiusModel.servicedetays_ibfk_3">
+      <End Role="service_durums" EntitySet="service_durums" />
+      <End Role="servicedetay" EntitySet="servicedetays" />
+    </AssociationSet>
+    <AssociationSet Name="paket_paket_detay_Kisit" Association="radiusModel.paket_paket_detay_Kisit">
+      <End Role="servis_pakets" EntitySet="servis_pakets" />
+      <End Role="servis_paket_detays" EntitySet="servis_paket_detays" />
+    </AssociationSet>
+    <EntitySet Name="faturas" EntityType="radiusModel.fatura" />
+    <AssociationSet Name="faturas_ibfk_1" Association="radiusModel.faturas_ibfk_1">
+      <End Role="satislar" EntitySet="satislars" />
+      <End Role="fatura" EntitySet="faturas" />
+    </AssociationSet>
+    <AssociationSet Name="karar_fatura_kisit2" Association="radiusModel.karar_fatura_kisit2">
+      <End Role="servicehesap" EntitySet="servicehesaps" />
+      <End Role="fatura" EntitySet="faturas" />
+    </AssociationSet>
+    <EntitySet Name="services" EntityType="radiusModel.service" />
+    <AssociationSet Name="service_faturas_ibfk_1" Association="radiusModel.service_faturas_ibfk_1">
+      <End Role="service" EntitySet="services" />
+      <End Role="service_faturas" EntitySet="service_faturas" />
+    </AssociationSet>
+    <AssociationSet Name="services_ibfk_4" Association="radiusModel.services_ibfk_4">
+      <End Role="service_tips" EntitySet="service_tips" />
+      <End Role="service" EntitySet="services" />
+    </AssociationSet>
+    <AssociationSet Name="servicedetays_ibfk_1" Association="radiusModel.servicedetays_ibfk_1">
+      <End Role="service" EntitySet="services" />
+      <End Role="servicedetay" EntitySet="servicedetays" />
+    </AssociationSet>
+    <AssociationSet Name="servicehesaps_ibfk_2" Association="radiusModel.servicehesaps_ibfk_2">
+      <End Role="service" EntitySet="services" />
+      <End Role="servicehesap" EntitySet="servicehesaps" />
+    </AssociationSet>
+    <AssociationSet Name="services_ibfk_5" Association="radiusModel.services_ibfk_5">
+      <End Role="urun" EntitySet="uruns" />
+      <End Role="service" EntitySet="services" />
+    </AssociationSet>
+    <EntitySet Name="customers" EntityType="radiusModel.customer" />
+    <AssociationSet Name="alims_ibfk_1" Association="radiusModel.alims_ibfk_1">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="alim" EntitySet="alims" />
+    </AssociationSet>
+    <AssociationSet Name="cekhesaps_ibfk_1" Association="radiusModel.cekhesaps_ibfk_1">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="cekhesap" EntitySet="cekhesaps" />
+    </AssociationSet>
+    <AssociationSet Name="garanti_custom_Kisit" Association="radiusModel.garanti_custom_Kisit">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="cihaz_garantis" EntitySet="cihaz_garantis" />
+    </AssociationSet>
+    <AssociationSet Name="kart_hesaps_ibfk_2" Association="radiusModel.kart_hesaps_ibfk_2">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="kart_hesaps" EntitySet="kart_hesaps" />
+    </AssociationSet>
+    <AssociationSet Name="kasaharekets_ibfk_2" Association="radiusModel.kasaharekets_ibfk_2">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="kasahareket" EntitySet="kasaharekets" />
+    </AssociationSet>
+    <AssociationSet Name="musteri_id" Association="radiusModel.musteri_id">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="satislar" EntitySet="satislars" />
+    </AssociationSet>
+    <AssociationSet Name="musteriodemelers_ibfk_1" Association="radiusModel.musteriodemelers_ibfk_1">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="musteriodemeler" EntitySet="musteriodemelers" />
+    </AssociationSet>
+    <AssociationSet Name="poshesaps_ibfk_3" Association="radiusModel.poshesaps_ibfk_3">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="poshesap" EntitySet="poshesaps" />
+    </AssociationSet>
+    <AssociationSet Name="service_faturas_ibfk_2" Association="radiusModel.service_faturas_ibfk_2">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="service_faturas" EntitySet="service_faturas" />
+    </AssociationSet>
+    <AssociationSet Name="servicehesaps_ibfk_1" Association="radiusModel.servicehesaps_ibfk_1">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="servicehesap" EntitySet="servicehesaps" />
+    </AssociationSet>
+    <AssociationSet Name="servicehesaps_ibfk_4" Association="radiusModel.servicehesaps_ibfk_4">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="servicehesap" EntitySet="servicehesaps" />
+    </AssociationSet>
+    <AssociationSet Name="services_ibfk_1" Association="radiusModel.services_ibfk_1">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="service" EntitySet="services" />
+    </AssociationSet>
+    <AssociationSet Name="services_ibfk_6" Association="radiusModel.services_ibfk_6">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="service" EntitySet="services" />
+    </AssociationSet>
+    <AssociationSet Name="tamirci_kisit" Association="radiusModel.tamirci_kisit">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="fatura" EntitySet="faturas" />
+    </AssociationSet>
+    <AssociationSet Name="uruns_ibfk_1" Association="radiusModel.uruns_ibfk_1">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="urun" EntitySet="uruns" />
+    </AssociationSet>
+    <AssociationSet Name="yedek_uruns_ibfk_1" Association="radiusModel.yedek_uruns_ibfk_1">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="yedek_uruns" EntitySet="yedek_uruns" />
+    </AssociationSet>
+    <EntitySet Name="cihaz_grups" EntityType="radiusModel.cihaz_grups" />
+    <AssociationSet Name="cihaz_grup_f" Association="radiusModel.cihaz_grup_f">
+      <End Role="cihaz_grups" EntitySet="cihaz_grups" />
+      <End Role="cihaz" EntitySet="cihazs" />
+    </AssociationSet>
+    <EntitySet Name="manuels" EntityType="radiusModel.manuel" />
+    <EntitySet Name="abonelik_pakets" EntityType="radiusModel.abonelik_pakets" />
+    <AssociationSet Name="fatura_pak_baglantisi" Association="radiusModel.fatura_pak_baglantisi">
+      <End Role="abonelik_pakets" EntitySet="abonelik_pakets" />
+      <End Role="fatura" EntitySet="faturas" />
+    </AssociationSet>
+    <AssociationSet Name="paket_cust_basglantisi" Association="radiusModel.paket_cust_basglantisi">
+      <End Role="abonelik_pakets" EntitySet="abonelik_pakets" />
+      <End Role="customer" EntitySet="customers" />
+    </AssociationSet>
+    <AssociationSet Name="fatura_custome_kst" Association="radiusModel.fatura_custome_kst">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="fatura" EntitySet="faturas" />
+    </AssociationSet>
+    <EntitySet Name="antens" EntityType="radiusModel.anten" />
+    <AssociationSet Name="anten_cust_baglanti" Association="radiusModel.anten_cust_baglanti">
+      <End Role="anten" EntitySet="antens" />
+      <End Role="customer" EntitySet="customers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="alim_detays">
+    <Key>
+      <PropertyRef Name="detay_id" />
+    </Key>
+    <Property Name="detay_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="alim_id" Type="Int32" Nullable="false" />
+    <Property Name="cust_id" Type="Int32" Nullable="false" />
+    <Property Name="cihaz_id" Type="Int32" />
+    <Property Name="cihaz_adi" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="aciklama" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="adet" Type="Int32" Nullable="false" />
+    <Property Name="tutar" Type="Decimal" Nullable="false" />
+    <Property Name="kdv" Type="Decimal" Nullable="false" />
+    <Property Name="yekun" Type="Decimal" Nullable="false" />
+    <Property Name="tarih" Type="DateTime" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="alim" Relationship="radiusModel.alim_detays_ibfk_1" FromRole="alim_detays" ToRole="alim" />
+    <NavigationProperty Name="cihaz" Relationship="radiusModel.alim_detays_ibfk_2" FromRole="alim_detays" ToRole="cihaz" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="alim">
+    <Key>
+      <PropertyRef Name="alim_id" />
+    </Key>
+    <Property Name="alim_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustID" Type="Int32" Nullable="false" />
+    <Property Name="konu" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="aciklama" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="alim_tarih" Type="DateTime" />
+    <Property Name="belge_no" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <Property Name="toplam_tutar" Type="Decimal" Nullable="false" />
+    <Property Name="toplam_kdv" Type="Decimal" Nullable="false" />
+    <Property Name="toplam_yekun" Type="Decimal" Nullable="false" />
+    <NavigationProperty Name="alim_detays" Relationship="radiusModel.alim_detays_ibfk_1" FromRole="alim" ToRole="alim_detays" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.alims_ibfk_1" FromRole="alim" ToRole="customer" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ayargenel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="fifo" Type="Boolean" Nullable="false" />
+    <Property Name="adi" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="tel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="web" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="adres" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="sonfatura" Type="DateTime" />
+    <Property Name="lisanstarih" Type="DateTime" />
+    <Property Name="cift_taraf" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ayar">
+    <Key>
+      <PropertyRef Name="Ayar_ID" />
+    </Key>
+    <Property Name="Ayar_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mail_Server" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mail_Port" Type="Int32" Nullable="false" />
+    <Property Name="Mail_UserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mail_PW" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mail_Kimden" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="aktif_adres" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="tur" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="gonderen" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="banka">
+    <Key>
+      <PropertyRef Name="banka_id" />
+    </Key>
+    <Property Name="banka_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="banka_adi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="aciklama" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="giris" Type="Decimal" Nullable="false" />
+    <Property Name="cikis" Type="Decimal" Nullable="false" />
+    <Property Name="bakiye" Type="Decimal" Nullable="false" />
+    <NavigationProperty Name="musteriodemelers" Relationship="radiusModel.musteriodemelers_ibfk_4" FromRole="banka" ToRole="musteriodemeler" />
+    <NavigationProperty Name="pos_tanims" Relationship="radiusModel.pos_tanims_ibfk_1" FromRole="banka" ToRole="pos_tanims" />
+  </EntityType>
+  <EntityType Name="carihesap">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="Int32" Nullable="false" />
+    <Property Name="ToplamBorc" Type="Decimal" Nullable="false" />
+    <Property Name="ToplamOdenen" Type="Decimal" Nullable="false" />
+    <Property Name="NetBorc" Type="Decimal" Nullable="false" />
+    <Property Name="ToplamAlacak" Type="Decimal" Nullable="false" />
+    <Property Name="ToplamOdedigimiz" Type="Decimal" Nullable="false" />
+    <Property Name="NetAlacak" Type="Decimal" Nullable="false" />
+    <Property Name="ToplamBakiye" Type="Decimal" Nullable="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="kullanici" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="son_mesaj" Type="DateTime" />
+    <Property Name="telefon" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="adi" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="cekhesap">
+    <Key>
+      <PropertyRef Name="cek_id" />
+    </Key>
+    <Property Name="cek_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="belge_no" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="tutar" Type="Decimal" Nullable="false" />
+    <Property Name="masraf" Type="Decimal" Nullable="false" />
+    <Property Name="nettutar" Type="Decimal" Nullable="false" />
+    <Property Name="odeme_id" Type="Int32" Nullable="false" />
+    <Property Name="Musteri_ID" Type="Int32" Nullable="false" />
+    <Property Name="tarih" Type="DateTime" Nullable="false" />
+    <Property Name="vade_tarih" Type="DateTime" Nullable="false" />
+    <Property Name="tahsilat_tarih" Type="DateTime" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <Property Name="cekildi" Type="Boolean" Nullable="false" />
+    <Property Name="alinan" Type="Boolean" Nullable="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="banka_id" Type="Int32" />
+    <Property Name="kasa_id" Type="Int32" />
+    <Property Name="islem" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="musteriodemeler" Relationship="radiusModel.cekhesaps_ibfk_2" FromRole="cekhesap" ToRole="musteriodemeler" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.cekhesaps_ibfk_1" FromRole="cekhesap" ToRole="customer" />
+  </EntityType>
+  <EntityType Name="cihaz_fifos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cihaz_id" Type="Int32" Nullable="false" />
+    <Property Name="tarih" Type="DateTime" />
+    <Property Name="giris" Type="Decimal" Nullable="false" />
+    <Property Name="cikis" Type="Decimal" Nullable="false" />
+    <Property Name="bakiye" Type="Decimal" Nullable="false" />
+    <Property Name="fiyat" Type="Decimal" Nullable="false" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="cihaz" Relationship="radiusModel.cihaz_fifos_ibfk_1" FromRole="cihaz_fifos" ToRole="cihaz" />
+  </EntityType>
+  <EntityType Name="cihaz_garantis">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustID" Type="Int32" />
+    <Property Name="cihaz_id" Type="Int32" Nullable="false" />
+    <Property Name="baslangic" Type="DateTime" />
+    <Property Name="bitis" Type="DateTime" Nullable="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <Property Name="durum" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="satis_tutar" Type="Decimal" />
+    <Property Name="iade_tutar" Type="Decimal" />
+    <Property Name="aciklama" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="servicehesap_id" Type="Int32" Nullable="false" />
+    <Property Name="adet" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="cihaz" Relationship="radiusModel.cihaz_garanti_kisit" FromRole="cihaz_garantis" ToRole="cihaz" />
+    <NavigationProperty Name="musteriodemelers" Relationship="radiusModel.cihazIadeKisit" FromRole="cihaz_garantis" ToRole="musteriodemeler" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.garanti_custom_Kisit" FromRole="cihaz_garantis" ToRole="customer" />
+  </EntityType>
+  <EntityType Name="cihaz_stoks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cihaz_id" Type="Int32" Nullable="false" />
+    <Property Name="cihaz_adi" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="aciklama" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="seri_no" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="garanti_suresi" Type="Int32" Nullable="false" />
+    <Property Name="giris" Type="Int32" Nullable="false" />
+    <Property Name="cikis" Type="Int32" Nullable="false" />
+    <Property Name="bakiye" Type="Int32" Nullable="false" />
+    <Property Name="son_alis_fiyati" Type="Decimal" />
+    <Property Name="satis_fiyati" Type="Decimal" />
+    <Property Name="tarih" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="cihaz" Relationship="radiusModel.stokKisit1" FromRole="cihaz_stoks" ToRole="cihaz" />
+  </EntityType>
+  <EntityType Name="cihaz">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cihaz_adi" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="aciklama" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="seri_no" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="garanti_suresi" Type="Int32" Nullable="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="alim_detays" Relationship="radiusModel.alim_detays_ibfk_2" FromRole="cihaz" ToRole="alim_detays" />
+    <NavigationProperty Name="cihaz_fifos" Relationship="radiusModel.cihaz_fifos_ibfk_1" FromRole="cihaz" ToRole="cihaz_fifos" />
+    <NavigationProperty Name="cihaz_garantis" Relationship="radiusModel.cihaz_garanti_kisit" FromRole="cihaz" ToRole="cihaz_garantis" />
+    <NavigationProperty Name="cihaz_stoks" Relationship="radiusModel.stokKisit1" FromRole="cihaz" ToRole="cihaz_stoks" />
+    <NavigationProperty Name="satislars" Relationship="radiusModel.cihaz_id" FromRole="cihaz" ToRole="satislar" />
+    <NavigationProperty Name="servis_paket_detays" Relationship="radiusModel.paket_cihaz_kisit" FromRole="cihaz" ToRole="servis_paket_detays" />
+    <NavigationProperty Name="servicehesaps" Relationship="radiusModel.servicehesaps_ibfk_3" FromRole="cihaz" ToRole="servicehesap" />
+    <Property Name="grupid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="cihaz_grups" Relationship="radiusModel.cihaz_grup_f" FromRole="cihaz" ToRole="cihaz_grups" />
+    <Property Name="barkod" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="kart_caris">
+    <Key>
+      <PropertyRef Name="kart_id" />
+    </Key>
+    <Property Name="kart_id" Type="Int32" Nullable="false" />
+    <Property Name="borc" Type="Decimal" Nullable="false" />
+    <Property Name="odenen" Type="Decimal" Nullable="false" />
+    <Property Name="bakiye" Type="Decimal" Nullable="false" />
+    <Property Name="kart_adi" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="kart_tanims" Relationship="radiusModel.cari_tanim_kartR" FromRole="kart_caris" ToRole="kart_tanims" />
+  </EntityType>
+  <EntityType Name="kart_hesaps">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kart_id" Type="Int32" Nullable="false" />
+    <Property Name="odeme_id" Type="Int32" Nullable="false" />
+    <Property Name="tarih" Type="DateTime" />
+    <Property Name="extre_tarih" Type="DateTime" Nullable="false" />
+    <Property Name="tutar" Type="Decimal" Nullable="false" />
+    <Property Name="aciklama" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="toplam_tutar" Type="Decimal" Nullable="false" />
+    <Property Name="cekildi" Type="Boolean" Nullable="false" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="islem" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Musteri_ID" Type="Int32" />
+    <NavigationProperty Name="kart_tanims" Relationship="radiusModel.kart_hesaps_ibfk_1" FromRole="kart_hesaps" ToRole="kart_tanims" />
+    <NavigationProperty Name="musteriodemeler" Relationship="radiusModel.kart_hesaps_ibfk_3" FromRole="kart_hesaps" ToRole="musteriodemeler" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.kart_hesaps_ibfk_2" FromRole="kart_hesaps" ToRole="customer" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="kart_odemes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kart_id" Type="Int32" Nullable="false" />
+    <Property Name="tutar" Type="Decimal" Nullable="false" />
+    <Property Name="tarih" Type="DateTime" Nullable="false" />
+    <Property Name="aciklama" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" />
+    <NavigationProperty Name="kart_tanims" Relationship="radiusModel.kartTanimOdemeF1" FromRole="kart_odemes" ToRole="kart_tanims" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="kart_tanims">
+    <Key>
+      <PropertyRef Name="kart_id" />
+    </Key>
+    <Property Name="kart_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kart_adi" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="extre_tarih" Type="DateTime" Nullable="false" />
+    <Property Name="devreden_bakiye" Type="Decimal" Nullable="false" />
+    <Property Name="aciklama" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="kart_caris" Relationship="radiusModel.cari_tanim_kartR" FromRole="kart_tanims" ToRole="kart_caris" />
+    <NavigationProperty Name="kart_hesaps" Relationship="radiusModel.kart_hesaps_ibfk_1" FromRole="kart_tanims" ToRole="kart_hesaps" />
+    <NavigationProperty Name="kart_odemes" Relationship="radiusModel.kartTanimOdemeF1" FromRole="kart_tanims" ToRole="kart_odemes" />
+    <NavigationProperty Name="musteriodemelers" Relationship="radiusModel.musteriodemelers_ibfk_3" FromRole="kart_tanims" ToRole="musteriodemeler" />
+  </EntityType>
+  <EntityType Name="kasahareket">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="giris" Type="Decimal" Nullable="false" />
+    <Property Name="cikis" Type="Decimal" Nullable="false" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <Property Name="Odeme_ID" Type="Int32" />
+    <Property Name="aktif_bakiye" Type="Decimal" Nullable="false" />
+    <Property Name="KasaTur" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="islem" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="DateTime" />
+    <Property Name="Musteri_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="musteriodemeler" Relationship="radiusModel.kasaharekets_ibfk_1" FromRole="kasahareket" ToRole="musteriodemeler" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.kasaharekets_ibfk_2" FromRole="kasahareket" ToRole="customer" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="kasahesap">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ToplamGiris" Type="Decimal" Nullable="false" />
+    <Property Name="ToplamCikis" Type="Decimal" Nullable="false" />
+    <Property Name="ToplamBakiye" Type="Decimal" Nullable="false" />
+    <Property Name="KasaTur" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="kasa_adi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="mail_ayars">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tur" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="iliski_id" Type="Int32" Nullable="false" />
+    <Property Name="gonderen" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="konu" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="FirmaTam" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Adres" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="url" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Telefon" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="durum" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="body_mesaj" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="kritik_gun" Type="Int32" Nullable="false" />
+    <Property Name="resim_yol" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="aktif" Type="Boolean" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="masraf_tips">
+    <Key>
+      <PropertyRef Name="tip_id" />
+    </Key>
+    <Property Name="tip_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tip_adi" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="aciklama" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="css" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="musteriodemelers" Relationship="radiusModel.masraf_kisit_1" FromRole="masraf_tips" ToRole="musteriodemeler" />
+  </EntityType>
+  <EntityType Name="musteriodemeler">
+    <Key>
+      <PropertyRef Name="Odeme_ID" />
+    </Key>
+    <Property Name="KullaniciID" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="no" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="OdemeMiktar" Type="Decimal" Nullable="false" />
+    <Property Name="OdemeTarih" Type="DateTime" Nullable="false" />
+    <Property Name="Aciklama" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Odeme_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Musteri_ID" Type="Int32" Nullable="false" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="kullanici" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="taksit_no" Type="Int32" Nullable="false" />
+    <Property Name="tahsilat_turu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="tahsilat_odeme" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="pos_id" Type="Int32" />
+    <Property Name="kart_id" Type="Int32" />
+    <Property Name="taksit_sayisi" Type="Int32" />
+    <Property Name="banka_id" Type="Int32" />
+    <Property Name="belge_no" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="vade_tarih" Type="DateTime" />
+    <Property Name="masraf" Type="Decimal" />
+    <Property Name="fatura_id" Type="Int32" />
+    <Property Name="extre_tarih" Type="DateTime" />
+    <Property Name="mahsup" Type="Boolean" />
+    <Property Name="mahsup_key" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="iade_id" Type="Int32" />
+    <Property Name="standart" Type="Boolean" />
+    <Property Name="masraf_tipi" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="masraf_id" Type="Int32" />
+    <Property Name="islem_tarihi" Type="DateTime" />
+    <NavigationProperty Name="banka" Relationship="radiusModel.musteriodemelers_ibfk_4" FromRole="musteriodemeler" ToRole="banka" />
+    <NavigationProperty Name="cekhesaps" Relationship="radiusModel.cekhesaps_ibfk_2" FromRole="musteriodemeler" ToRole="cekhesap" />
+    <NavigationProperty Name="cihaz_garantis" Relationship="radiusModel.cihazIadeKisit" FromRole="musteriodemeler" ToRole="cihaz_garantis" />
+    <NavigationProperty Name="kart_hesaps" Relationship="radiusModel.kart_hesaps_ibfk_3" FromRole="musteriodemeler" ToRole="kart_hesaps" />
+    <NavigationProperty Name="kart_tanims" Relationship="radiusModel.musteriodemelers_ibfk_3" FromRole="musteriodemeler" ToRole="kart_tanims" />
+    <NavigationProperty Name="kasaharekets" Relationship="radiusModel.kasaharekets_ibfk_1" FromRole="musteriodemeler" ToRole="kasahareket" />
+    <NavigationProperty Name="masraf_tips" Relationship="radiusModel.masraf_kisit_1" FromRole="musteriodemeler" ToRole="masraf_tips" />
+    <NavigationProperty Name="pos_tanims" Relationship="radiusModel.musteriodemelers_ibfk_2" FromRole="musteriodemeler" ToRole="pos_tanims" />
+    <NavigationProperty Name="satislars" Relationship="radiusModel.odeme_id" FromRole="musteriodemeler" ToRole="satislar" />
+    <NavigationProperty Name="poshesaps" Relationship="radiusModel.poshesaps_ibfk_4" FromRole="musteriodemeler" ToRole="poshesap" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.musteriodemelers_ibfk_1" FromRole="musteriodemeler" ToRole="customer" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="not">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="not_adi" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="notlar" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="panel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="servis_sayisi" Type="Int32" Nullable="false" />
+    <Property Name="onay_bekleyen_sayisi" Type="Int32" Nullable="false" />
+    <Property Name="borclu_sayisi" Type="Int32" Nullable="false" />
+    <Property Name="emanet_sayisi" Type="Int32" Nullable="false" />
+    <Property Name="ToplamBorc" Type="Decimal" Nullable="false" />
+    <Property Name="ToplamOdenen" Type="Decimal" Nullable="false" />
+    <Property Name="NetBorc" Type="Decimal" Nullable="false" />
+    <Property Name="ToplamAlacak" Type="Decimal" Nullable="false" />
+    <Property Name="ToplamOdedigimiz" Type="Decimal" Nullable="false" />
+    <Property Name="NetAlacak" Type="Decimal" Nullable="false" />
+    <Property Name="ToplamBakiye" Type="Decimal" Nullable="false" />
+    <Property Name="musteri_sayisi" Type="Int32" Nullable="false" />
+    <Property Name="kullanici" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pos_tanims">
+    <Key>
+      <PropertyRef Name="pos_id" />
+    </Key>
+    <Property Name="pos_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pos_adi" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="banka_id" Type="Int32" Nullable="false" />
+    <Property Name="ikinci_sure" Type="Int32" Nullable="false" />
+    <Property Name="ikinci_komisyon" Type="Decimal" Nullable="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="banka" Relationship="radiusModel.pos_tanims_ibfk_1" FromRole="pos_tanims" ToRole="banka" />
+    <NavigationProperty Name="musteriodemelers" Relationship="radiusModel.musteriodemelers_ibfk_2" FromRole="pos_tanims" ToRole="musteriodemeler" />
+    <NavigationProperty Name="poshesaps" Relationship="radiusModel.poshesaps_ibfk_2" FromRole="pos_tanims" ToRole="poshesap" />
+  </EntityType>
+  <EntityType Name="poshesap">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pos_id" Type="Int32" Nullable="false" />
+    <Property Name="tahsilat_tarih" Type="DateTime" Nullable="false" />
+    <Property Name="tahsilat_tutar" Type="Decimal" Nullable="false" />
+    <Property Name="komsiyon_oran" Type="Decimal" Nullable="false" />
+    <Property Name="komisyon_tutar" Type="Decimal" Nullable="false" />
+    <Property Name="net_tutar" Type="Decimal" Nullable="false" />
+    <Property Name="extre_tarihi" Type="DateTime" Nullable="false" />
+    <Property Name="cekildi" Type="Boolean" Nullable="false" />
+    <Property Name="tahsilat_id" Type="Int32" Nullable="false" />
+    <Property Name="iptal" Type="Boolean" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="islem" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Musteri_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="musteriodemeler" Relationship="radiusModel.poshesaps_ibfk_4" FromRole="poshesap" ToRole="musteriodemeler" />
+    <NavigationProperty Name="pos_tanims" Relationship="radiusModel.poshesaps_ibfk_2" FromRole="poshesap" ToRole="pos_tanims" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.poshesaps_ibfk_3" FromRole="poshesap" ToRole="customer" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="satislar">
+    <Key>
+      <PropertyRef Name="satis_id" />
+    </Key>
+    <Property Name="satis_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="musteri_id" Type="Int32" Nullable="false" />
+    <Property Name="odeme_id" Type="Int32" />
+    <Property Name="cihaz_id" Type="Int32" Nullable="false" />
+    <Property Name="adet" Type="Int32" Nullable="false" />
+    <Property Name="tutar" Type="Decimal" Nullable="false" />
+    <Property Name="vergi" Type="Decimal" Nullable="false" />
+    <Property Name="kdv" Type="Decimal" Nullable="false" />
+    <Property Name="otv" Type="Decimal" Nullable="false" />
+    <Property Name="oiv" Type="Decimal" Nullable="false" />
+    <Property Name="bandrol" Type="Decimal" Nullable="false" />
+    <Property Name="iskonto_oran" Type="Decimal" Nullable="false" />
+    <Property Name="yekun" Type="Decimal" Nullable="false" />
+    <Property Name="tarih" Type="DateTime" Nullable="false" />
+    <Property Name="stok_id" Type="Int32" />
+    <Property Name="Firma" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <Property Name="fat_no" Type="Int32" />
+    <Property Name="fat_seri" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="basim_tarih" Type="DateTime" />
+    <NavigationProperty Name="cihaz" Relationship="radiusModel.cihaz_id" FromRole="satislar" ToRole="cihaz" />
+    <NavigationProperty Name="musteriodemeler" Relationship="radiusModel.odeme_id" FromRole="satislar" ToRole="musteriodemeler" />
+    <NavigationProperty Name="faturas" Relationship="radiusModel.faturas_ibfk_1" FromRole="satislar" ToRole="fatura" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.musteri_id" FromRole="satislar" ToRole="customer" />
+    <Property Name="unvan" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="tc" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="vd" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="service_durums">
+    <Key>
+      <PropertyRef Name="Durum_ID" />
+    </Key>
+    <Property Name="Durum_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Durum" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="SMS" Type="Boolean" Nullable="false" />
+    <Property Name="Mail" Type="Boolean" Nullable="false" />
+    <Property Name="Whatsapp" Type="Boolean" Nullable="false" />
+    <Property Name="baslangicmi" Type="Boolean" />
+    <Property Name="sonmu" Type="Boolean" />
+    <Property Name="kararmi" Type="Boolean" />
+    <Property Name="onaymi" Type="Boolean" />
+    <Property Name="iptal" Type="Boolean" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mail_Tema" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="servicedetays" Relationship="radiusModel.servicedetays_ibfk_3" FromRole="service_durums" ToRole="servicedetay" />
+  </EntityType>
+  <EntityType Name="service_faturas">
+    <Key>
+      <PropertyRef Name="ServiceID" />
+    </Key>
+    <Property Name="ServiceID" Type="Int32" Nullable="false" />
+    <Property Name="usta_id" Type="Int32" />
+    <Property Name="Tutar" Type="Decimal" Nullable="false" />
+    <Property Name="KDV" Type="Decimal" Nullable="false" />
+    <Property Name="Yekun" Type="Decimal" Nullable="false" />
+    <Property Name="toplam_maliyet" Type="Decimal" />
+    <Property Name="toplam_fark" Type="Decimal" />
+    <Property Name="fat_seri" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fat_no" Type="Int32" />
+    <Property Name="basim_tarih" Type="DateTime" />
+    <Property Name="service_tur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tahsilat_turu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="kapanma" Type="Boolean" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" />
+    <NavigationProperty Name="service" Relationship="radiusModel.service_faturas_ibfk_1" FromRole="service_faturas" ToRole="service" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.service_faturas_ibfk_2" FromRole="service_faturas" ToRole="customer" />
+  </EntityType>
+  <EntityType Name="service_tips">
+    <Key>
+      <PropertyRef Name="tip_id" />
+    </Key>
+    <Property Name="tip_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tip_ad" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="aciklama" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="css" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" />
+    <NavigationProperty Name="services" Relationship="radiusModel.services_ibfk_4" FromRole="service_tips" ToRole="service" />
+  </EntityType>
+  <EntityType Name="servicedetay">
+    <Key>
+      <PropertyRef Name="DetayID" />
+    </Key>
+    <Property Name="DetayID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceID" Type="Int32" Nullable="false" />
+    <Property Name="TarihZaman" Type="DateTime" Nullable="false" />
+    <Property Name="BelgeYol" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Aciklama" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Durum_ID" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciID" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="kullanici" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" />
+    <Property Name="Baslik" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="service_durums" Relationship="radiusModel.servicedetays_ibfk_3" FromRole="servicedetay" ToRole="service_durums" />
+    <NavigationProperty Name="service" Relationship="radiusModel.servicedetays_ibfk_1" FromRole="servicedetay" ToRole="service" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="servicehesap">
+    <Key>
+      <PropertyRef Name="HesapID" />
+    </Key>
+    <Property Name="HesapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriID" Type="Int32" />
+    <Property Name="tamirci_id" Type="Int32" />
+    <Property Name="ServiceID" Type="Int32" Nullable="false" />
+    <Property Name="servis_kimlik" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IslemParca" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Tutar" Type="Decimal" />
+    <Property Name="KDV" Type="Decimal" />
+    <Property Name="Yekun" Type="Decimal" Nullable="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TarihZaman" Type="DateTime" Nullable="false" />
+    <Property Name="adet" Type="Int32" Nullable="false" />
+    <Property Name="cihaz_id" Type="Int32" />
+    <Property Name="cihaz_adi" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="cihaz_gsure" Type="Int32" />
+    <Property Name="Urun_Cinsi" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Urun_GarantiBaslangic" Type="DateTime" />
+    <Property Name="Urun_GarantiBitis" Type="DateTime" />
+    <Property Name="Urun_GarantiSuresi" Type="Int32" />
+    <Property Name="Urun_Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Urun_Kimlik" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="onay" Type="Boolean" Nullable="false" />
+    <Property Name="Onay_tarih" Type="DateTime" />
+    <Property Name="stok_id" Type="Int32" />
+    <Property Name="birim_maliyet" Type="Decimal" />
+    <Property Name="toplam_maliyet" Type="Decimal" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="kullanici" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="cihaz" Relationship="radiusModel.servicehesaps_ibfk_3" FromRole="servicehesap" ToRole="cihaz" />
+    <NavigationProperty Name="faturas" Relationship="radiusModel.karar_fatura_kisit2" FromRole="servicehesap" ToRole="fatura" />
+    <NavigationProperty Name="service" Relationship="radiusModel.servicehesaps_ibfk_2" FromRole="servicehesap" ToRole="service" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.servicehesaps_ibfk_1" FromRole="servicehesap" ToRole="customer" />
+    <NavigationProperty Name="customer1" Relationship="radiusModel.servicehesaps_ibfk_4" FromRole="servicehesap" ToRole="customer" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="servis_paket_detays">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="paket_id" Type="Int32" Nullable="false" />
+    <Property Name="paket_adi" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="IslemParca" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Tutar" Type="Decimal" />
+    <Property Name="KDV" Type="Decimal" />
+    <Property Name="Yekun" Type="Decimal" Nullable="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="adet" Type="Int32" Nullable="false" />
+    <Property Name="cihaz_id" Type="Int32" />
+    <Property Name="cihaz_adi" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="cihaz_gsure" Type="Int32" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="cihaz" Relationship="radiusModel.paket_cihaz_kisit" FromRole="servis_paket_detays" ToRole="cihaz" />
+    <NavigationProperty Name="servis_pakets" Relationship="radiusModel.paket_paket_detay_Kisit" FromRole="servis_paket_detays" ToRole="servis_pakets" />
+  </EntityType>
+  <EntityType Name="servis_pakets">
+    <Key>
+      <PropertyRef Name="paket_id" />
+    </Key>
+    <Property Name="paket_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="paket_adi" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="tutar" Type="Decimal" Nullable="false" />
+    <Property Name="aciklama" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="servis_paket_detays" Relationship="radiusModel.paket_paket_detay_Kisit" FromRole="servis_pakets" ToRole="servis_paket_detays" />
+  </EntityType>
+  <EntityType Name="sms_ayars">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tur" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="iliski_id" Type="Int32" Nullable="false" />
+    <Property Name="gonderen" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="mesaj" Type="String" Nullable="false" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="kritik_gun" Type="Int32" />
+    <Property Name="tip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="aktif" Type="Boolean" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="urun">
+    <Key>
+      <PropertyRef Name="urunID" />
+    </Key>
+    <Property Name="urunID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriID" Type="Int32" Nullable="false" />
+    <Property Name="Cinsi" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="GranatiBaslangic" Type="DateTime" />
+    <Property Name="GarantiBitis" Type="DateTime" />
+    <Property Name="GarantiSuresi" Type="Int32" />
+    <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BelgeYol" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="kullanici" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" />
+    <NavigationProperty Name="services" Relationship="radiusModel.services_ibfk_5" FromRole="urun" ToRole="service" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.uruns_ibfk_1" FromRole="urun" ToRole="customer" />
+    <Property Name="serino" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="imeino" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="digerno" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="yedek_uruns">
+    <Key>
+      <PropertyRef Name="yedek_id" />
+    </Key>
+    <Property Name="yedek_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="musteri_id" Type="Int32" Nullable="false" />
+    <Property Name="urun_aciklama" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="tarih_verilme" Type="DateTime" Nullable="false" />
+    <Property Name="tarih_donus" Type="DateTime" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="kullanici" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.yedek_uruns_ibfk_1" FromRole="yedek_uruns" ToRole="customer" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="alim_detays_ibfk_1">
+    <End Type="radiusModel.alim" Role="alim" Multiplicity="1" />
+    <End Type="radiusModel.alim_detays" Role="alim_detays" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="alim">
+        <PropertyRef Name="alim_id" />
+      </Principal>
+      <Dependent Role="alim_detays">
+        <PropertyRef Name="alim_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="alim_detays_ibfk_2">
+    <End Type="radiusModel.cihaz" Role="cihaz" Multiplicity="0..1" />
+    <End Type="radiusModel.alim_detays" Role="alim_detays" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cihaz">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="alim_detays">
+        <PropertyRef Name="cihaz_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="musteriodemelers_ibfk_4">
+    <End Type="radiusModel.banka" Role="banka" Multiplicity="0..1" />
+    <End Type="radiusModel.musteriodemeler" Role="musteriodemeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="banka">
+        <PropertyRef Name="banka_id" />
+      </Principal>
+      <Dependent Role="musteriodemeler">
+        <PropertyRef Name="banka_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="pos_tanims_ibfk_1">
+    <End Type="radiusModel.banka" Role="banka" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.pos_tanims" Role="pos_tanims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="banka">
+        <PropertyRef Name="banka_id" />
+      </Principal>
+      <Dependent Role="pos_tanims">
+        <PropertyRef Name="banka_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cekhesaps_ibfk_2">
+    <End Type="radiusModel.musteriodemeler" Role="musteriodemeler" Multiplicity="1" />
+    <End Type="radiusModel.cekhesap" Role="cekhesap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteriodemeler">
+        <PropertyRef Name="Odeme_ID" />
+      </Principal>
+      <Dependent Role="cekhesap">
+        <PropertyRef Name="odeme_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cihaz_fifos_ibfk_1">
+    <End Type="radiusModel.cihaz" Role="cihaz" Multiplicity="1" />
+    <End Type="radiusModel.cihaz_fifos" Role="cihaz_fifos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cihaz">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="cihaz_fifos">
+        <PropertyRef Name="cihaz_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cihaz_garanti_kisit">
+    <End Type="radiusModel.cihaz" Role="cihaz" Multiplicity="1" />
+    <End Type="radiusModel.cihaz_garantis" Role="cihaz_garantis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cihaz">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="cihaz_garantis">
+        <PropertyRef Name="cihaz_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cihazIadeKisit">
+    <End Type="radiusModel.cihaz_garantis" Role="cihaz_garantis" Multiplicity="0..1" />
+    <End Type="radiusModel.musteriodemeler" Role="musteriodemeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cihaz_garantis">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="musteriodemeler">
+        <PropertyRef Name="iade_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="stokKisit1">
+    <End Type="radiusModel.cihaz" Role="cihaz" Multiplicity="1" />
+    <End Type="radiusModel.cihaz_stoks" Role="cihaz_stoks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cihaz">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="cihaz_stoks">
+        <PropertyRef Name="cihaz_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cihaz_id">
+    <End Type="radiusModel.cihaz" Role="cihaz" Multiplicity="1" />
+    <End Type="radiusModel.satislar" Role="satislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cihaz">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="satislar">
+        <PropertyRef Name="cihaz_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="paket_cihaz_kisit">
+    <End Type="radiusModel.cihaz" Role="cihaz" Multiplicity="0..1" />
+    <End Type="radiusModel.servis_paket_detays" Role="servis_paket_detays" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cihaz">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="servis_paket_detays">
+        <PropertyRef Name="cihaz_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicehesaps_ibfk_3">
+    <End Type="radiusModel.cihaz" Role="cihaz" Multiplicity="0..1" />
+    <End Type="radiusModel.servicehesap" Role="servicehesap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cihaz">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="servicehesap">
+        <PropertyRef Name="cihaz_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cari_tanim_kartR">
+    <End Type="radiusModel.kart_tanims" Role="kart_tanims" Multiplicity="1" />
+    <End Type="radiusModel.kart_caris" Role="kart_caris" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="kart_tanims">
+        <PropertyRef Name="kart_id" />
+      </Principal>
+      <Dependent Role="kart_caris">
+        <PropertyRef Name="kart_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kart_hesaps_ibfk_1">
+    <End Type="radiusModel.kart_tanims" Role="kart_tanims" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.kart_hesaps" Role="kart_hesaps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kart_tanims">
+        <PropertyRef Name="kart_id" />
+      </Principal>
+      <Dependent Role="kart_hesaps">
+        <PropertyRef Name="kart_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kart_hesaps_ibfk_3">
+    <End Type="radiusModel.musteriodemeler" Role="musteriodemeler" Multiplicity="1" />
+    <End Type="radiusModel.kart_hesaps" Role="kart_hesaps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteriodemeler">
+        <PropertyRef Name="Odeme_ID" />
+      </Principal>
+      <Dependent Role="kart_hesaps">
+        <PropertyRef Name="odeme_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kartTanimOdemeF1">
+    <End Type="radiusModel.kart_tanims" Role="kart_tanims" Multiplicity="1" />
+    <End Type="radiusModel.kart_odemes" Role="kart_odemes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kart_tanims">
+        <PropertyRef Name="kart_id" />
+      </Principal>
+      <Dependent Role="kart_odemes">
+        <PropertyRef Name="kart_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="musteriodemelers_ibfk_3">
+    <End Type="radiusModel.kart_tanims" Role="kart_tanims" Multiplicity="0..1" />
+    <End Type="radiusModel.musteriodemeler" Role="musteriodemeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kart_tanims">
+        <PropertyRef Name="kart_id" />
+      </Principal>
+      <Dependent Role="musteriodemeler">
+        <PropertyRef Name="kart_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kasaharekets_ibfk_1">
+    <End Type="radiusModel.musteriodemeler" Role="musteriodemeler" Multiplicity="0..1" />
+    <End Type="radiusModel.kasahareket" Role="kasahareket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteriodemeler">
+        <PropertyRef Name="Odeme_ID" />
+      </Principal>
+      <Dependent Role="kasahareket">
+        <PropertyRef Name="Odeme_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="masraf_kisit_1">
+    <End Type="radiusModel.masraf_tips" Role="masraf_tips" Multiplicity="0..1" />
+    <End Type="radiusModel.musteriodemeler" Role="musteriodemeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="masraf_tips">
+        <PropertyRef Name="tip_id" />
+      </Principal>
+      <Dependent Role="musteriodemeler">
+        <PropertyRef Name="masraf_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="musteriodemelers_ibfk_2">
+    <End Type="radiusModel.pos_tanims" Role="pos_tanims" Multiplicity="0..1" />
+    <End Type="radiusModel.musteriodemeler" Role="musteriodemeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pos_tanims">
+        <PropertyRef Name="pos_id" />
+      </Principal>
+      <Dependent Role="musteriodemeler">
+        <PropertyRef Name="pos_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="odeme_id">
+    <End Type="radiusModel.musteriodemeler" Role="musteriodemeler" Multiplicity="0..1" />
+    <End Type="radiusModel.satislar" Role="satislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteriodemeler">
+        <PropertyRef Name="Odeme_ID" />
+      </Principal>
+      <Dependent Role="satislar">
+        <PropertyRef Name="odeme_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="poshesaps_ibfk_4">
+    <End Type="radiusModel.musteriodemeler" Role="musteriodemeler" Multiplicity="1" />
+    <End Type="radiusModel.poshesap" Role="poshesap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="musteriodemeler">
+        <PropertyRef Name="Odeme_ID" />
+      </Principal>
+      <Dependent Role="poshesap">
+        <PropertyRef Name="tahsilat_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="poshesaps_ibfk_2">
+    <End Type="radiusModel.pos_tanims" Role="pos_tanims" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.poshesap" Role="poshesap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pos_tanims">
+        <PropertyRef Name="pos_id" />
+      </Principal>
+      <Dependent Role="poshesap">
+        <PropertyRef Name="pos_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicedetays_ibfk_3">
+    <End Type="radiusModel.service_durums" Role="service_durums" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.servicedetay" Role="servicedetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="service_durums">
+        <PropertyRef Name="Durum_ID" />
+      </Principal>
+      <Dependent Role="servicedetay">
+        <PropertyRef Name="Durum_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="paket_paket_detay_Kisit">
+    <End Type="radiusModel.servis_pakets" Role="servis_pakets" Multiplicity="1" />
+    <End Type="radiusModel.servis_paket_detays" Role="servis_paket_detays" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="servis_pakets">
+        <PropertyRef Name="paket_id" />
+      </Principal>
+      <Dependent Role="servis_paket_detays">
+        <PropertyRef Name="paket_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="fatura">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriID" Type="Int32" />
+    <Property Name="no" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="taksit_no" Type="Int32" Nullable="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sattis_tarih" Type="DateTime" />
+    <Property Name="tc" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ad" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="adres" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="tutar" Type="Decimal" Nullable="false" />
+    <Property Name="tamirci_maliyet" Type="Decimal" />
+    <Property Name="telefon" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="odenen" Type="Decimal" Nullable="false" />
+    <Property Name="bakiye" Type="Decimal" Nullable="false" />
+    <Property Name="vergisiz_tutar" Type="Decimal" Nullable="false" />
+    <Property Name="KDV" Type="Decimal" Nullable="false" />
+    <Property Name="OIV" Type="Decimal" Nullable="false" />
+    <Property Name="fat_seri" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fat_no" Type="Int32" />
+    <Property Name="basim_tarih" Type="DateTime" />
+    <Property Name="odendi" Type="Boolean" />
+    <Property Name="tur" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="tahsilat_turu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <Property Name="hesap_id" Type="Int32" />
+    <Property Name="service_id" Type="Int32" />
+    <Property Name="tahsilat_aciklama" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="taksit_sayisi" Type="Int32" />
+    <Property Name="belge_no" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="vade_tarih" Type="DateTime" />
+    <Property Name="masraf" Type="Decimal" />
+    <Property Name="borc_odeme_id" Type="Int32" />
+    <Property Name="mahsup" Type="Boolean" />
+    <Property Name="mahsup_key" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="iade_id" Type="Int32" />
+    <Property Name="servicehesap_id" Type="Int32" />
+    <Property Name="son_odeme_tarihi" Type="DateTime" Nullable="false" />
+    <Property Name="odeme_tarihi" Type="DateTime" />
+    <Property Name="islem_tarihi" Type="DateTime" />
+    <Property Name="guncelleme_tarihi" Type="DateTime" />
+    <Property Name="islemci_user" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="satis_id" Type="Int32" />
+    <Property Name="tamirci_id" Type="Int32" />
+    <NavigationProperty Name="satislar" Relationship="radiusModel.faturas_ibfk_1" FromRole="fatura" ToRole="satislar" />
+    <NavigationProperty Name="servicehesap" Relationship="radiusModel.karar_fatura_kisit2" FromRole="fatura" ToRole="servicehesap" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.tamirci_kisit" FromRole="fatura" ToRole="customer" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="paket_id" Type="Int32" />
+    <NavigationProperty Name="abonelik_pakets" Relationship="radiusModel.fatura_pak_baglantisi" FromRole="fatura" ToRole="abonelik_pakets" />
+    <NavigationProperty Name="customer1" Relationship="radiusModel.fatura_custome_kst" FromRole="fatura" ToRole="customer" />
+  </EntityType>
+  <Association Name="faturas_ibfk_1">
+    <End Type="radiusModel.satislar" Role="satislar" Multiplicity="0..1" />
+    <End Type="radiusModel.fatura" Role="fatura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="satislar">
+        <PropertyRef Name="satis_id" />
+      </Principal>
+      <Dependent Role="fatura">
+        <PropertyRef Name="satis_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="karar_fatura_kisit2">
+    <End Type="radiusModel.servicehesap" Role="servicehesap" Multiplicity="0..1" />
+    <End Type="radiusModel.fatura" Role="fatura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="servicehesap">
+        <PropertyRef Name="HesapID" />
+      </Principal>
+      <Dependent Role="fatura">
+        <PropertyRef Name="servicehesap_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="service">
+    <Key>
+      <PropertyRef Name="ServiceID" />
+    </Key>
+    <Property Name="ServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustID" Type="Int32" />
+    <Property Name="usta_id" Type="Int32" />
+    <Property Name="usta" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="tamirci_id" Type="Int32" />
+    <Property Name="son_dis_servis" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SonAtananID" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Aciklama" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="AcilmaZamani" Type="DateTime" Nullable="false" />
+    <Property Name="KapanmaZamani" Type="DateTime" />
+    <Property Name="UrunID" Type="Int32" />
+    <Property Name="Servis_Kimlik_No" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="tip_id" Type="Int32" Nullable="false" />
+    <Property Name="SonDurum" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="iptal" Type="Boolean" />
+    <Property Name="olusturan_Kullanici" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="kullanici" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Baslik" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="durum_id" Type="Int32" />
+    <NavigationProperty Name="service_faturas" Relationship="radiusModel.service_faturas_ibfk_1" FromRole="service" ToRole="service_faturas" />
+    <NavigationProperty Name="service_tips" Relationship="radiusModel.services_ibfk_4" FromRole="service" ToRole="service_tips" />
+    <NavigationProperty Name="servicedetays" Relationship="radiusModel.servicedetays_ibfk_1" FromRole="service" ToRole="servicedetay" />
+    <NavigationProperty Name="servicehesaps" Relationship="radiusModel.servicehesaps_ibfk_2" FromRole="service" ToRole="servicehesap" />
+    <NavigationProperty Name="urun" Relationship="radiusModel.services_ibfk_5" FromRole="service" ToRole="urun" />
+    <NavigationProperty Name="customer" Relationship="radiusModel.services_ibfk_1" FromRole="service" ToRole="customer" />
+    <NavigationProperty Name="customer1" Relationship="radiusModel.services_ibfk_6" FromRole="service" ToRole="customer" />
+    <Property Name="barcode" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="service_faturas_ibfk_1">
+    <End Type="radiusModel.service" Role="service" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.service_faturas" Role="service_faturas" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="service">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="service_faturas">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="services_ibfk_4">
+    <End Type="radiusModel.service_tips" Role="service_tips" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.service" Role="service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="service_tips">
+        <PropertyRef Name="tip_id" />
+      </Principal>
+      <Dependent Role="service">
+        <PropertyRef Name="tip_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicedetays_ibfk_1">
+    <End Type="radiusModel.service" Role="service" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.servicedetay" Role="servicedetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="service">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="servicedetay">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicehesaps_ibfk_2">
+    <End Type="radiusModel.service" Role="service" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.servicehesap" Role="servicehesap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="service">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="servicehesap">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="services_ibfk_5">
+    <End Type="radiusModel.urun" Role="urun" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.service" Role="service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="urun">
+        <PropertyRef Name="urunID" />
+      </Principal>
+      <Dependent Role="service">
+        <PropertyRef Name="UrunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="CustID" />
+    </Key>
+    <Property Name="CustID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Adres" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="telefon" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="telefon_cep" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="tanimlayici" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Firma" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Lat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Long" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="pasif" Type="Boolean" />
+    <Property Name="istihbarat" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="prim_yekun" Type="Decimal" />
+    <Property Name="prim_kar" Type="Decimal" />
+    <Property Name="musteri" Type="Boolean" />
+    <Property Name="tedarikci" Type="Boolean" />
+    <Property Name="usta" Type="Boolean" />
+    <Property Name="disservis" Type="Boolean" />
+    <NavigationProperty Name="alims" Relationship="radiusModel.alims_ibfk_1" FromRole="customer" ToRole="alim" />
+    <NavigationProperty Name="cekhesaps" Relationship="radiusModel.cekhesaps_ibfk_1" FromRole="customer" ToRole="cekhesap" />
+    <NavigationProperty Name="cihaz_garantis" Relationship="radiusModel.garanti_custom_Kisit" FromRole="customer" ToRole="cihaz_garantis" />
+    <NavigationProperty Name="kart_hesaps" Relationship="radiusModel.kart_hesaps_ibfk_2" FromRole="customer" ToRole="kart_hesaps" />
+    <NavigationProperty Name="kasaharekets" Relationship="radiusModel.kasaharekets_ibfk_2" FromRole="customer" ToRole="kasahareket" />
+    <NavigationProperty Name="satislars" Relationship="radiusModel.musteri_id" FromRole="customer" ToRole="satislar" />
+    <NavigationProperty Name="musteriodemelers" Relationship="radiusModel.musteriodemelers_ibfk_1" FromRole="customer" ToRole="musteriodemeler" />
+    <NavigationProperty Name="poshesaps" Relationship="radiusModel.poshesaps_ibfk_3" FromRole="customer" ToRole="poshesap" />
+    <NavigationProperty Name="service_faturas" Relationship="radiusModel.service_faturas_ibfk_2" FromRole="customer" ToRole="service_faturas" />
+    <NavigationProperty Name="servicehesaps" Relationship="radiusModel.servicehesaps_ibfk_1" FromRole="customer" ToRole="servicehesap" />
+    <NavigationProperty Name="servicehesaps1" Relationship="radiusModel.servicehesaps_ibfk_4" FromRole="customer" ToRole="servicehesap" />
+    <NavigationProperty Name="services" Relationship="radiusModel.services_ibfk_1" FromRole="customer" ToRole="service" />
+    <NavigationProperty Name="services1" Relationship="radiusModel.services_ibfk_6" FromRole="customer" ToRole="service" />
+    <NavigationProperty Name="faturas" Relationship="radiusModel.tamirci_kisit" FromRole="customer" ToRole="fatura" />
+    <NavigationProperty Name="uruns" Relationship="radiusModel.uruns_ibfk_1" FromRole="customer" ToRole="urun" />
+    <NavigationProperty Name="yedek_uruns" Relationship="radiusModel.yedek_uruns_ibfk_1" FromRole="customer" ToRole="yedek_uruns" />
+    <Property Name="unvan" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="vd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="paket_id" Type="Int32" />
+    <NavigationProperty Name="abonelik_pakets" Relationship="radiusModel.paket_cust_basglantisi" FromRole="customer" ToRole="abonelik_pakets" />
+    <Property Name="expire" Type="DateTime" />
+    <NavigationProperty Name="faturas1" Relationship="radiusModel.fatura_custome_kst" FromRole="customer" ToRole="fatura" />
+    <Property Name="antenid" Type="Int32" />
+    <NavigationProperty Name="anten" Relationship="radiusModel.anten_cust_baglanti" FromRole="customer" ToRole="anten" />
+  </EntityType>
+  <Association Name="alims_ibfk_1">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.alim" Role="alim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="alim">
+        <PropertyRef Name="CustID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cekhesaps_ibfk_1">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="1" />
+    <End Type="radiusModel.cekhesap" Role="cekhesap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="cekhesap">
+        <PropertyRef Name="Musteri_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="garanti_custom_Kisit">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="0..1" />
+    <End Type="radiusModel.cihaz_garantis" Role="cihaz_garantis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="cihaz_garantis">
+        <PropertyRef Name="CustID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kart_hesaps_ibfk_2">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="0..1" />
+    <End Type="radiusModel.kart_hesaps" Role="kart_hesaps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="kart_hesaps">
+        <PropertyRef Name="Musteri_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kasaharekets_ibfk_2">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="1" />
+    <End Type="radiusModel.kasahareket" Role="kasahareket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="kasahareket">
+        <PropertyRef Name="Musteri_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="musteri_id">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="1" />
+    <End Type="radiusModel.satislar" Role="satislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="satislar">
+        <PropertyRef Name="musteri_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="musteriodemelers_ibfk_1">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.musteriodemeler" Role="musteriodemeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="musteriodemeler">
+        <PropertyRef Name="Musteri_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="poshesaps_ibfk_3">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="1" />
+    <End Type="radiusModel.poshesap" Role="poshesap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="poshesap">
+        <PropertyRef Name="Musteri_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="service_faturas_ibfk_2">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="0..1" />
+    <End Type="radiusModel.service_faturas" Role="service_faturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="service_faturas">
+        <PropertyRef Name="usta_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicehesaps_ibfk_1">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.servicehesap" Role="servicehesap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="servicehesap">
+        <PropertyRef Name="MusteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicehesaps_ibfk_4">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="0..1" />
+    <End Type="radiusModel.servicehesap" Role="servicehesap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="servicehesap">
+        <PropertyRef Name="tamirci_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="services_ibfk_1">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.service" Role="service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="service">
+        <PropertyRef Name="CustID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="services_ibfk_6">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="0..1" />
+    <End Type="radiusModel.service" Role="service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="service">
+        <PropertyRef Name="usta_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tamirci_kisit">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="0..1" />
+    <End Type="radiusModel.fatura" Role="fatura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="fatura">
+        <PropertyRef Name="tamirci_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="uruns_ibfk_1">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.urun" Role="urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="urun">
+        <PropertyRef Name="MusteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="yedek_uruns_ibfk_1">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="radiusModel.yedek_uruns" Role="yedek_uruns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="yedek_uruns">
+        <PropertyRef Name="musteri_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="cihaz_grups">
+    <Key>
+      <PropertyRef Name="grupid" />
+    </Key>
+    <Property Name="grupid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="grupadi" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="kdv" Type="Decimal" />
+    <Property Name="oiv" Type="Decimal" />
+    <Property Name="otv" Type="Decimal" />
+    <NavigationProperty Name="cihazs" Relationship="radiusModel.cihaz_grup_f" FromRole="cihaz_grups" ToRole="cihaz" />
+  </EntityType>
+  <Association Name="cihaz_grup_f">
+    <End Type="radiusModel.cihaz_grups" Role="cihaz_grups" Multiplicity="1" />
+    <End Type="radiusModel.cihaz" Role="cihaz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cihaz_grups">
+        <PropertyRef Name="grupid" />
+      </Principal>
+      <Dependent Role="cihaz">
+        <PropertyRef Name="grupid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="manuel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="unvan" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="tutar" Type="Decimal" Nullable="false" />
+    <Property Name="kdv" Type="Decimal" Nullable="false" />
+    <Property Name="otv" Type="Decimal" Nullable="false" />
+    <Property Name="oiv" Type="Decimal" Nullable="false" />
+    <Property Name="yekun" Type="Decimal" Nullable="false" />
+    <Property Name="iptal" Type="Boolean" Nullable="false" />
+    <Property Name="tarih" Type="DateTime" Nullable="false" />
+    <Property Name="inserted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updated" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="abonelik_pakets">
+    <Key>
+      <PropertyRef Name="paket_id" />
+    </Key>
+    <Property Name="paket_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="paket_adi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gun" Type="Int32" Nullable="false" />
+    <Property Name="fiyat" Type="Decimal" Nullable="false" />
+    <Property Name="iptal" Type="Boolean" />
+    <NavigationProperty Name="faturas" Relationship="radiusModel.fatura_pak_baglantisi" FromRole="abonelik_pakets" ToRole="fatura" />
+    <NavigationProperty Name="customers" Relationship="radiusModel.paket_cust_basglantisi" FromRole="abonelik_pakets" ToRole="customer" />
+  </EntityType>
+  <Association Name="fatura_pak_baglantisi">
+    <End Type="radiusModel.abonelik_pakets" Role="abonelik_pakets" Multiplicity="0..1" />
+    <End Type="radiusModel.fatura" Role="fatura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="abonelik_pakets">
+        <PropertyRef Name="paket_id" />
+      </Principal>
+      <Dependent Role="fatura">
+        <PropertyRef Name="paket_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="paket_cust_basglantisi">
+    <End Type="radiusModel.abonelik_pakets" Role="abonelik_pakets" Multiplicity="0..1" />
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="abonelik_pakets">
+        <PropertyRef Name="paket_id" />
+      </Principal>
+      <Dependent Role="customer">
+        <PropertyRef Name="paket_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fatura_custome_kst">
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="0..1" />
+    <End Type="radiusModel.fatura" Role="fatura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="fatura">
+        <PropertyRef Name="MusteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="anten">
+    <Key>
+      <PropertyRef Name="anten_id" />
+    </Key>
+    <Property Name="anten_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="anten_adi" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="center_Lat" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="center_Long" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="start_Lat" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="start_Long" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="end_Lat" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="end_Long" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="customers" Relationship="radiusModel.anten_cust_baglanti" FromRole="anten" ToRole="customer" />
+  </EntityType>
+  <Association Name="anten_cust_baglanti">
+    <End Type="radiusModel.anten" Role="anten" Multiplicity="0..1" />
+    <End Type="radiusModel.customer" Role="customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="anten">
+        <PropertyRef Name="anten_id" />
+      </Principal>
+      <Dependent Role="customer">
+        <PropertyRef Name="antenid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

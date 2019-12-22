@@ -1,0 +1,568 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="MasterPage" CodeBehind="MasterPage.master.cs" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - BilgiTAP Teknik Servis</title>
+    <%--  <base href="/"/>--%>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <meta name="description" content="Web tabanlı teknik servis yönetim yazılımı" />
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <!--  wrapper -->
+        <div id="wrapper">
+            <!-- navbar top -->
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+                <!-- navbar-header -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a runat="server" id="brr" class="navbar-brand" href="Default.aspx">
+                        <%-- <b>BilgiTAP</b>--%>
+                        <img src="/img/logo.png" alt="" />
+                    </a>
+
+                </div>
+
+                <!-- end navbar-header -->
+                <!-- navbar-top-links -->
+
+                <ul class="nav navbar-top-links navbar-right">
+
+                    <%-- <div class="navbar-right">--%>
+                    <li class="navbar-form arama" role="search">
+                        <asp:Panel ID="kisiara" Visible="false" runat="server" DefaultButton="btnKisi">
+                            <div class="input-group">
+                                <input type="text" id="txtKisi" runat="server" class="form-control" placeholder="Kişi arayın..." />
+                                <span class="input-group-btn">
+                                    <asp:Button ID="btnKisi" runat="server" CssClass="btn btn-default btn-md" Text="ARA" OnClick="KisiAra" />
+
+                                </span>
+                            </div>
+
+                        </asp:Panel>
+
+                    </li>
+                    <li class="hidden-xs hidden-sm">
+                        <a href="/TeknikTeknik/ServisEkle"><i class="fa fa-wrench fa-2x"></i>Servis</a>
+                    </li>
+                    <%-- <li class="hidden-md hidden-lg">
+                        <a href="/TeknikTeknik/ServislerCanli"><i class="fa fa-wrench fa-2x"></i>Servis</a>
+                    </li>--%>
+                    <li id="stokLi" runat="server">
+                        <a href="/TeknikHarita/MusteriAnten2"><i class="fa fa-list fa-2x"></i>Müşteri/Anten</a>
+                    </li>
+                    <li id="satistopLi" runat="server" class="hidden-xs hidden-sm">
+                        <a href="/TeknikHarita/Antenler"><i class="fa fa-hand-pointer-o fa-2x"></i>Antenler</a>
+                    </li>
+                    <%--</div>--%>
+                   
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="top-label label label-warning">5</span>  <i class="fa fa-cog fa-spin fa-2x"></i>
+                        </a>
+                        <!-- dropdown alerts-->
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="/TeknikTeknik/ServislerCanli.aspx">
+                                    <div>
+                                        <i class="fa fa-table fa-fw"></i>Aktif Servisler
+                                    <span class="pull-right text-muted small">Detaylar</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/TeknikTeknik/ServisEkle.aspx">
+                                    <div>
+                                        <i class="fa fa-wrench fa-fw"></i>Servis Ekle
+                                    <span class="pull-right text-muted small">Aç</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/Musteri.aspx?tip=hepsi">
+                                    <div>
+                                        <i class="fa fa-user fa-fw"></i>Müşteriler
+                                    <span class="pull-right text-muted small">Müşteri</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/TeknikTeknik/ServisHesaplar.aspx?onay=false">
+                                    <div>
+                                        <i class="fa fa-clock-o fa-fw"></i>Onay Bekleyenler
+                                    <span class="pull-right text-muted small">Onay</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/TeknikEmanet/EmanetVerMusteri.aspx">
+                                    <div>
+                                        <i class="fa fa-tasks fa-fw"></i>Emanet
+                                    <span class="pull-right text-muted small">Ver-Al</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/TeknikEmanet/Emanetler.aspx">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i>Emanettekiler
+                                    <span class="pull-right text-muted small">Dönmemiş</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a runat="server" href="~/Account/Manage" title="Manage your account"><%: Context.User.Identity.GetUserName()  %> !</a></li>
+
+                            <li class="divider"></li>
+                            <li>
+                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Çıkış" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                            </li>
+                            <li class="divider"></li>
+                        </ul>
+                        <!-- end dropdown-alerts -->
+                    </li>
+
+                    <li runat="server" id="ayar" class="dropdown" visible="false">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-2x"></i>
+                        </a>
+                        <!-- dropdown user-->
+                        <ul class="dropdown-menu dropdown-user ">
+                            <li><a href="/Admin/Kullanicilar"><i class="fa fa-user fa-fw"></i>Kullanıcılar</a>
+                            </li>
+
+                            <li id="liAyar" runat="server"><a href="/Admin/Ayarlar"><i class="fa fa-refresh fa-fw"></i>Ayarlar</a>
+                            </li>
+
+                            <li id="liSms" runat="server"><a href="/Admin/SmsAyarlari"><i class="fa fa-phone-square fa-fw"></i>Sms Ayarlar</a>
+                            </li>
+                            <li id="liMail" runat="server"><a href="/Admin/MailAyarlari"><i class="fa fa-envelope fa-fw"></i>Mail Ayarlar</a>
+                            </li>
+                            <li id="liBayiAyar" runat="server"><a href="/Admin/BayiAyarlari"><i class="fa fa-sitemap fa-fw"></i>Yönetici Ayarları</a>
+                            </li>
+                            <li id="li5" runat="server"><a href="/TeknikTeknik/ServisPaketleri"><i class="fa fa-wrench fa-fw"></i>Servis Paketleri</a>
+                            </li>
+                            <li>
+                                <a href="/TeknikAlim/CihazGruplar"><i class="fa fa-cubes"></i>Ürün Grupları</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/TeknikHarita/Antenler"><i class="fa fa-cubes"></i>Antenler</a>
+                            </li>
+                             <li>
+                                <a href="/TeknikHarita/MusteriAnten2"><i class="fa fa-cubes"></i>Müşteri/Anten Listesi</a>
+                            </li>
+                            <li>
+                                <a href="/TeknikHarita/ButunAntenler"><i class="fa fa-cubes"></i>Haritada Antenler</a>
+                            </li>
+                            <li>
+                                <a href="/TeknikHarita/ButunAntenMusteri"><i class="fa fa-cubes"></i>Anten Kapsamında Müşteriler</a>
+                            </li>
+                             <li>
+                                <a href="/TeknikHarita/ButunAntenMusteri2"><i class="fa fa-cubes"></i>Antene Kayıtlı Müşteriler</a>
+                            </li>
+                            <li>
+                                <a href="/TeknikHarita/ButunMusteriler"><i class="fa fa-cubes"></i>Müşteri Haritası</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a runat="server" href="~/Account/Manage" title="Manage your account"><%: Context.User.Identity.GetUserName()  %> !</a></li>
+
+                            <li class="divider"></li>
+                            <li>
+                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Çıkış" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                            </li>
+
+                        </ul>
+                        <!-- end dropdown-user -->
+                    </li>
+                    <!-- end main dropdown -->
+                </ul>
+                <!-- end navbar-top-links -->
+
+            </nav>
+            <!-- end navbar top -->
+
+            <!-- navbar side -->
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <!-- sidebar-collapse -->
+                <div class="sidebar-collapse">
+                    <!-- side-menu -->
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <!-- src="/Uploads/firma.png"-->
+                            <div class="user-section">
+
+                                <div class="user-info">
+                                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                                        <AnonymousTemplate>
+                                            <div class="user-section-inner">
+                                                <img src="img/user.jpg" class="img-circle" alt="" />
+                                            </div>
+                                        </AnonymousTemplate>
+                                        <LoggedInTemplate>
+                                            <div class="user-section-inner">
+
+                                                <img id="res" runat="server" src="<%#resim()%>" class="img-circle" alt="" />
+                                            </div>
+                                            <ul class="user-text-online">
+                                                <li><a runat="server" href="~/Account/Manage" title="Manage your account"><%: Context.User.Identity.GetUserName()  %> !</a></li>
+
+                                                <%--<asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Çıkış" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />--%>
+                                            </ul>
+                                        </LoggedInTemplate>
+                                    </asp:LoginView>
+                                </div>
+                            </div>
+
+                            <!--end user image section-->
+                        </li>
+                        <li class="sidebar-search">
+                            <!-- search section-->
+                            <asp:Panel ID="servisara" runat="server" Visible="false" DefaultButton="btnAra">
+                                <div class="input-group custom-search-form">
+                                    <input type="text" id="txtAra" runat="server" class="form-control" placeholder="Servis arayın..." />
+                                    <span class="input-group-btn">
+                                        <asp:Button ID="btnAra" runat="server" Text="Ara" CssClass="btn btn-info btn-md " OnClick="MusteriAra" />
+
+                                    </span>
+                                </div>
+                            </asp:Panel>
+
+                            <!--end search section-->
+                        </li>
+                        <%--  <li id="panelLi" runat="server" visible="false">
+
+                            <a href="/Admin/BilgitapPanel"><i class="fa fa-area-chart fa-2x"></i>&nbsp Panel</a>
+                        </li>--%>
+
+
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-2x"></i>&nbsp Servis İşlemleri<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/TeknikTeknik/ServislerCanli.aspx">&nbsp &nbsp<i class="fa fa-hourglass-half fa-2x"></i> &nbsp &nbsp Aktif Servisler</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikTeknik/ServisEkle.aspx">&nbsp &nbsp<i class="fa fa-cart-plus fa-2x"></i>&nbsp &nbsp Yeni Servis</a>
+                                </li>
+                                  <li>
+                                    <a href="/TeknikHarita/ButunServisler.aspx">&nbsp &nbsp<i class="fa fa-map fa-2x"></i>&nbsp &nbsp Servis Haritası</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikTeknik/ServisHesaplar.aspx?onay=false">&nbsp &nbsp<i class="fa fa-clock-o fa-2x"></i> &nbsp &nbsp Onay Bekleyenler</a>
+                                </li>
+                                <li id="maliyetLi" runat="server" visible="false">
+                                    <a href="/TeknikTeknik/ServisMaliyetler.aspx">&nbsp &nbsp<i class="fa fa-money fa-2x"></i> &nbsp &nbsp Servis Maliyetleri</a>
+                                </li>
+                            </ul>
+                            <!-- second-level-items -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-group fa-2x"></i>&nbsp Firma/Kişi<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/Musteri.aspx?tip=hepsi">&nbsp &nbsp<i class="fa fa-group fa-2x"></i> &nbsp &nbsp Firma/Kişi</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikHarita/MusteriAnten">&nbsp &nbsp<i class="fa fa-list fa-2x"></i> &nbsp &nbsp Müşteri Anten</a>
+                                </li>
+                               
+                                <li>
+                                    <a href="/TeknikHarita/ButunMusteriler.aspx">&nbsp &nbsp<i class="fa fa-map fa-2x"></i>&nbsp &nbsp Müşteri Haritası</a>
+                                </li>
+                            </ul>
+                            <!-- second-level-items -->
+                        </li>
+                        <li id="cihazLi" runat="server">
+                            <a href="#"><i class="fa fa-tachometer fa-2x"></i>&nbsp Ürün/Cihaz<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <%-- Burası müşteriye göre verilen ürünler, ve müşteri cihazlarının araması var --%>
+                                <%--        <li>
+                                    <a href="/TeknikAlim/MusteriUrunler">&nbsp &nbsp<i class="fa fa-caret-square-o-left fa-2x"></i> &nbsp &nbsp Müşteri Ürün ve Yedek Parçaları</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikTeknik/MusteriUrunler">&nbsp &nbsp<i class="fa fa-tty fa-2x"></i> &nbsp &nbsp Müşteri Cihazları</a>
+                                </li>--%>
+                                <li>
+                                    <a href="/TeknikAlim/MusteriUrunAra">&nbsp &nbsp<i class="fa fa-user-md fa-2x"></i>&nbsp &nbsp Parça/Müşteri</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikTeknik/MusteriUrunAra">&nbsp &nbsp<i class="fa fa-sort-amount-desc fa-2x"></i>&nbsp &nbsp Cihaz/Müşteri</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikAlim/Stoklar">&nbsp &nbsp<i class="fa fa-cubes fa-2x"></i> &nbsp &nbsp Ürün-Parça/Stok</a>
+                                </li>
+
+
+                            </ul>
+                            <!-- second-level-items -->
+                        </li>
+                        <li id="cariHesapLi" runat="server">
+                            <a href="#"><i class="fa fa-money fa-2x"></i>&nbsp Cari Hesaplar<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/TeknikCari/Ode.aspx?custid=-2">&nbsp &nbsp<i class="fa fa-search-plus fa-2x"></i> &nbsp &nbsp Gider Kaydet</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikCari/CariHesaplar.aspx">&nbsp &nbsp<i class="fa fa-search-plus fa-2x"></i> &nbsp &nbsp Cari Hesap Arama</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikCari/CariHesapBorclu.aspx">&nbsp &nbsp<i class="fa fa-list fa-2x"></i> &nbsp &nbsp Borçlu Cari Listesi</a>
+                                </li>
+
+
+                            </ul>
+                            <!-- second-level-items -->
+                        </li>
+
+                        <%-- çek-kasa-banka vb --%>
+
+                        <li id="paraHesapLi" runat="server">
+                            <a href="#"><i class="fa fa-balance-scale fa-2x"></i>&nbsp Para Hesapları<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <%--  <li>
+                                    <a href="/TeknikCari/Cekler.aspx">&nbsp &nbsp<i class="fa fa-copyright fa-2x"></i> &nbsp &nbsp Çekler</a>
+                                </li>--%>
+                                <li>
+                                    <a href="/TeknikCari/Hareketler.aspx">&nbsp &nbsp<i class="fa fa-calculator fa-2x"></i> &nbsp &nbsp Kasa</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikCari/Bankalar.aspx">&nbsp &nbsp<i class="fa fa-university fa-2x"></i> &nbsp &nbsp Bankalar</a>
+
+                                </li>
+                                <li>
+                                    <a href="/TeknikCari/Poslar.aspx">&nbsp &nbsp<i class="fa fa-cc-visa fa-2x"></i> &nbsp &nbsp Pos Hesapları</a>
+
+                                </li>
+                                <li>
+                                    <a href="/TeknikCari/KartExtre2.aspx">&nbsp &nbsp<i class="fa fa-credit-card fa-2x"></i> &nbsp &nbsp Kartla Extre</a>
+
+                                </li>
+                                <li>
+                                    <a href="/TeknikCari/Kartlar.aspx">&nbsp &nbsp<i class="fa fa-credit-card fa-2x"></i> &nbsp &nbsp Kredi Kartları</a>
+
+                                </li>
+                                <li>
+                                    <a href="/TeknikCari/OdemeTahsilatlar.aspx">&nbsp &nbsp<i class="fa fa-fax fa-2x"></i> &nbsp &nbsp Ödeme ve Tahsilatlar</a>
+
+                                </li>
+                            </ul>
+                            <!-- second-level-items -->
+                        </li>
+
+
+                        <li id="alimLi" runat="server">
+                            <a href="#"><i class="fa fa-shopping-cart fa-2x"></i>&nbsp Satın Alma<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/TeknikAlim/SatinAl">&nbsp &nbsp<i class="fa fa-cart-arrow-down fa-2x danger"></i> &nbsp &nbsp Alım Faturası</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikAlim/Alimlar">&nbsp &nbsp<i class="fa fa-archive fa-2x"></i> &nbsp &nbsp Alımlar</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikAlim/AlimDetaylar">&nbsp &nbsp<i class="fa fa-binoculars fa-2x"></i> &nbsp &nbsp Alım Kalemleri</a>
+                                </li>
+
+                            </ul>
+                            <!-- second-level-items -->
+                        </li>
+
+                        <li id="satisLi" runat="server">
+                            <a href="#"><i class="fa fa-hand-pointer-o fa-2x"></i>&nbsp Peşin Satış<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/TeknikSatis/PesinSatis">&nbsp &nbsp<i class="fa fa-hand-pointer-o fa-2x"></i> &nbsp &nbsp Yeni Satış</a>
+                                </li>
+                                <li id="satisListesiLi" runat="server">
+                                    <a href="/TeknikSatis/SatisListesi">&nbsp &nbsp<i class="fa fa-list fa-2x"></i> &nbsp &nbsp Satış Listesi</a>
+                                </li>
+
+                            </ul>
+                            <!-- second-level-items -->
+                        </li>
+                        <li id="faturaLi" runat="server" visible="false">
+                            <a href="#"><i class="fa fa-print fa-2x"></i>&nbsp Fatura Baskısı<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/TeknikFatura/FaturaBasim.aspx">&nbsp &nbsp<i class="fa fa-print fa-2x"></i> &nbsp &nbsp Fatura Basımı</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikFatura/FaturaManuel.aspx">&nbsp &nbsp<i class="fa fa-hand-paper-o fa-2x"></i> &nbsp &nbsp Manuel Fatura</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikFatura/FaturaBasim.aspx?durum=baski">&nbsp &nbsp<i class="fa fa-list fa-2x"></i> &nbsp &nbsp Basılmış Faturalar</a>
+                                </li>
+                            </ul>
+                            <!-- second-level-items -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gift fa-2x"></i>&nbsp Emanet İşlem<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+
+                                <li>
+                                    <a href="/TeknikEmanet/Emanetler.aspx">&nbsp &nbsp<i class="fa fa-calendar fa-2x"></i>&nbsp &nbsp Emanettekiler</a>
+                                </li>
+
+                            </ul>
+                            <!-- second-level-items -->
+                        </li>
+                        <li id="roporLi" runat="server">
+                            <a href="#"><i class="fa fa-area-chart fa-2x"></i>&nbsp Raporlar<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/Raporlar/TekRaporView">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Günlük Rapor</a>
+                                </li>
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=odeme_tahsilat">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Ödeme ve Tahsilatlar</a>
+                                </li>
+
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=gider_raporu">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Ödeme Raporu</a>
+                                </li>
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=tahsilat_raporu">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Tahsilat Raporu</a>
+                                </li>
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=satis_raporu">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Satış Raporu</a>
+                                </li>
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=odeme_tahsilat_gruplu">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Tahsilat/Ödeme Özet</a>
+                                </li>
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=odeme_tahsilat_satis">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Tahsilat/Ödeme/Satış</a>
+                                </li>
+                                <li>
+                                    <a href="/Raporlar/RaporSorgu.aspx?tip=periyodik_rapor">&nbsp &nbsp<i class="fa fa-calendar-plus-o"></i> &nbsp &nbsp Periyodik Rapor</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">&nbsp</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="ayarLi2" runat="server">
+                            <a href="#"><i class="fa fa-gift fa-2x"></i>&nbsp Ayarlar<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="/Admin/Kullanicilar"><i class="fa fa-user fa-fw"></i>Kullanıcılar</a>
+                                </li>
+
+                                <li id="li11" runat="server"><a href="/Admin/Ayarlar"><i class="fa fa-refresh fa-fw"></i>Ayarlar</a>
+                                </li>
+
+                                <li id="li12" runat="server"><a href="/Admin/SmsAyarlari"><i class="fa fa-phone-square fa-fw"></i>Sms Ayarlar</a>
+                                </li>
+                                <li id="li13" runat="server"><a href="/Admin/MailAyarlari"><i class="fa fa-envelope fa-fw"></i>Mail Ayarlar</a>
+                                </li>
+                                <li id="li14" runat="server"><a href="/Admin/BayiAyarlari"><i class="fa fa-sitemap fa-fw"></i>Yönetici Ayarları</a>
+                                </li>
+                                <li id="li15" runat="server"><a href="/TeknikTeknik/ServisPaketleri"><i class="fa fa-wrench fa-fw"></i>Servis Paketleri</a>
+                                </li>
+                                <li>
+                                    <a href="/TeknikAlim/CihazGruplar"><i class="fa fa-cubes"></i>Ürün Grupları</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li id="li16" runat="server"><a href="/Admin/Tasarimci.aspx?tip=fatura"><i class="fa fa-sitemap fa-fw"></i>Fatura Tasarımı</a>
+                                </li>
+
+                                <li id="li17" runat="server"><a href="/Admin/Tasarimci.aspx?tip=makbuz"><i class="fa fa-sitemap fa-fw"></i>Makbuz Tasarımı</a>
+                                </li>
+
+                                <li id="li18" runat="server"><a href="/Admin/Tasarimci.aspx?tip=servis"><i class="fa fa-sitemap fa-fw"></i>Servis Tasarımı</a>
+                                </li>
+
+                                <li id="li19" runat="server"><a href="/Admin/Tasarimci.aspx?tip=extre"><i class="fa fa-sitemap fa-fw"></i>Extre Tasarımı</a>
+                                </li>
+
+                                <li id="li20" runat="server"><a href="/Admin/Tasarimci.aspx?tip=gelirgider"><i class="fa fa-sitemap fa-fw"></i>GelirGider Tasarımı</a>
+                                </li>
+
+                                <li id="li21" runat="server"><a href="/Admin/Tasarimci.aspx?tip=gelirgiderozet"><i class="fa fa-sitemap fa-fw"></i>Gelir Gider Özet Tasarımı</a>
+                                </li>
+
+                                <li id="li22" runat="server"><a href="/Admin/Tasarimci.aspx?tip=gelirgidergruplu"><i class="fa fa-sitemap fa-fw"></i>Gelir Gider Gruplu Tasarımı</a>
+                                </li>
+
+                                <li id="li23" runat="server"><a href="/Admin/Tasarimci.aspx?tip=gelirgideraylik"><i class="fa fa-sitemap fa-fw"></i>Gelir Gider Aylık Tasarımı</a>
+                                </li>
+
+                                <li id="li24" runat="server"><a href="/Admin/Tasarimci.aspx?tip=servis_maliyet"><i class="fa fa-sitemap fa-fw"></i>Servis Maliyet Tasarımı</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- end side-menu -->
+                </div>
+                <!-- end sidebar-collapse -->
+            </nav>
+            <!-- end navbar side -->
+
+            <asp:ScriptManager runat="server" EnablePageMethods="true">
+                <Scripts>
+                    <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                    <%--Framework Scripts--%>
+                    <asp:ScriptReference Name="MsAjaxBundle" />
+                    <asp:ScriptReference Name="jquery" />
+                    <asp:ScriptReference Name="bootstrap" />
+                    <asp:ScriptReference Name="respond" />
+                    <asp:ScriptReference Name="pace" />
+                    <asp:ScriptReference Name="metis" />
+                    <asp:ScriptReference Name="siminta" />
+                    <asp:ScriptReference Name="moments" />
+                    <asp:ScriptReference Name="momentlocals" />
+                    <asp:ScriptReference Name="datetime" />
+                    <%--    <asp:ScriptReference Name="anten-kaydet" />--%>
+                    <asp:ScriptReference Name="alertify" />
+                    <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                    <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                    <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                    <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                    <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                    <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                    <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                    <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                    <asp:ScriptReference Name="WebFormsBundle" />
+                    <%--Site Scripts--%>
+                </Scripts>
+            </asp:ScriptManager>
+            <div id="page-wrapper">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+
+
+
+
+
+
+        </div>
+        <!-- end wrapper -->
+
+    </form>
+
+</body>
+</html>

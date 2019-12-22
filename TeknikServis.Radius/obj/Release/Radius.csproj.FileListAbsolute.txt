@@ -1,0 +1,39 @@
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Release\TeknikServis.Radius.dll.config
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Release\TeknikServis.Radius.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Release\TeknikServis.Radius.pdb
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Release\EntityFramework.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Release\MySql.Data.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Release\MySql.Web.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Release\EntityFramework.xml
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\obj\Release\Radius.csprojResolveAssemblyReference.cache
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\obj\Release\TeknikServis.Radius.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\TeknikServis\TeknikServis.Radius\obj\Release\TeknikServis.Radius.pdb
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\CepServis\TeknikServis.Radius\bin\Release\TeknikServis.Radius.dll.config
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\CepServis\TeknikServis.Radius\bin\Release\TeknikServis.Radius.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\CepServis\TeknikServis.Radius\bin\Release\TeknikServis.Radius.pdb
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\CepServis\TeknikServis.Radius\bin\Release\EntityFramework.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\CepServis\TeknikServis.Radius\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\CepServis\TeknikServis.Radius\bin\Release\MySql.Data.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\CepServis\TeknikServis.Radius\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\CepServis\TeknikServis.Radius\bin\Release\MySql.Web.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\CepServis\TeknikServis.Radius\bin\Release\EntityFramework.xml
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\CepServis\TeknikServis.Radius\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\CepServis\TeknikServis.Radius\obj\Release\TeknikServis.Radius.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\CepServis\TeknikServis.Radius\obj\Release\TeknikServis.Radius.pdb
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\CepServis\TeknikServis.Radius\obj\Release\Radius.csprojResolveAssemblyReference.cache
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\BilgiTAP ISP 2017\TeknikServis.Radius\bin\Release\TeknikServis.Radius.dll.config
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\BilgiTAP ISP 2017\TeknikServis.Radius\bin\Release\TeknikServis.Radius.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\BilgiTAP ISP 2017\TeknikServis.Radius\bin\Release\TeknikServis.Radius.pdb
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\BilgiTAP ISP 2017\TeknikServis.Radius\bin\Release\EntityFramework.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\BilgiTAP ISP 2017\TeknikServis.Radius\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\BilgiTAP ISP 2017\TeknikServis.Radius\bin\Release\MySql.Data.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\BilgiTAP ISP 2017\TeknikServis.Radius\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\BilgiTAP ISP 2017\TeknikServis.Radius\bin\Release\MySql.Web.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\BilgiTAP ISP 2017\TeknikServis.Radius\bin\Release\EntityFramework.xml
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\BilgiTAP ISP 2017\TeknikServis.Radius\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\BilgiTAP ISP 2017\TeknikServis.Radius\obj\Release\TeknikServis.Radius.dll
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\BilgiTAP ISP 2017\TeknikServis.Radius\obj\Release\TeknikServis.Radius.pdb
+C:\Users\WIN8\Documents\Visual Studio 2013\Projects\BilgiTAP ISP 2017\TeknikServis.Radius\obj\Release\Radius.csprojResolveAssemblyReference.cache

@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="teknikvt_yukleModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="antens">
+    <Key>
+      <PropertyRef Name="anten_id" />
+    </Key>
+    <Property Name="anten_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="anten_adi" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="center_Lat" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="center_Long" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="start_Lat" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="start_Long" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="end_Lat" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="end_Long" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Firma" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ayars">
+    <Key>
+      <PropertyRef Name="Ayar_ID" />
+    </Key>
+    <Property Name="Ayar_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mail_Server" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Mail_Port" Type="int" Nullable="false" />
+    <Property Name="Mail_UserName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Mail_PW" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Mail_Kimden" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Firma" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="carihesaps">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="int" Nullable="false" />
+    <Property Name="ToplamBorc" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ToplamOdenen" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ToplamBakiye" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="Firma" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="customers">
+    <Key>
+      <PropertyRef Name="CustID" />
+    </Key>
+    <Property Name="CustID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TC" Type="varchar" MaxLength="100" />
+    <Property Name="Adres" Type="varchar" MaxLength="500" />
+    <Property Name="telefon" Type="varchar" MaxLength="200" />
+    <Property Name="telefon_cep" Type="varchar" MaxLength="200" />
+    <Property Name="email" Type="varchar" MaxLength="200" />
+    <Property Name="tanimlayici" Type="varchar" MaxLength="500" />
+    <Property Name="Firma" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Lat" Type="varchar" MaxLength="100" />
+    <Property Name="Long" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="emirs">
+    <Key>
+      <PropertyRef Name="EmirID" />
+    </Key>
+    <Property Name="EmirID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceID" Type="int" Nullable="false" />
+    <Property Name="AtananID" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Konu" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="300" />
+    <Property Name="EmirTarihi" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="TamamlanmaTarihi" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="musteriodemelers">
+    <Key>
+      <PropertyRef Name="Odeme_ID" />
+    </Key>
+    <Property Name="KullaniciID" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="OdemeMiktar" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="OdemeTarih" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Odeme_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Musteri_ID" Type="int" Nullable="false" />
+    <Property Name="iptal" Type="bit" Nullable="false" />
+    <Property Name="Firma" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.teknikvt_yukle.panels' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="panels">
+    <Key>
+      <PropertyRef Name="Firma" />
+      <PropertyRef Name="servis_sayisi" />
+      <PropertyRef Name="onay_bekleyen_sayisi" />
+      <PropertyRef Name="borclu_sayisi" />
+      <PropertyRef Name="emanet_sayisi" />
+      <PropertyRef Name="toplam_borc" />
+      <PropertyRef Name="toplam_odenen" />
+      <PropertyRef Name="toplam_bakiye" />
+      <PropertyRef Name="musteri_sayisi" />
+    </Key>
+    <Property Name="Firma" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="servis_sayisi" Type="int" Nullable="false" />
+    <Property Name="onay_bekleyen_sayisi" Type="int" Nullable="false" />
+    <Property Name="borclu_sayisi" Type="int" Nullable="false" />
+    <Property Name="emanet_sayisi" Type="int" Nullable="false" />
+    <Property Name="toplam_borc" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="toplam_odenen" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="toplam_bakiye" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="musteri_sayisi" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rm_users">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="groupid" Type="int" Nullable="false" />
+    <Property Name="enableuser" Type="bool" Nullable="false" />
+    <Property Name="uplimit" Type="bigint" Nullable="false" />
+    <Property Name="downlimit" Type="bigint" Nullable="false" />
+    <Property Name="comblimit" Type="bigint" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="company" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="mobile" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="city" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="zip" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="country" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="state" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="comment" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="gpslat" Type="decimal" Precision="17" Scale="14" Nullable="false" />
+    <Property Name="gpslong" Type="decimal" Precision="17" Scale="14" Nullable="false" />
+    <Property Name="mac" Type="varchar" MaxLength="17" Nullable="false" />
+    <Property Name="usemacauth" Type="bool" Nullable="false" />
+    <Property Name="expiration" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="uptimelimit" Type="bigint" Nullable="false" />
+    <Property Name="srvid" Type="int" Nullable="false" />
+    <Property Name="staticipcm" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="staticipcpe" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ipmodecm" Type="bool" Nullable="false" />
+    <Property Name="ipmodecpe" Type="bool" Nullable="false" />
+    <Property Name="poolidcm" Type="int" Nullable="false" />
+    <Property Name="poolidcpe" Type="int" Nullable="false" />
+    <Property Name="createdon" Type="date" Nullable="false" />
+    <Property Name="acctype" Type="bool" Nullable="false" />
+    <Property Name="credits" Type="decimal" Precision="20" Scale="2" Nullable="false" />
+    <Property Name="cardfails" Type="tinyint" Nullable="false" />
+    <Property Name="createdby" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="taxid" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="maccm" Type="varchar" MaxLength="17" Nullable="false" />
+    <Property Name="custattr" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="warningsent" Type="bool" Nullable="false" />
+    <Property Name="verifycode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="verified" Type="bool" Nullable="false" />
+    <Property Name="selfreg" Type="bool" Nullable="false" />
+    <Property Name="verifyfails" Type="tinyint" Nullable="false" />
+    <Property Name="verifysentnum" Type="tinyint" Nullable="false" />
+    <Property Name="verifymobile" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="contractid" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="contractvalid" Type="date" Nullable="false" />
+    <Property Name="actcode" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="pswactsmsnum" Type="tinyint" Nullable="false" />
+    <Property Name="alertemail" Type="bool" Nullable="false" />
+    <Property Name="alertsms" Type="bool" Nullable="false" />
+    <Property Name="lang" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="lastlogoff" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="service_durums">
+    <Key>
+      <PropertyRef Name="Durum_ID" />
+    </Key>
+    <Property Name="Durum_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Durum" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="SMS" Type="bit" Nullable="false" />
+    <Property Name="Mail" Type="bit" Nullable="false" />
+    <Property Name="Whatsapp" Type="bit" Nullable="false" />
+    <Property Name="baslangicmi" Type="bit" />
+    <Property Name="sonmu" Type="bit" />
+    <Property Name="kararmi" Type="bit" />
+    <Property Name="onaymi" Type="bit" />
+    <Property Name="iptal" Type="bit" />
+    <Property Name="Firma" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="service_tips">
+    <Key>
+      <PropertyRef Name="tip_id" />
+    </Key>
+    <Property Name="tip_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tip_ad" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="aciklama" Type="varchar" MaxLength="200" />
+    <Property Name="css" Type="varchar" MaxLength="100" />
+    <Property Name="Firma" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="iptal" Type="bit" />
+  </EntityType>
+  <EntityType Name="servicedetays">
+    <Key>
+      <PropertyRef Name="DetayID" />
+    </Key>
+    <Property Name="DetayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceID" Type="int" Nullable="false" />
+    <Property Name="TarihZaman" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="BelgeYol" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Durum_ID" Type="int" Nullable="false" />
+    <Property Name="KullaniciID" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Firma" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="iptal" Type="bit" />
+    <Property Name="Baslik" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servicehesaps">
+    <Key>
+      <PropertyRef Name="HesapID" />
+    </Key>
+    <Property Name="HesapID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriID" Type="int" Nullable="false" />
+    <Property Name="ServiceID" Type="int" Nullable="false" />
+    <Property Name="IslemParca" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Tutar" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="KDV" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Yekun" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="500" />
+    <Property Name="TarihZaman" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="onay" Type="bit" Nullable="false" />
+    <Property Name="Onay_tarih" Type="datetime" Precision="0" />
+    <Property Name="iptal" Type="bit" Nullable="false" />
+    <Property Name="Firma" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="services">
+    <Key>
+      <PropertyRef Name="ServiceID" />
+    </Key>
+    <Property Name="ServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustID" Type="int" Nullable="false" />
+    <Property Name="SonAtananID" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="AcilmaZamani" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="KapanmaZamani" Type="datetime" Precision="0" />
+    <Property Name="UrunID" Type="int" />
+    <Property Name="Servis_Kimlik_No" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tip_id" Type="int" Nullable="false" />
+    <Property Name="SonDurum" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="iptal" Type="bit" />
+    <Property Name="olusturan_Kullanici" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Firma" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Baslik" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="durum_id" Type="int" />
+  </EntityType>
+  <EntityType Name="uruns">
+    <Key>
+      <PropertyRef Name="urunID" />
+    </Key>
+    <Property Name="urunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriID" Type="int" Nullable="false" />
+    <Property Name="Cinsi" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="GranatiBaslangic" Type="datetime" Precision="0" />
+    <Property Name="GarantiBitis" Type="datetime" Precision="0" />
+    <Property Name="GarantiSuresi" Type="int" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="500" />
+    <Property Name="BelgeYol" Type="varchar" MaxLength="200" />
+    <Property Name="Firma" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="yedek_uruns">
+    <Key>
+      <PropertyRef Name="yedek_id" />
+    </Key>
+    <Property Name="yedek_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="musteri_id" Type="int" Nullable="false" />
+    <Property Name="urun_aciklama" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="tarih_verilme" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="tarih_donus" Type="datetime" Precision="0" />
+    <Property Name="Firma" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="emirs_ibfk_1">
+    <End Role="services" Type="Self.services" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="emirs" Type="Self.emirs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="services">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="emirs">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="musteriodemelers_ibfk_1">
+    <End Role="customers" Type="Self.customers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="musteriodemelers" Type="Self.musteriodemelers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="musteriodemelers">
+        <PropertyRef Name="Musteri_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicedetays_ibfk_1">
+    <End Role="services" Type="Self.services" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="servicedetays" Type="Self.servicedetays" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="services">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="servicedetays">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicedetays_ibfk_3">
+    <End Role="service_durums" Type="Self.service_durums" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="servicedetays" Type="Self.servicedetays" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="service_durums">
+        <PropertyRef Name="Durum_ID" />
+      </Principal>
+      <Dependent Role="servicedetays">
+        <PropertyRef Name="Durum_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicehesaps_ibfk_1">
+    <End Role="customers" Type="Self.customers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="servicehesaps" Type="Self.servicehesaps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="servicehesaps">
+        <PropertyRef Name="MusteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="servicehesaps_ibfk_2">
+    <End Role="services" Type="Self.services" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="servicehesaps" Type="Self.servicehesaps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="services">
+        <PropertyRef Name="ServiceID" />
+      </Principal>
+      <Dependent Role="servicehesaps">
+        <PropertyRef Name="ServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="services_ibfk_1">
+    <End Role="customers" Type="Self.customers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="services" Type="Self.services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="services">
+        <PropertyRef Name="CustID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="services_ibfk_4">
+    <End Role="service_tips" Type="Self.service_tips" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="services" Type="Self.services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="service_tips">
+        <PropertyRef Name="tip_id" />
+      </Principal>
+      <Dependent Role="services">
+        <PropertyRef Name="tip_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="services_ibfk_5">
+    <End Role="uruns" Type="Self.uruns" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="services" Type="Self.services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="uruns">
+        <PropertyRef Name="urunID" />
+      </Principal>
+      <Dependent Role="services">
+        <PropertyRef Name="UrunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="uruns_ibfk_1">
+    <End Role="customers" Type="Self.customers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="uruns" Type="Self.uruns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="uruns">
+        <PropertyRef Name="MusteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="yedek_uruns_ibfk_1">
+    <End Role="customers" Type="Self.customers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="yedek_uruns" Type="Self.yedek_uruns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="CustID" />
+      </Principal>
+      <Dependent Role="yedek_uruns">
+        <PropertyRef Name="musteri_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="teknikvt_yukleModelStoreContainer">
+    <EntitySet Name="antens" EntityType="Self.antens" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="ayars" EntityType="Self.ayars" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="carihesaps" EntityType="Self.carihesaps" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="customers" EntityType="Self.customers" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="emirs" EntityType="Self.emirs" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="musteriodemelers" EntityType="Self.musteriodemelers" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="rm_users" EntityType="Self.rm_users" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="service_durums" EntityType="Self.service_durums" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="service_tips" EntityType="Self.service_tips" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="servicedetays" EntityType="Self.servicedetays" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="servicehesaps" EntityType="Self.servicehesaps" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="services" EntityType="Self.services" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="uruns" EntityType="Self.uruns" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="yedek_uruns" EntityType="Self.yedek_uruns" Schema="teknikvt_yukle" store:Type="Tables" />
+    <EntitySet Name="panels" EntityType="Self.panels" store:Type="Tables" store:Schema="teknikvt_yukle">
+      <DefiningQuery>SELECT
+`panels`.`Firma`, 
+`panels`.`servis_sayisi`, 
+`panels`.`onay_bekleyen_sayisi`, 
+`panels`.`borclu_sayisi`, 
+`panels`.`emanet_sayisi`, 
+`panels`.`toplam_borc`, 
+`panels`.`toplam_odenen`, 
+`panels`.`toplam_bakiye`, 
+`panels`.`musteri_sayisi`
+FROM `panels` AS `panels`</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="emirs_ibfk_1" Association="Self.emirs_ibfk_1">
+      <End Role="services" EntitySet="services" />
+      <End Role="emirs" EntitySet="emirs" />
+    </AssociationSet>
+    <AssociationSet Name="musteriodemelers_ibfk_1" Association="Self.musteriodemelers_ibfk_1">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="musteriodemelers" EntitySet="musteriodemelers" />
+    </AssociationSet>
+    <AssociationSet Name="servicedetays_ibfk_1" Association="Self.servicedetays_ibfk_1">
+      <End Role="services" EntitySet="services" />
+      <End Role="servicedetays" EntitySet="servicedetays" />
+    </AssociationSet>
+    <AssociationSet Name="servicedetays_ibfk_3" Association="Self.servicedetays_ibfk_3">
+      <End Role="service_durums" EntitySet="service_durums" />
+      <End Role="servicedetays" EntitySet="servicedetays" />
+    </AssociationSet>
+    <AssociationSet Name="servicehesaps_ibfk_1" Association="Self.servicehesaps_ibfk_1">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="servicehesaps" EntitySet="servicehesaps" />
+    </AssociationSet>
+    <AssociationSet Name="servicehesaps_ibfk_2" Association="Self.servicehesaps_ibfk_2">
+      <End Role="services" EntitySet="services" />
+      <End Role="servicehesaps" EntitySet="servicehesaps" />
+    </AssociationSet>
+    <AssociationSet Name="services_ibfk_1" Association="Self.services_ibfk_1">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="services" EntitySet="services" />
+    </AssociationSet>
+    <AssociationSet Name="services_ibfk_4" Association="Self.services_ibfk_4">
+      <End Role="service_tips" EntitySet="service_tips" />
+      <End Role="services" EntitySet="services" />
+    </AssociationSet>
+    <AssociationSet Name="services_ibfk_5" Association="Self.services_ibfk_5">
+      <End Role="uruns" EntitySet="uruns" />
+      <End Role="services" EntitySet="services" />
+    </AssociationSet>
+    <AssociationSet Name="uruns_ibfk_1" Association="Self.uruns_ibfk_1">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="uruns" EntitySet="uruns" />
+    </AssociationSet>
+    <AssociationSet Name="yedek_uruns_ibfk_1" Association="Self.yedek_uruns_ibfk_1">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="yedek_uruns" EntitySet="yedek_uruns" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

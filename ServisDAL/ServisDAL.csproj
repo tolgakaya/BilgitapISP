@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F115947F-A6D2-4710-B92E-3A4E2E2101A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServisDAL</RootNamespace>
+    <AssemblyName>ServisDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Web, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\TeknikServis\packages\MySql.Data.6.9.7\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\TeknikServis\packages\MySql.Data.Entity.6.9.7\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\TeknikServis\packages\MySql.Web.6.9.7\lib\net45\MySql.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abonelik.cs" />
+    <Compile Include="Araclar.cs" />
+    <Compile Include="AyarCurrent.cs" />
+    <Compile Include="AyarIslemleri.cs" />
+    <Compile Include="HizliSatis.cs" />
+    <Compile Include="MusteriOnline.cs" />
+    <Compile Include="Raporlama\baslamaX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlama\baslamaX.Designer.cs">
+      <DependentUpon>baslamaX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CekSenet.cs" />
+    <Compile Include="CihazMalzeme.cs" />
+    <Compile Include="Raporlama\emanetX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlama\emanetX.Designer.cs">
+      <DependentUpon>emanetX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlama\extreX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlama\extreX.Designer.cs">
+      <DependentUpon>extreX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaturaBas.cs" />
+    <Compile Include="FaturaIslemleri.cs" />
+    <Compile Include="FaturaPrinter.cs" />
+    <Compile Include="Raporlama\faturaTekX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlama\faturaTekX.Designer.cs">
+      <DependentUpon>faturaTekX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlama\faturaX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlama\faturaX.Designer.cs">
+      <DependentUpon>faturaX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GelirGider.cs" />
+    <Compile Include="Raporlama\GelirGiderAylikX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlama\GelirGiderAylikX.Designer.cs">
+      <DependentUpon>GelirGiderAylikX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlama\GelirGiderGrupluX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlama\GelirGiderGrupluX.Designer.cs">
+      <DependentUpon>GelirGiderGrupluX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlama\GelirGiderOzetX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlama\GelirGiderOzetX.Designer.cs">
+      <DependentUpon>GelirGiderOzetX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlama\GelirGiderX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlama\GelirGiderX.Designer.cs">
+      <DependentUpon>GelirGiderX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hareket.cs" />
+    <Compile Include="Kart.cs" />
+    <Compile Include="KasaIslemleri.cs" />
+    <Compile Include="KaydetmeIslemleri.cs" />
+    <Compile Include="Kurulum.cs" />
+    <Compile Include="MailIslemleri.cs" />
+    <Compile Include="Raporlama\makbuzX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlama\makbuzX.Designer.cs">
+      <DependentUpon>makbuzX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriIslemleri.cs" />
+    <Compile Include="Odeme.cs" />
+    <Compile Include="PosBanka.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raporlama\ServisMaliyetlerX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlama\ServisMaliyetlerX.Designer.cs">
+      <DependentUpon>ServisMaliyetlerX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repo\MusteriRepoC.cs" />
+    <Compile Include="Repo\ServisRepo.cs" />
+    <Compile Include="SatinAlim.cs" />
+    <Compile Include="Service References\NetGsm\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServisIslemleri.cs" />
+    <Compile Include="ServisIslemleri2.cs" />
+    <Compile Include="ServisPaketli.cs" />
+    <Compile Include="Sifrele.cs" />
+    <Compile Include="SmsIslemleri.cs" />
+    <Compile Include="Raporlama\tahsilatX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlama\tahsilatX.Designer.cs">
+      <DependentUpon>tahsilatX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tahsilat.cs" />
+    <Compile Include="TekMusteri.cs" />
+    <Compile Include="TekPanel.cs" />
+    <Compile Include="TekRapor.cs" />
+    <Compile Include="TekServis.cs" />
+    <Compile Include="TestSinifi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\NetGsm\ServisDAL.NetGsm.gelensmsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NetGsm\ServisDAL.NetGsm.gondericiadlariResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NetGsm\ServisDAL.NetGsm.krediResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NetGsm\ServisDAL.NetGsm.paketkampanyaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NetGsm\ServisDAL.NetGsm.raporResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NetGsm\ServisDAL.NetGsm.rapor_v2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NetGsm\ServisDAL.NetGsm.sms_gonder_1nResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NetGsm\ServisDAL.NetGsm.sms_gonder_nnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NetGsm\SMS.wsdl" />
+    <None Include="Service References\NetGsm\SMS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NetGsm\SMS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\NetGsm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NetGsm\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NetGsm\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NetGsm\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Raporlama\baslamaX.resx">
+      <DependentUpon>baslamaX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlama\emanetX.resx">
+      <DependentUpon>emanetX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlama\extreX.resx">
+      <DependentUpon>extreX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlama\faturaTekX.resx">
+      <DependentUpon>faturaTekX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlama\faturaX.resx">
+      <DependentUpon>faturaX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlama\GelirGiderAylikX.resx">
+      <DependentUpon>GelirGiderAylikX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlama\GelirGiderGrupluX.resx">
+      <DependentUpon>GelirGiderGrupluX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlama\GelirGiderOzetX.resx">
+      <DependentUpon>GelirGiderOzetX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlama\GelirGiderX.resx">
+      <DependentUpon>GelirGiderX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlama\makbuzX.resx">
+      <DependentUpon>makbuzX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Raporlama\ServisMaliyetlerX.resx">
+      <DependentUpon>ServisMaliyetlerX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlama\tahsilatX.resx">
+      <DependentUpon>tahsilatX.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TeknikServis.Radius\Radius.csproj">
+      <Project>{3755f7c5-5a81-4912-beef-15dedd86ca97}</Project>
+      <Name>Radius</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
